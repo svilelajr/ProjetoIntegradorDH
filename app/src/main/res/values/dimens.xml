@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top_titulo_filme">5dp</dimen>
+    <dimen name="margin_start_titulo_filme">5dp</dimen>
+    <dimen name="layout_height_titulo_filme">50dp</dimen>
+    <dimen name="layout_width_titulo_filme">100dp</dimen>
+    <dimen name="layout_height_logo_mw">50dp</dimen>
+    <dimen name="layout_width_logo_mw">50dp</dimen>
+    <dimen name="text_size_categorias">20sp</dimen>
+    <dimen name="layout_margin_top_txtview_categorias">10dp</dimen>
+    <dimen name="layout_margin_start_txtview_categorias">10dp</dimen>
+    <dimen name="layout_height_recyclerview_lacamentos">260dp</dimen>
+    <dimen name="layout_height_cardview_posters">220dp</dimen>
+    <dimen name="layout_margin_top_recyclerview_posters">5dp</dimen>
+    <dimen name="layout_width_poster">150dp</dimen>
+    <dimen name="layout_height_poster">200dp</dimen>
+    <dimen name="layout_margin_top_cardview_poster">10dp</dimen>
+    <dimen name="layout_margin_start_cardview_poster">10dp</dimen>
+    <dimen name="layout_margin_bottom_cardview_poster">10dp</dimen>
+    <dimen name="card_corner_radius">15dp</dimen>
+    <dimen name="layout_heigth_recyclerview_lancamentos">260dp</dimen>
+    <dimen name="layout_margin_top_recyclerview_lacementos">5dp</dimen>
+    <dimen name="layout_width_poster_lancamentos">350dp</dimen>
+    <dimen name="layout_heigth_lancamentos">200dp</dimen>
+    <dimen name="layout_margin_top_cardview_poster_lancamentos">10dp</dimen>
+    <dimen name="layout_margin_start_cardview_poster_lancamentos">10dp</dimen>
+    <dimen name="margin_botton_cardview_poster_lancamentos">10dp</dimen>
+    <dimen name="layout_margin_top_recyclerview_categorias">5dp</dimen>
+    <dimen name="text_size_btn_ver_mais">15sp</dimen>
+    <dimen name="layout_margin_right_btn_ver_mais">10dp</dimen>
+    <dimen name="layout_margin_top_btn_ver_mais">2dp</dimen>
+    <dimen name="layout_height_recyclerview_posters">260dp</dimen>
+</resources>
