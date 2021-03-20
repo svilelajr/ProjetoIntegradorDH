@@ -19,6 +19,7 @@
         <activity android:name=".activities.HomeScreen" />
         <activity android:name=".activities.SearchScreen" />
         <activity android:name=".activities.DetailsScreen" />
+        <activity android:name=".activities.MovieScreen" />
     </application>
 
 </manifest>

@@ -204,7 +204,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_baseline_favorite_24"
-        app:backgroundTint="@color/rosa_principal"
+        android:backgroundTint="@color/rosa_principal"
         android:alpha=".35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

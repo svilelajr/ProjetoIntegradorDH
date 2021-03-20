@@ -1,5 +1,6 @@
 package com.digitalhouse.moviewallet.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.data.Category
+import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewalletsprint1.R
+import com.digitalhouse.moviewalletsprint1.activities.MovieScreen
 
 class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Category>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
@@ -23,10 +26,19 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Categ
         val tipoDeCategorias = holder.nomeDasCategorias
         val buttonVerMais = holder.buttonVerMais
         val recyclerViewFilmes = holder.recyclerViewFilmes
+
         tipoDeCategorias.text = listaCategorias.categoria
         recyclerViewFilmes.layoutManager = LinearLayoutManager(holder.recyclerViewFilmes.context, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewFilmes.adapter = HomeScreenMovieAdapter(listaCategorias.listaDeFilmes)
         recyclerViewFilmes.setRecycledViewPool(viewPool)
+
+        buttonVerMais.setOnClickListener{
+            val intent= Intent(it.context, MovieScreen::class.java)
+            val movieArray:ArrayList<Movie> = ArrayList(listaDeCategorias[position].listaDeFilmes)
+            intent.putExtra("NAME",listaDeCategorias[position].categoria)
+            intent.putExtra("MOVIES",movieArray)
+            it.context.startActivity(intent)
+        }
     }
 
     inner class HomeScreenCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
