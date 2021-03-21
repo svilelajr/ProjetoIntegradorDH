@@ -15,11 +15,13 @@ import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewalletsprint1.R
 import com.digitalhouse.moviewalletsprint1.adpaters.HomeScreenReleaseAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationMenu
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeScreen : AppCompatActivity() {
     private val recyclerViewCategoria by lazy { findViewById<RecyclerView>(R.id.rv_category_home) }
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_home) }
-    private val bottomNavigate by lazy { findViewById<View>(R.id.bn_home) }
+    private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
 
@@ -44,6 +46,5 @@ class HomeScreen : AppCompatActivity() {
             val intent = Intent(this, SearchScreen::class.java)
             startActivity(intent)
         }
-
     }
 }

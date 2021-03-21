@@ -20,6 +20,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HomeScreen::class.java)
             startActivity(intent)
             finish()
-        }, 1000)
+        }, 999)
     }
 }

@@ -6,12 +6,12 @@
         android:title="@string/btn_home"/>
     <item
         android:id="@+id/page_favoritos"
-        android:enabled="true"
+        android:enabled="false"
         android:icon="@drawable/ic_baseline_favorite_border_35"
         android:title="@string/btn_favoritos"/>
     <item
         android:id="@+id/page_perfil"
-        android:enabled="true"
+        android:enabled="false"
         android:icon="@drawable/ic_baseline_perm_identity_35"
         android:title="@string/btn_perfil"/>
 </menu>

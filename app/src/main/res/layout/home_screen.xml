@@ -35,8 +35,8 @@
 
     <ImageButton
         android:id="@+id/ib_search_home"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
@@ -101,6 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
                 android:text="LANÇAMENTOS"
                 android:textColor="@color/white"
                 android:textSize="30dp"

@@ -19,6 +19,7 @@
         tools:text="Genero" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -33,10 +34,11 @@
 
     <ImageButton
         android:id="@+id/bt_categorysearch_temcategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
         android:background="@drawable/ic_baseline_arrow_forward_24"
-        app:layout_constraintEnd_toEndOf="@+id/tv_categorysearch_itemcategory" />/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_categorysearch_itemcategory"
+        app:layout_constraintTop_toTopOf="@+id/tv_categorysearch_itemcategory" />/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

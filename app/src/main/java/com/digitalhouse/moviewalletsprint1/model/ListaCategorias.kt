@@ -17,17 +17,11 @@ object ListaCategorias {
     }
 
     private fun getFilmes(): MutableList<Movie> {
-
-        val lista = ListaFilmes.getListaDefilmes()
-
-        return lista
+        return ListaFilmes.getListaDefilmes()
     }
 
     fun getCategorias() : MutableList<Category> {
-
-        val listaDeCategorias = Categorias()
-
-        return listaDeCategorias
+        return Categorias()
     }
 
 

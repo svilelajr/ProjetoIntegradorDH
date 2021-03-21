@@ -35,7 +35,7 @@ class MovieScreen : AppCompatActivity() {
         val name = extras?.getString("NAME")
         val movie = extras?.getSerializable("MOVIES")
         val movies = movie?.let { getMovies(it) }
-        toolbar.title = name
+        toolbar.title = name.toString()
         tvContext.text = "$name :"
         rvMovie.adapter = movies?.let { MovieScreenAdapter(it) }
     }

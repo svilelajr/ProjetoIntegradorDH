@@ -22,57 +22,56 @@
 
     <ImageView
         android:id="@+id/iv_movie_details"
-        android:layout_width="398dp"
+        android:layout_width="match_parent"
         android:layout_height="226dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:scaleType="centerCrop"
-        tools:src="@drawable/filme_example"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tb_details"
-        app:layout_constraintVertical_bias="0.018"/>
+        tools:src="@drawable/filme_example" />
 
     <TextView
         android:id="@+id/tv_rating_details"
         android:layout_width="73dp"
         android:layout_height="59dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="16dp"
         android:text="Avaliação
          dos
          usuarios:"
         android:textColor="#47525E"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_actors_details"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_movie_details"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toStartOf="@+id/tv_percentage_details"
+        app:layout_constraintTop_toBottomOf="@+id/iv_movie_details" />
 
     <TextView
         android:id="@+id/tv_percentage_details"
         android:layout_width="73dp"
         android:layout_height="59dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:paddingTop="18dp"
         android:text="50%"
         android:textAlignment="center"
         android:textColor="#5929D977"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tv_rating_details"
-        app:layout_constraintTop_toBottomOf="@+id/iv_movie_details" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_rating_details" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="230dp"
-        android:layout_height="430dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#40F7146F"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/rosa_principal_background"
         android:orientation="vertical"
         app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_rating_details"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_movie_details">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -81,29 +80,27 @@
 
             <TextView
                 android:id="@+id/tv_title_details"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                tools:text="NOME FILME"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="25dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.257"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="NOME FILME" />
 
             <TextView
                 android:id="@+id/tv_yearmovie_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="16dp"
                 android:text="(2020)"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.228"
+                android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/tv_title_details"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,8 +108,7 @@
                 android:id="@+id/tv_parentalrating_details"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/borda_class_indic"
                 android:paddingTop="2dp"
                 android:text="14"
@@ -120,52 +116,50 @@
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_details"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title_details" />
 
             <TextView
                 android:id="@+id/tv_genre_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
                 android:text="Ação, Aventura, Crime"
                 android:textColor="@color/white"
                 android:textSize="8sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_parentalrating_details"
                 app:layout_constraintStart_toEndOf="@+id/tv_parentalrating_details"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_details" />
+                app:layout_constraintTop_toTopOf="@+id/tv_parentalrating_details" />
 
             <TextView
                 android:id="@+id/tv_duration_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="12dp"
                 android:text="| 120 min"
                 android:textColor="@color/white"
                 android:textSize="8sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_parentalrating_details"
                 app:layout_constraintStart_toEndOf="@+id/tv_genre_details"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_details" />
+                app:layout_constraintTop_toTopOf="@+id/tv_parentalrating_details" />
 
             <TextView
                 android:id="@+id/tv_synipsis_details"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
-                android:paddingStart="40dp"
-                android:paddingEnd="20dp"
+                android:layout_marginEnd="8dp"
                 android:text="  Lorem ipsum pretium massa erat dapibus aptent eros donec elit, consequat inceptos eros enim aliquet elit sodales donec, massa dolor tellus nisi congue aptent aliquam nunc. amet fermentum neque fames proin elit ante tortor iaculis libero lacinia, aliquet curabitur aenean nunc vel turpis himenaeos amet porttitor accumsan, turpis nam hendrerit luctus sit vulputate molestie porttitor lorem. rutrum condimentum nulla adipiscing suspendisse vivamus platea sodales ultricies, lectus accumsan hendrerit platea facilisis scelerisque consectetur. himenaeos ac potenti felis ut aliquam blandit lectus aptent, urna nam euismod porttitor dapibus fringilla integer vestibulum, orci habitasse sollicitudin quam condimentum netus potenti massa dolor tellus nisi congue aptent aliquam  neq aenean nunc vel turpis himenaeos amet porttitor accumsan, turpis nam hendrerit luctus sit vulputate molestie porttitor lorem. rutrum condimentum nulla adipiscing."
                 android:textColor="@color/cinza_sinopse"
-                android:textSize="8sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_genre_details"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_genre_details" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -175,40 +169,34 @@
         android:id="@+id/tv_actors_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:text=" Elenco Principal:"
         android:textColor="@color/cinza_sinopse"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/tv_percentage_details"
         app:layout_constraintTop_toBottomOf="@+id/tv_percentage_details" />
 
     <ListView
         android:id="@+id/lv_actor_details"
         android:layout_width="150dp"
         android:layout_height="200dp"
-        android:layout_marginStart="39dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_actors_details"/>
+        app:layout_constraintEnd_toEndOf="@+id/tv_actors_details"
+        app:layout_constraintTop_toBottomOf="@+id/tv_actors_details" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/bt_favorite_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_baseline_favorite_24"
-        android:backgroundTint="@color/rosa_principal"
         android:alpha=".35"
+        android:backgroundTint="@color/rosa_principal"
+        android:src="@drawable/ic_baseline_favorite_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white"/>
+        app:layout_constraintEnd_toEndOf="@+id/lv_actor_details"
+        app:tint="@color/white" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
