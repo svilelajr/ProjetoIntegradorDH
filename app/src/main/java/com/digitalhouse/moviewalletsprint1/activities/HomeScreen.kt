@@ -24,20 +24,42 @@ class HomeScreen : AppCompatActivity() {
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.page_home -> {
 
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.page_favoritos -> {
+                val intent=Intent(this,LoginScreen::class.java)
+                startActivity(intent)
+
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.page_perfil -> {
+                val intent=Intent(this,LoginScreen::class.java)
+                startActivity(intent)
+
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
         setupRecyclerView()
         initClick()
+
+        bottomNavigate.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
     private fun setupRecyclerView() {
         recyclerViewCategoria.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewCategoria.adapter = HomeScreenCategoryAdapter(ListaCategorias.getCategorias())
         recyclerRelease.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerRelease.adapter = HomeScreenReleaseAdapter(ListaFilmes.getListaDefilmes())
+        recyclerRelease.adapter = HomeScreenReleaseAdapter(ListaFilmes.getListaDefilmeAcao())
         recyclerViewCategoria.isNestedScrollingEnabled
     }
 
@@ -47,4 +69,5 @@ class HomeScreen : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

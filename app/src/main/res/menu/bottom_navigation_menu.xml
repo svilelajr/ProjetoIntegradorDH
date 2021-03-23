@@ -1,17 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/page_home"
-        android:enabled="true"
         android:icon="@drawable/ic_baseline_home_35"
         android:title="@string/btn_home"/>
     <item
         android:id="@+id/page_favoritos"
-        android:enabled="false"
         android:icon="@drawable/ic_baseline_favorite_border_35"
         android:title="@string/btn_favoritos"/>
     <item
         android:id="@+id/page_perfil"
-        android:enabled="false"
         android:icon="@drawable/ic_baseline_perm_identity_35"
         android:title="@string/btn_perfil"/>
 </menu>

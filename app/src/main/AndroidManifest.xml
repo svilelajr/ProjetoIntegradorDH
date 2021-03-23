@@ -21,6 +21,8 @@
         <activity android:name=".activities.SearchScreen" />
         <activity android:name=".activities.DetailsScreen" />
         <activity android:name=".activities.MovieScreen" />
+        <activity android:name=".activities.LoginScreen" />
+        <activity android:name=".activities.RegisterScreen" />
     </application>
 
 </manifest>

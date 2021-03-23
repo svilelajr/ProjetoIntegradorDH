@@ -24,9 +24,25 @@ object ListaFilmes {
 
     }
 
-    fun getListaDefilmes(): MutableList<Movie> {
+    fun getListaDefilmeAcao(): MutableList<Movie> {
         return filmes()
     }
+    fun getListaDefilmeComedia(): MutableList<Movie> {
+        return filmes()
+    }
+    fun getListaDefilmeTerror(): MutableList<Movie> {
+        return filmes()
+    }
+    fun getListaDefilmeRomance(): MutableList<Movie> {
+        return filmes()
+    }
+    fun getListaDefilmeSuspense(): MutableList<Movie> {
+        return filmes()
+    }
+    fun getListaDefilmeDrama(): MutableList<Movie> {
+        return filmes()
+    }
+
 
 }
 
