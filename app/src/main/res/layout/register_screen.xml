@@ -52,28 +52,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_genre_register"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
+    <Spinner
+        android:id="@+id/spnCadastroGenero"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textColorHint="@color/rosa_principal"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:hint="Genêro"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_name_register">
+        app:layout_constraintTop_toBottomOf="@+id/til_name_register"/>
 
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:textColor="@color/rosa_principal"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_email_register"
@@ -85,7 +74,7 @@
         android:textColorHint="@color/rosa_principal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_genre_register">
+        app:layout_constraintTop_toBottomOf="@+id/spnCadastroGenero">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email_register"

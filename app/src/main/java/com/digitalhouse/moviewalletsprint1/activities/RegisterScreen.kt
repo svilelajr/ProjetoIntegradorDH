@@ -18,16 +18,28 @@ class RegisterScreen : AppCompatActivity(),Utils {
     private val fieldEmailLayout by lazy { findViewById<TextInputLayout>(R.id.til_email_register) }
     private val fieldPasswordLayout by lazy { findViewById<TextInputLayout>(R.id.til_password_register) }
     private val fieldConfirmPasswordLayout by lazy {findViewById<TextInputLayout>(R.id.til_confirmpassword_register) }
-    private val textField by lazy { findViewById<TextInputLayout>(R.id.til_genre_register) }
+    private val spinnerGender by lazy { findViewById<Spinner>(R.id.spnCadastroGenero) }
     private val btnConfirm by lazy { findViewById<Button>(R.id.confirm_button)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_screen)
 
-        val items = listOf("Masculino", "Feminino")
-        val adapter = ArrayAdapter(this, R.layout.list_item, items)
-        (textField.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+        //Criando uma lista de opções para o Spinner
+        val listaGenero = arrayListOf("Selecione o gênero", "Feminino", "Masculino", "Não-binário")
+
+        //Criando um adaptador para o spinner
+        val generoAdapter = ArrayAdapter(
+                this,                                               //contexto
+                android.R.layout.simple_spinner_dropdown_item,      //layout
+                listaGenero                                         //Dados
+        )
+
+        //Plugar o adaptador no Spinner
+        spinnerGender.adapter = generoAdapter
+
+
+
 
         initClick()
     }
