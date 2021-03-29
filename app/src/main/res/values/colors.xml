@@ -14,4 +14,6 @@
     <color name="subtextox_app">#8492A6</color>
     <color name="textos_app">#343F4B</color>
     <color name="cinza_sinopse">#47525E</color>
+    <color name="cinza_escuro">#47525E</color>
+    <color name ="rosa_claro">#66F7146F</color>
 </resources>

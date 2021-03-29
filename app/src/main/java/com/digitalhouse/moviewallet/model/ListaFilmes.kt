@@ -1,7 +1,7 @@
 package com.digitalhouse.moviewallet.data
 
 
-import com.digitalhouse.moviewalletsprint1.R
+import com.digitalhouse.moviewallet.R
 
 object ListaFilmes {
 

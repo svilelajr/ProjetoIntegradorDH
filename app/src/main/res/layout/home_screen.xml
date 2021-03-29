@@ -13,7 +13,8 @@
         android:background="@color/rosa_principal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/logo_mw_app"
@@ -36,7 +37,7 @@
     <ImageButton
         android:id="@+id/ib_search_home"
         android:layout_width="37dp"
-        android:layout_height="36dp"
+        android:layout_height="37dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
@@ -53,29 +54,19 @@
         android:text="EXPLORAR"
         android:background="?android:attr/selectableItemBackground"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tb_home"
         app:layout_constraintEnd_toStartOf="@+id/ib_search_home"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/rosa_principal_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tb_home" />
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bn_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout">
+        app:layout_constraintTop_toBottomOf="@+id/tb_home">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -87,8 +78,7 @@
                 android:id="@+id/rv_release_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:background="@color/rosa_principal_background"
+                android:layout_marginBottom="8dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toTopOf="@+id/rv_category_home"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -100,16 +90,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:shadowColor="@color/black"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="2"
+                android:layout_marginTop="8dp"
                 android:text="LANÇAMENTOS"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/rv_release_home"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:elevation="10dp"
+                app:layout_constraintTop_toTopOf="@+id/rv_release_home" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_category_home"

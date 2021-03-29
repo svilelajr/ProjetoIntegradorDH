@@ -1,4 +1,4 @@
-package com.digitalhouse.moviewalletsprint1
+package com.digitalhouse.moviewallet
 
 import org.junit.Test
 

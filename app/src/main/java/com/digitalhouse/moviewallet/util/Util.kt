@@ -1,8 +1,8 @@
-package com.digitalhouse.moviewalletsprint1.utils
+package com.digitalhouse.moviewallet.util
 
 import com.google.android.material.textfield.TextInputLayout
 
-interface Utils {
+interface Util {
 
     fun validateEmail(layout: TextInputLayout):Boolean {
         if (android.util.Patterns.EMAIL_ADDRESS.matcher(layout.editText?.text.toString()).matches()) {

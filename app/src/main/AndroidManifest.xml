@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.digitalhouse.moviewalletsprint1">
+    package="com.digitalhouse.moviewallet">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -10,19 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieWallet"
         >
-        <activity android:name=".activities.MainActivity">
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HomeScreen" />
-        <activity android:name=".activities.SearchScreen" />
-        <activity android:name=".activities.DetailsScreen" />
-        <activity android:name=".activities.MovieScreen" />
-        <activity android:name=".activities.LoginScreen" />
-        <activity android:name=".activities.RegisterScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.HomeScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.SearchScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.DetailsScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.LoginScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.RegisterScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.ContextScreen" />
     </application>
 
 </manifest>

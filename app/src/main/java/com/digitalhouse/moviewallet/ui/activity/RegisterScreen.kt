@@ -1,25 +1,24 @@
-package com.digitalhouse.moviewalletsprint1.activities
+package com.digitalhouse.moviewallet.ui.activity
 
-import android.content.ContentProvider
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
-import com.digitalhouse.moviewalletsprint1.R
-import com.digitalhouse.moviewalletsprint1.utils.Utils
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.util.Util
 import com.google.android.material.textfield.TextInputLayout
 
-class RegisterScreen : AppCompatActivity(),Utils {
+class RegisterScreen : AppCompatActivity(),Util {
     private val fieldNameLayout by lazy { findViewById<TextInputLayout>(R.id.til_name_register) }
     private val fieldEmailLayout by lazy { findViewById<TextInputLayout>(R.id.til_email_register) }
     private val fieldPasswordLayout by lazy { findViewById<TextInputLayout>(R.id.til_password_register) }
     private val fieldConfirmPasswordLayout by lazy {findViewById<TextInputLayout>(R.id.til_confirmpassword_register) }
     private val spinnerGender by lazy { findViewById<Spinner>(R.id.spnCadastroGenero) }
     private val btnConfirm by lazy { findViewById<Button>(R.id.confirm_button)}
+
+    private lateinit var viewModel: RegisterScreen
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

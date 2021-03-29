@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.data.Category
 import com.digitalhouse.moviewallet.data.Movie
-import com.digitalhouse.moviewalletsprint1.R
-import com.digitalhouse.moviewalletsprint1.activities.MovieScreen
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 
 class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Category>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
@@ -33,7 +33,7 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Categ
         recyclerViewFilmes.setRecycledViewPool(viewPool)
 
         buttonVerMais.setOnClickListener{
-            val intent= Intent(it.context, MovieScreen::class.java)
+            val intent= Intent(it.context, ContextScreen::class.java)
             val movieArray:ArrayList<Movie> = ArrayList(listaDeCategorias[position].listaDeFilmes)
             intent.putExtra("NAME",listaDeCategorias[position].categoria)
             intent.putExtra("MOVIES",movieArray)

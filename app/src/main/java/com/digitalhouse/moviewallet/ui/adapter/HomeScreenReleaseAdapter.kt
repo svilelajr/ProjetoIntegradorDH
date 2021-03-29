@@ -1,4 +1,4 @@
-package com.digitalhouse.moviewalletsprint1.adpaters
+package com.digitalhouse.moviewallet.ui.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.data.Movie
-import com.digitalhouse.moviewalletsprint1.R
-import com.digitalhouse.moviewalletsprint1.activities.DetailsScreen
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
 
 class HomeScreenReleaseAdapter(private val listRelease: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenReleaseAdapter.HomeScreenReleaseViewHolder>() {
 
@@ -18,12 +18,13 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<Movie>) : Re
     override fun getItemCount() = listRelease.size
 
     override fun onBindViewHolder(holder: HomeScreenReleaseViewHolder, position: Int) {
+        val position = listRelease[position]
         val img = holder.imgView
-        img.setImageResource(listRelease[position].poster)
+        img.setImageResource(position.poster)
         holder.cvMovie.setOnClickListener{
             val intent= Intent(it.context,DetailsScreen::class.java)
-            intent.putExtra("NAME_MOVIE", listRelease[position].nomeDoFilme)
-            intent.putExtra("IMAGE_MOVIE", listRelease[position].poster)
+            intent.putExtra("NAME_MOVIE", position.nomeDoFilme)
+            intent.putExtra("IMAGE_MOVIE", position.poster)
             it.context.startActivity(intent)
         }
 

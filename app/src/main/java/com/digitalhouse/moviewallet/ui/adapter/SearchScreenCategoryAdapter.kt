@@ -1,4 +1,4 @@
-package com.digitalhouse.moviewalletsprint1.adpaters
+package com.digitalhouse.moviewallet.ui.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.data.Category
 import com.digitalhouse.moviewallet.data.Movie
 
-import com.digitalhouse.moviewalletsprint1.R
-import com.digitalhouse.moviewalletsprint1.activities.MovieScreen
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 
 class SearchScreenCategoryAdapter(val listaDeCategorias: MutableList<Category>) : RecyclerView.Adapter<SearchScreenCategoryAdapter.SearchScreenCategoryViewHolder>() {
 
@@ -20,14 +20,16 @@ class SearchScreenCategoryAdapter(val listaDeCategorias: MutableList<Category>) 
     override fun getItemCount() = listaDeCategorias.size
 
     override fun onBindViewHolder(holder: SearchScreenCategoryViewHolder, position: Int) {
+        val position = listaDeCategorias[position]
         val nome = holder.nomeCategoria
-        nome.text = listaDeCategorias[position].categoria
         val btCategory = holder.btCategory
+        nome.text = position.categoria
+
 
         btCategory.setOnClickListener {
-            val intent= Intent(it.context, MovieScreen::class.java)
-            val movieArray:ArrayList<Movie> = ArrayList(listaDeCategorias[position].listaDeFilmes)
-            intent.putExtra("NAME",listaDeCategorias[position].categoria)
+            val intent= Intent(it.context, ContextScreen::class.java)
+            val movieArray:ArrayList<Movie> = ArrayList(position.listaDeFilmes)
+            intent.putExtra("NAME",position.categoria)
             intent.putExtra("MOVIES",movieArray)
             it.context.startActivity(intent)
         }

@@ -1,17 +1,17 @@
-package com.digitalhouse.moviewalletsprint1.activities
+package com.digitalhouse.moviewallet.ui.activity
 
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.digitalhouse.moviewalletsprint1.R
+import com.digitalhouse.moviewallet.R
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.screen_splash)
+        setContentView(R.layout.splash_screen)
         goToHome()
     }
 

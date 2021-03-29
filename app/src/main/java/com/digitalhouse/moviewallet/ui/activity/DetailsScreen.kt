@@ -1,16 +1,19 @@
-package com.digitalhouse.moviewalletsprint1.activities
+package com.digitalhouse.moviewallet.ui.activity
 
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
-import com.digitalhouse.moviewalletsprint1.R
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 
 class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
     private val ivMovie by lazy { findViewById<ImageView>(R.id.iv_movie_details) }
     private val tvMovie by lazy { findViewById<TextView>(R.id.tv_title_details) }
+
+    private lateinit var viewModel: DetailsViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

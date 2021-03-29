@@ -1,10 +1,8 @@
-package com.digitalhouse.moviewalletsprint1.activities
+package com.digitalhouse.moviewallet.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.adapters.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.data.ListaCategorias
 import com.digitalhouse.moviewallet.data.ListaFilmes
-import com.digitalhouse.moviewalletsprint1.R
-import com.digitalhouse.moviewalletsprint1.adpaters.HomeScreenReleaseAdapter
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
+import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeScreen : AppCompatActivity() {
@@ -45,6 +42,9 @@ class HomeScreen : AppCompatActivity() {
         }
         false
     }
+
+    private lateinit var viewModel: HomeViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
