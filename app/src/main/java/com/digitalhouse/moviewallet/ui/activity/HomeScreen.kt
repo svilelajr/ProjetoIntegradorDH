@@ -14,6 +14,7 @@ import com.digitalhouse.moviewallet.adapters.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Genre
+import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -49,7 +50,9 @@ class HomeScreen : AppCompatActivity() {
 
     private lateinit var viewModel: HomeViewModel
     var listGenres = mutableListOf<Genre>()
+    var listReleaseMovies = mutableListOf<Movie>()
     val adapterGenre = HomeScreenCategoryAdapter(listGenres)
+    val adapterRelease = HomeScreenReleaseAdapter(listReleaseMovies)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,8 +61,16 @@ class HomeScreen : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
         viewModel.listGenre.observe(this, Observer {
-            it?.let { listGenres.addAll(it)
-            adapterGenre.notifyDataSetChanged()}
+            it?.let {
+                listGenres.addAll(it)
+                adapterGenre.notifyDataSetChanged()
+            }
+        })
+        viewModel.listReleaseMovie.observe(this, Observer {
+            it?.let {
+                listReleaseMovies.addAll(it)
+                adapterRelease.notifyDataSetChanged()
+            }
         })
         setupRecyclerView()
         initClick()
@@ -74,7 +85,7 @@ class HomeScreen : AppCompatActivity() {
         recyclerViewCategoria.adapter = adapterGenre
         recyclerRelease.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerRelease.adapter = HomeScreenReleaseAdapter(ListaFilmes.getListaDefilmeAcao())
+        recyclerRelease.adapter = adapterRelease
         recyclerViewCategoria.isNestedScrollingEnabled
     }
 

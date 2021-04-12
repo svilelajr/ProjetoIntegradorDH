@@ -11,9 +11,11 @@ import com.digitalhouse.moviewallet.data.Category
 import com.digitalhouse.moviewallet.data.Movie
 
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.data.ListaFilmes
+import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 
-class SearchScreenCategoryAdapter(val listaDeCategorias: MutableList<Category>) : RecyclerView.Adapter<SearchScreenCategoryAdapter.SearchScreenCategoryViewHolder>() {
+class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>) : RecyclerView.Adapter<SearchScreenCategoryAdapter.SearchScreenCategoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = SearchScreenCategoryViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_search_category, parent, false))
 
@@ -23,13 +25,13 @@ class SearchScreenCategoryAdapter(val listaDeCategorias: MutableList<Category>) 
         val position = listaDeCategorias[position]
         val nome = holder.nomeCategoria
         val btCategory = holder.btCategory
-        nome.text = position.categoria
+        nome.text = position.name
 
 
         btCategory.setOnClickListener {
             val intent= Intent(it.context, ContextScreen::class.java)
-            val movieArray:ArrayList<Movie> = ArrayList(position.listaDeFilmes)
-            intent.putExtra("NAME",position.categoria)
+            val movieArray:ArrayList<Movie> = ArrayList(ListaFilmes.getListaDefilmeAcao())
+            intent.putExtra("NAME",position.name)
             intent.putExtra("MOVIES",movieArray)
             it.context.startActivity(intent)
         }

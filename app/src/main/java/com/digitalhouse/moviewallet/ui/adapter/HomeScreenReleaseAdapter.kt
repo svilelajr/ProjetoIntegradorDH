@@ -11,7 +11,7 @@ import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
 
-class HomeScreenReleaseAdapter(private val listRelease: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenReleaseAdapter.HomeScreenReleaseViewHolder>() {
+class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalhouse.moviewallet.model.Movie>) : RecyclerView.Adapter<HomeScreenReleaseAdapter.HomeScreenReleaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HomeScreenReleaseViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_home_release, parent, false))
 
@@ -20,11 +20,11 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<Movie>) : Re
     override fun onBindViewHolder(holder: HomeScreenReleaseViewHolder, position: Int) {
         val position = listRelease[position]
         val img = holder.imgView
-        img.setImageResource(position.poster)
+//        img.setImageResource(position.backdropPath)
         holder.cvMovie.setOnClickListener{
             val intent= Intent(it.context,DetailsScreen::class.java)
-            intent.putExtra("NAME_MOVIE", position.nomeDoFilme)
-            intent.putExtra("IMAGE_MOVIE", position.poster)
+            intent.putExtra("NAME_MOVIE", position.title)
+            intent.putExtra("IMAGE_MOVIE", position.backdropPath)
             it.context.startActivity(intent)
         }
 

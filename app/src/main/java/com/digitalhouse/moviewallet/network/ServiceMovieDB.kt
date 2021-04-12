@@ -17,7 +17,7 @@ interface ServiceMovieDB {
         @Query("language") language: String?
     ): ListGenre
 
-    @GET("/movie/now_playing")
+    @GET("movie/now_playing")
     suspend fun getReleaseMovie(): ReleaseMovie
 
 }
