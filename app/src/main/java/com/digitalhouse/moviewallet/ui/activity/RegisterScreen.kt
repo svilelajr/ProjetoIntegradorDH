@@ -6,7 +6,10 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
+import com.digitalhouse.moviewallet.ui.viewmodel.RegisterViewModel
 import com.digitalhouse.moviewallet.util.Util
 import com.google.android.material.textfield.TextInputLayout
 
@@ -18,11 +21,12 @@ class RegisterScreen : AppCompatActivity(),Util {
     private val spinnerGender by lazy { findViewById<Spinner>(R.id.spnCadastroGenero) }
     private val btnConfirm by lazy { findViewById<Button>(R.id.confirm_button)}
 
-    private lateinit var viewModel: RegisterScreen
+    private lateinit var viewModel: RegisterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_screen)
+        viewModel = ViewModelProvider.NewInstanceFactory().create(RegisterViewModel::class.java)
 
         //Criando uma lista de opções para o Spinner
         val listaGenero = arrayListOf("Selecione o gênero", "Feminino", "Masculino", "Não-binário")
@@ -37,14 +41,10 @@ class RegisterScreen : AppCompatActivity(),Util {
         //Plugar o adaptador no Spinner
         spinnerGender.adapter = generoAdapter
 
-
-
-
         initClick()
     }
 
     private fun initClick() {
-//
         btnConfirm.setOnClickListener{
             if(validateName(fieldNameLayout) && validateEmail(fieldEmailLayout) && validadePassword(fieldPasswordLayout) && validadeConfirmPassword(fieldPasswordLayout,fieldConfirmPasswordLayout)){
                 val intent = Intent(this,HomeScreen::class.java)

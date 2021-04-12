@@ -8,12 +8,14 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Category
 import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.data.ListaCategorias
+import com.digitalhouse.moviewallet.data.ListaFilmes
+import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 
-class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Category>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
+class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
     private val viewPool = RecyclerView.RecycledViewPool()
 
@@ -27,15 +29,15 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Categ
         val buttonVerMais = holder.buttonVerMais
         val recyclerViewFilmes = holder.recyclerViewFilmes
 
-        tipoDeCategorias.text = listaCategorias.categoria
+        tipoDeCategorias.text = listaCategorias.name
         recyclerViewFilmes.layoutManager = LinearLayoutManager(holder.recyclerViewFilmes.context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewFilmes.adapter = HomeScreenMovieAdapter(listaCategorias.listaDeFilmes)
+        recyclerViewFilmes.adapter = HomeScreenMovieAdapter(ListaFilmes.getListaDefilmeAcao())
         recyclerViewFilmes.setRecycledViewPool(viewPool)
 
         buttonVerMais.setOnClickListener{
             val intent= Intent(it.context, ContextScreen::class.java)
-            val movieArray:ArrayList<Movie> = ArrayList(listaDeCategorias[position].listaDeFilmes)
-            intent.putExtra("NAME",listaDeCategorias[position].categoria)
+            val movieArray:ArrayList<Movie> = ArrayList(ListaFilmes.getListaDefilmeAcao())
+            intent.putExtra("NAME",listaDeCategorias[position].name)
             intent.putExtra("MOVIES",movieArray)
             it.context.startActivity(intent)
         }

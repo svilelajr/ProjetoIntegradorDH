@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.digitalhouse.moviewallet.ui.viewmodel.LoginViewModel
 import com.digitalhouse.moviewallet.util.Util
 import com.google.android.material.textfield.TextInputLayout
@@ -21,8 +23,8 @@ class LoginScreen: AppCompatActivity(),Util {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
+        viewModel = ViewModelProvider.NewInstanceFactory().create(LoginViewModel::class.java)
         initClick()
-
     }
 
     private fun initClick(){

@@ -3,6 +3,7 @@ package com.digitalhouse.moviewallet.ui.activity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.data.ListaCategorias
@@ -10,6 +11,7 @@ import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.adapter.SearchScreenCategoryAdapter
 import com.digitalhouse.moviewallet.ui.adapter.SearchScreenLastSeeAdapter
+import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.digitalhouse.moviewallet.ui.viewmodel.SearchViewModel
 
 class SearchScreen() : AppCompatActivity() {
@@ -22,11 +24,10 @@ class SearchScreen() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_screen)
+        viewModel = ViewModelProvider.NewInstanceFactory().create(SearchViewModel::class.java)
+
         setupRecycler()
-        setSupportActionBar(toolbar)
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
+        setupToolbar()
     }
 
     private fun setupRecycler() {
@@ -39,6 +40,13 @@ class SearchScreen() : AppCompatActivity() {
         recyclerCategorias.adapter = SearchScreenCategoryAdapter(ListaCategorias.getCategorias())
 
         recyclerCategorias.isNestedScrollingEnabled
+    }
+
+    private fun setupToolbar() {
+        setSupportActionBar(toolbar)
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 }
 

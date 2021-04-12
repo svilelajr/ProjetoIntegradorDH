@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 
@@ -14,10 +15,11 @@ class DetailsScreen : AppCompatActivity() {
 
     private lateinit var viewModel: DetailsViewModel
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.details_screen)
+        viewModel = ViewModelProvider.NewInstanceFactory().create(DetailsViewModel::class.java)
+
         initViews()
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener {
