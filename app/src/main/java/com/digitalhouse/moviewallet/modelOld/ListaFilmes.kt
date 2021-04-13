@@ -2,6 +2,7 @@ package com.digitalhouse.moviewallet.data
 
 
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 
 object ListaFilmes {
 

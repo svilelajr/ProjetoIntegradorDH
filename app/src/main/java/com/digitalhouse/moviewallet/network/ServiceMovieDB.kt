@@ -1,9 +1,6 @@
 package com.digitalhouse.moviewallet.network
 
-import com.digitalhouse.moviewallet.model.Genre
-import com.digitalhouse.moviewallet.model.ListGenre
-import com.digitalhouse.moviewallet.model.MovieConfiguration
-import com.digitalhouse.moviewallet.model.ReleaseMovie
+import com.digitalhouse.moviewallet.model.*
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -19,5 +16,11 @@ interface ServiceMovieDB {
 
     @GET("movie/now_playing")
     suspend fun getReleaseMovie(): ReleaseMovie
+
+    @GET("discover/movie")
+    suspend fun getMoviesByGenre(
+        @Query("language") language: String?,
+        @Query("with_genres") genre:String?
+    ):DiscoverMovies
 
 }

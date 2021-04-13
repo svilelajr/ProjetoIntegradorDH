@@ -18,10 +18,16 @@ class HomeViewModel : ViewModel() {
     val listGenre:LiveData<List<Genre>> = _listGenre
     val listReleaseMovie = MutableLiveData<List<Movie>>()
 
+
+    companion object{
+        val listMovie = MutableLiveData<List<Movie>>()
+    }
+
     init {
         getConfiguration()
         getGenre()
         getReleaseMovies()
+        getMoviesByGenre()
     }
 
     fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
@@ -48,6 +54,16 @@ class HomeViewModel : ViewModel() {
         try {
             repository.getReleaseMovie().let { movie ->
                 listReleaseMovie.postValue(movie.releaseMovies)
+            }
+        } catch (error: Throwable) {
+            Log.e("Error", "Problema de conexão $error")
+        }
+    }
+
+    fun getMoviesByGenre() = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            repository.getMoviesByGenre().let { movie ->
+                listMovie.postValue(movie.movies)
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de conexão $error")

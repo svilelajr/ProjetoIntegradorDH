@@ -14,10 +14,13 @@ import com.digitalhouse.moviewallet.data.ListaCategorias
 import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
+import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 
 class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
     private val viewPool = RecyclerView.RecycledViewPool()
+    var listFilmes = HomeViewModel.listMovie as MutableList<Movie>
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HomeScreenCategoryViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.reciclerview_lista_de_filmes, parent, false))
 
@@ -28,10 +31,14 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre
         val tipoDeCategorias = holder.nomeDasCategorias
         val buttonVerMais = holder.buttonVerMais
         val recyclerViewFilmes = holder.recyclerViewFilmes
+        val adapterMovies = HomeScreenMovieAdapter(listFilmes)
+
+
+
 
         tipoDeCategorias.text = listaCategorias.name
         recyclerViewFilmes.layoutManager = LinearLayoutManager(holder.recyclerViewFilmes.context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewFilmes.adapter = HomeScreenMovieAdapter(ListaFilmes.getListaDefilmeAcao())
+        recyclerViewFilmes.adapter = adapterMovies
         recyclerViewFilmes.setRecycledViewPool(viewPool)
 
         buttonVerMais.setOnClickListener{

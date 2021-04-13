@@ -6,7 +6,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
+import com.squareup.picasso.Picasso
 
 class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
@@ -28,11 +31,16 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun initViews() {
+        val configuration = SingletonConfiguration.config
         val extras = intent.extras
-        val name = extras?.getString("NAME_MOVIE")
-        val image = extras?.getInt("IMAGE_MOVIE")
-        tvMovie.text = name
-        image?.let { ivMovie.setImageResource(it) }
+        val movie = extras?.getSerializable("MOVIE") as Movie
+//        val imageUrl = extras?.getString("IMAGE")
+        val imageUrl = "${configuration?.images?.base_url}${configuration?.images?.backdrop_sizes?.last()}${movie.backdropPath}"
+
+
+
+        tvMovie.text = movie.title
+        Picasso.get().load(imageUrl).into(ivMovie)
 
     }
 }

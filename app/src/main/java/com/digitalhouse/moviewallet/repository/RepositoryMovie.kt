@@ -18,4 +18,5 @@ class RepositoryMovie {
     suspend fun getConfiguration() = serviceMovie.getMoviesConfiguration()
     suspend fun getGenre() = serviceMovie.getGenre(language)
     suspend fun getReleaseMovie() = serviceMovie.getReleaseMovie()
+    suspend fun getMoviesByGenre() = serviceMovie.getMoviesByGenre(language,"18")
 }

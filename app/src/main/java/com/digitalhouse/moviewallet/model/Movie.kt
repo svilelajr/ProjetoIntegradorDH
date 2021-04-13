@@ -2,6 +2,7 @@ package com.digitalhouse.moviewallet.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Movie(
     @SerializedName("adult")
@@ -32,4 +33,4 @@ data class Movie(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+):Serializable
