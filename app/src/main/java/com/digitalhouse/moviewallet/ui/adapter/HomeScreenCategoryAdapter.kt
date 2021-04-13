@@ -8,33 +8,27 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.data.ListaCategorias
 import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
-import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
+import com.digitalhouse.moviewallet.model.Movie
 
-class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
+class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>, val listMovie: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
     private val viewPool = RecyclerView.RecycledViewPool()
-    var listFilmes = HomeViewModel.listMovie as MutableList<Movie>
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HomeScreenCategoryViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.reciclerview_lista_de_filmes, parent, false))
 
     override fun getItemCount() = listaDeCategorias.size
 
     override fun onBindViewHolder(holder: HomeScreenCategoryViewHolder, position: Int) {
+
         val listaCategorias = listaDeCategorias[position]
         val tipoDeCategorias = holder.nomeDasCategorias
         val buttonVerMais = holder.buttonVerMais
         val recyclerViewFilmes = holder.recyclerViewFilmes
-        val adapterMovies = HomeScreenMovieAdapter(listFilmes)
-
-
-
+        val adapterMovies = HomeScreenMovieAdapter(listMovie)
 
         tipoDeCategorias.text = listaCategorias.name
         recyclerViewFilmes.layoutManager = LinearLayoutManager(holder.recyclerViewFilmes.context, LinearLayoutManager.HORIZONTAL, false)
@@ -43,12 +37,15 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre
 
         buttonVerMais.setOnClickListener{
             val intent= Intent(it.context, ContextScreen::class.java)
-            val movieArray:ArrayList<Movie> = ArrayList(ListaFilmes.getListaDefilmeAcao())
             intent.putExtra("NAME",listaDeCategorias[position].name)
-            intent.putExtra("MOVIES",movieArray)
             it.context.startActivity(intent)
         }
+
+        fun getCategoryPosition(): Int? {
+            return listaDeCategorias[position].id
+        }
     }
+
 
     inner class HomeScreenCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nomeDasCategorias by lazy { view.findViewById<TextView>(R.id.txt_categorias) }

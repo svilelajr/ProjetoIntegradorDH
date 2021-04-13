@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.digitalhouse.moviewallet.adapters.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.repository.RepositoryMovie
@@ -17,17 +18,18 @@ class HomeViewModel : ViewModel() {
     val _listGenre = MutableLiveData<List<Genre>>()
     val listGenre:LiveData<List<Genre>> = _listGenre
     val listReleaseMovie = MutableLiveData<List<Movie>>()
+    val listMovie = MutableLiveData<List<Movie>>()
+    private var genreId = getGenreId()
 
 
-    companion object{
-        val listMovie = MutableLiveData<List<Movie>>()
-    }
+
 
     init {
         getConfiguration()
         getGenre()
         getReleaseMovies()
-        getMoviesByGenre()
+        getMoviesByGenre(genreId)
+
     }
 
     fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
@@ -60,13 +62,22 @@ class HomeViewModel : ViewModel() {
         }
     }
 
-    fun getMoviesByGenre() = CoroutineScope(Dispatchers.IO).launch {
+    fun getMoviesByGenre(genreId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
-            repository.getMoviesByGenre().let { movie ->
+            repository.getMoviesByGenre(genreId).let { movie ->
                 listMovie.postValue(movie.movies)
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de conexão $error")
         }
     }
+
+    fun getGenreId(): String {
+        var id:String = ""
+        listGenre.value?.forEach { id = it.id.toString()}
+
+        return id
+    }
+
 }
+

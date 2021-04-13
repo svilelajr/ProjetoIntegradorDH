@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
+import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.repository.SingletonConfiguration
+import com.squareup.picasso.Picasso
 
 class HomeScreenMovieAdapter(private val listaFilme: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenMovieAdapter.HomeScreenMovieViewHolder>() {
 
@@ -18,13 +20,15 @@ class HomeScreenMovieAdapter(private val listaFilme: MutableList<Movie>) : Recyc
     override fun getItemCount() = listaFilme.size
 
     override fun onBindViewHolder(holder: HomeScreenMovieViewHolder, position: Int) {
+
         val position = listaFilme[position]
+        val configuration = SingletonConfiguration.config
+        val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(4)}${position.posterPath}"
         val poster = holder.imgPoster
-        poster.setImageResource(position.poster)
+        Picasso.get().load(imageUrl).into(poster)
         holder.cvMovie.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
-            intent.putExtra("NAME_MOVIE", position.nomeDoFilme)
-            intent.putExtra("IMAGE_MOVIE", position.poster)
+            intent.putExtra("NAME_MOVIE", position.originalTitle)
             it.context.startActivity(intent)
         }
     }

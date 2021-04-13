@@ -51,8 +51,9 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var viewModel: HomeViewModel
     var listGenres = mutableListOf<Genre>()
     var listReleaseMovies = mutableListOf<Movie>()
-    val adapterGenre = HomeScreenCategoryAdapter(listGenres)
+    var listMovie = mutableListOf<Movie>()
     val adapterRelease = HomeScreenReleaseAdapter(listReleaseMovies)
+    val adapterGenre = HomeScreenCategoryAdapter(listGenres, listMovie)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,8 +73,15 @@ class HomeScreen : AppCompatActivity() {
                 adapterRelease.notifyDataSetChanged()
             }
         })
+        viewModel.listMovie.observe(this, Observer {
+            it.let {
+                listMovie.addAll(it)
+                adapterGenre.notifyDataSetChanged()
+            }
+        })
         setupRecyclerView()
         initClick()
+
 
         bottomNavigate.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
