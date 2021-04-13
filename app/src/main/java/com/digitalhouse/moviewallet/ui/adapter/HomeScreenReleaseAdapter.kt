@@ -23,7 +23,7 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalh
     override fun onBindViewHolder(holder: HomeScreenReleaseViewHolder, position: Int) {
         val movie = listRelease[position]
         val configuration = SingletonConfiguration.config
-        val imageUrl = "${configuration?.images?.base_url}${configuration?.images?.backdrop_sizes?.get(0)}${movie.backdropPath}"
+        val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(0)}${movie.backdropPath}"
         holder.tvMovie.text = movie.title
         Picasso.get().load(imageUrl).into(holder.imgView)
 

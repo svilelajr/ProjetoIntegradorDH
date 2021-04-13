@@ -21,9 +21,6 @@ class HomeViewModel : ViewModel() {
     val listMovie = MutableLiveData<List<Movie>>()
     private var genreId = getGenreId()
 
-
-
-
     init {
         getConfiguration()
         getGenre()
