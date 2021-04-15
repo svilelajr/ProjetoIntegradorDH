@@ -1,0 +1,2 @@
+com/digitalhouse/moviewallet/BuildConfig.java
+ com.digitalhouse.moviewallet.BuildConfig
