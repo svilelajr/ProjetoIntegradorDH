@@ -35,7 +35,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3539e461cd3f7ece]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RX8NB08XE0V]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,7 +64,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Teste" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +87,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ANDROID012020-master/AndroidStudio/marvelApi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
@@ -199,9 +199,10 @@
     <state width="424" height="466" key="DebuggerActiveHint/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618370223123" />
     <state width="427" height="839" key="DebuggerActiveHint/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443385364" />
     <state width="541" height="466" key="DebuggerActiveHint/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451537614" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1618539297276">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-664" y="502" key="FileChooserDialogImpl" timestamp="1618615579809">
+      <screen x="-1080" y="0" width="1080" height="1890" />
     </state>
+    <state x="-664" y="502" key="FileChooserDialogImpl/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618615579809" />
     <state x="740" y="279" key="FileChooserDialogImpl/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618539297276" />
     <state width="1876" height="284" key="GridCell.Tab.0.bottom" timestamp="1618543592575">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -276,10 +277,19 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="968" height="533" key="XDebugger.FullValuePopup/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451502629" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618456985896">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618616152807">
+      <screen x="-1080" y="0" width="1080" height="1890" />
     </state>
+    <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618616152807" />
+    <state x="-1028" y="166" width="977" height="1559" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618616486431">
+      <screen x="-1080" y="0" width="1080" height="1890" />
+    </state>
+    <state x="-1028" y="166" width="977" height="1559" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618616486431" />
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618456985896" />
+    <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1618616152807">
+      <screen x="-1080" y="0" width="1080" height="1890" />
+    </state>
+    <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618616152807" />
     <state x="-1080" y="0" width="1096" height="1037" maximized="true" key="dock-window-1" timestamp="1618582831371">
       <screen x="-1080" y="0" width="1080" height="1890" />
     </state>

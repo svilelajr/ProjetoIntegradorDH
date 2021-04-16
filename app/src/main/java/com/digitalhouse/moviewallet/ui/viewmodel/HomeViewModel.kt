@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.digitalhouse.moviewallet.adapters.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.model.MovieRecycler
 import com.digitalhouse.moviewallet.repository.RepositoryMovie
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import kotlinx.coroutines.CoroutineScope
@@ -16,36 +16,46 @@ import kotlinx.coroutines.launch
 class HomeViewModel : ViewModel() {
     private val repository = RepositoryMovie()
     val _listGenre = MutableLiveData<List<Genre>>()
-    val listGenre:LiveData<List<Genre>> = _listGenre
+    val listGenre: MutableLiveData<List<Genre>> = MutableLiveData()
+    val loading = MutableLiveData<Boolean>()
     val listReleaseMovie = MutableLiveData<List<Movie>>()
-    val listMovie = MutableLiveData<List<Movie>>()
-    private var genreId = getGenreId()
-
-    init {
-        getConfiguration()
-        getGenre()
-        getReleaseMovies()
-        getMoviesByGenre(genreId)
-
-    }
+    var genreApi = mutableListOf<Genre>()
+    val genreView = listOf("28", "12", "35", "18", "10751", "27")
 
     fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
         try {
             repository.getConfiguration().let { configuration ->
                 SingletonConfiguration.setConfiguration(configuration)
+                getGenre()
+                getReleaseMovies()
             }
         } catch (error: Throwable) {
-            Log.e("Error", "Problema de conexão $error")
+            Log.e("Error", "Problema de Configuration $error")
         }
     }
 
     fun getGenre() = CoroutineScope(Dispatchers.IO).launch {
         try {
-            repository.getGenre().let { genre ->
-                _listGenre.postValue(genre.genres)
+            repository.getGenre().let {
+                _listGenre.postValue(it.genres)
+                genreApi = it.genres as MutableList<Genre>
+                genreApi.forEach { genreApi ->
+                    repository.getMoviesByGenre(genreApi.id.toString()).let { movie ->
+                        genreApi.movies = movie.movies as MutableList<MovieRecycler>?
+                    }
+                }
             }
+
+            listGenre.postValue(genreApi)
+
         } catch (error: Throwable) {
-            Log.e("Error", "Problema de conexão $error")
+            Log.e("Error", "Problema de Genre $error")
+        }
+    }
+
+    fun getMoviesByGenre(genreId: String?) = CoroutineScope(Dispatchers.IO).launch {
+        repository.getMoviesByGenre(genreId).let { movie ->
+
         }
     }
 
@@ -55,26 +65,21 @@ class HomeViewModel : ViewModel() {
                 listReleaseMovie.postValue(movie.releaseMovies)
             }
         } catch (error: Throwable) {
-            Log.e("Error", "Problema de conexão $error")
+            Log.e("Error", "Problema de Release $error")
         }
     }
 
-    fun getMoviesByGenre(genreId: String) = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            repository.getMoviesByGenre(genreId).let { movie ->
-                listMovie.postValue(movie.movies)
+    fun getGenreView(genre: Genre) {
+        genreView.forEach { genreV ->
+            if (genreV == genre.id.toString()) {
+                _listGenre.postValue(listOf(genre))
             }
-        } catch (error: Throwable) {
-            Log.e("Error", "Problema de conexão $error")
         }
     }
-
-    fun getGenreId(): String {
-        var id:String = ""
-        listGenre.value?.forEach { id = it.id.toString()}
-
-        return id
-    }
-
 }
+
+
+
+
+
 

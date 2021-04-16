@@ -7,7 +7,7 @@ data class DiscoverMovies(
     @SerializedName("page")
     val page: Int?,
     @SerializedName("results")
-    val movies: List<Movie>?,
+    val movies: List<MovieRecycler>?,
     @SerializedName("total_pages")
     val totalPages: Int?,
     @SerializedName("total_results")
