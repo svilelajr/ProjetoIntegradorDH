@@ -1,7 +1,7 @@
-#Thu Apr 15 08:32:01 BRT 2021
-base.0=C\:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\NOVOMOVIEWALLET\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Fri Apr 16 11:38:41 BRT 2021
+base.0=C\:\\Users\\gportoma\\Downloads\\ProjetoIntegradorDH-Teste\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\NOVOMOVIEWALLET\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.1=C\:\\Users\\gportoma\\Downloads\\ProjetoIntegradorDH-Teste\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

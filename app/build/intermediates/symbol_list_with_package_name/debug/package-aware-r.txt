@@ -2086,6 +2086,7 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_home
 id pb_splash
 id peekHeight
 id percent
