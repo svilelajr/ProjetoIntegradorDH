@@ -13,7 +13,7 @@ import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.squareup.picasso.Picasso
 
-class HomeScreenMovieAdapter(private val listaFilme: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenMovieAdapter.HomeScreenMovieViewHolder>() {
+class HomeScreenMovieAdapter(val listaFilme: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenMovieAdapter.HomeScreenMovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HomeScreenMovieViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_home_category, parent, false))
 

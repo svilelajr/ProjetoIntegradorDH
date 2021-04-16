@@ -14,11 +14,15 @@ import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 import com.digitalhouse.moviewallet.model.Movie
 
-class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre>, val listMovie: MutableList<Movie>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
+class HomeScreenCategoryAdapter( val listaDeCategorias: MutableList<Genre>) : RecyclerView.Adapter<HomeScreenCategoryAdapter.HomeScreenCategoryViewHolder>() {
 
     private val viewPool = RecyclerView.RecycledViewPool()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = HomeScreenCategoryViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.reciclerview_lista_de_filmes, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        HomeScreenCategoryViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.reciclerview_lista_de_filmes, parent, false)
+        )
 
     override fun getItemCount() = listaDeCategorias.size
 
@@ -28,23 +32,26 @@ class HomeScreenCategoryAdapter(private val listaDeCategorias: MutableList<Genre
         val tipoDeCategorias = holder.nomeDasCategorias
         val buttonVerMais = holder.buttonVerMais
         val recyclerViewFilmes = holder.recyclerViewFilmes
-        val adapterMovies = HomeScreenMovieAdapter(listMovie)
+        val adapterMovies = listaCategorias.movies?.let { HomeScreenMovieAdapter(it) }
+        adapterMovies?.notifyDataSetChanged()
 
         tipoDeCategorias.text = listaCategorias.name
-        recyclerViewFilmes.layoutManager = LinearLayoutManager(holder.recyclerViewFilmes.context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewFilmes.layoutManager = LinearLayoutManager(
+            holder.recyclerViewFilmes.context,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         recyclerViewFilmes.adapter = adapterMovies
         recyclerViewFilmes.setRecycledViewPool(viewPool)
 
-        buttonVerMais.setOnClickListener{
-            val intent= Intent(it.context, ContextScreen::class.java)
-            intent.putExtra("NAME",listaDeCategorias[position].name)
+
+        buttonVerMais.setOnClickListener {
+            val intent = Intent(it.context, ContextScreen::class.java)
+            intent.putExtra("NAME", listaDeCategorias[position].name)
             it.context.startActivity(intent)
         }
-
-        fun getCategoryPosition(): Int? {
-            return listaDeCategorias[position].id
-        }
     }
+
 
 
     inner class HomeScreenCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {

@@ -2,7 +2,10 @@ package com.digitalhouse.moviewallet.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Button
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
@@ -25,6 +28,7 @@ class HomeScreen : AppCompatActivity() {
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
+    lateinit var progressBar: ProgressBar
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -51,20 +55,29 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var viewModel: HomeViewModel
     var listGenres = mutableListOf<Genre>()
     var listReleaseMovies = mutableListOf<Movie>()
-    var listMovie = mutableListOf<Movie>()
     val adapterRelease = HomeScreenReleaseAdapter(listReleaseMovies)
-    val adapterGenre = HomeScreenCategoryAdapter(listGenres, listMovie)
+    val adapterGenre = HomeScreenCategoryAdapter(listGenres)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        viewModel.getConfiguration()
+        progressBar = findViewById(R.id.pb_home)
 
-        viewModel.listGenre.observe(this, Observer {
-            it?.let {
-                listGenres.addAll(it)
-                adapterGenre.notifyDataSetChanged()
+        observers()
+        setupRecyclerView()
+        initClick()
+        bottomNavigate.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+    }
+    
+    private fun observers() {
+        viewModel.loading.observe(this, Observer {
+            if (it){
+                progressBar.visibility = VISIBLE
+            }else{
+                progressBar.visibility = GONE
             }
         })
         viewModel.listReleaseMovie.observe(this, Observer {
@@ -73,17 +86,13 @@ class HomeScreen : AppCompatActivity() {
                 adapterRelease.notifyDataSetChanged()
             }
         })
-        viewModel.listMovie.observe(this, Observer {
-            it.let {
-                listMovie.addAll(it)
+        viewModel.listGenre.observe(this, Observer {
+            it?.let {
+                listGenres.addAll(it)
                 adapterGenre.notifyDataSetChanged()
             }
         })
-        setupRecyclerView()
-        initClick()
 
-
-        bottomNavigate.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
     private fun setupRecyclerView() {
