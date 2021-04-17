@@ -745,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618683528265</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Alterações cosméticas HomeScreen">
+      <created>1618703380595</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618703380595</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -764,7 +771,8 @@
     <MESSAGE value="codigo refatorado" />
     <MESSAGE value="Atualização consumo de genero com lista de filmes API" />
     <MESSAGE value="atualização do codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualização do codigo" />
+    <MESSAGE value="Alterações cosméticas HomeScreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações cosméticas HomeScreen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-810" y="691" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618441012342">
@@ -778,6 +786,10 @@
     <state x="758" y="271" key="AndroidProcessChooserDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618455423701" />
     <state x="758" y="271" key="AndroidProcessChooserDialog/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618369093900" />
     <state x="758" y="271" key="AndroidProcessChooserDialog/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451372821" />
+    <state x="504" y="95" key="CommitChangelistDialog2" timestamp="1618703343090">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="504" y="95" key="CommitChangelistDialog2/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618703343090" />
     <state width="601" height="466" key="DebuggerActiveHint" timestamp="1618538875959">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -871,11 +883,12 @@
     </state>
     <state x="0" y="0" key="SettingsEditor/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618486132526" />
     <state x="0" y="0" key="SettingsEditor/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618450084933" />
-    <state x="393" y="181" key="Vcs.Push.Dialog.v2" timestamp="1618683542998">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1618703201226">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="393" y="181" key="Vcs.Push.Dialog.v2/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1618683542998" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618487494080" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618703201226" />
     <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1618451502629">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -884,11 +897,12 @@
       <screen x="-1080" y="0" width="1080" height="1890" />
     </state>
     <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618616152807" />
-    <state x="-1028" y="166" width="977" height="1559" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618616486431">
-      <screen x="-1080" y="0" width="1080" height="1890" />
+    <state x="92" y="92" width="1737" height="867" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618703386605">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1028" y="166" width="977" height="1559" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618616486431" />
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618456985896" />
+    <state x="92" y="92" width="1737" height="867" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618703386605" />
     <state x="-988" y="92" width="896" height="1706" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1618616152807">
       <screen x="-1080" y="0" width="1080" height="1890" />
     </state>
