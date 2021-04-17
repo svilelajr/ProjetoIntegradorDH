@@ -102,7 +102,8 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/tv_title_details"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_parentalrating_details"
@@ -145,13 +146,12 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_parentalrating_details" />
 
             <TextView
-                android:id="@+id/tv_synipsis_details"
+                android:id="@+id/tv_synopsis_details"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
-                android:text="  Lorem ipsum pretium massa erat dapibus aptent eros donec elit, consequat inceptos eros enim aliquet elit sodales donec, massa dolor tellus nisi congue aptent aliquam nunc. amet fermentum neque fames proin elit ante tortor iaculis libero lacinia, aliquet curabitur aenean nunc vel turpis himenaeos amet porttitor accumsan, turpis nam hendrerit luctus sit vulputate molestie porttitor lorem. rutrum condimentum nulla adipiscing suspendisse vivamus platea sodales ultricies, lectus accumsan hendrerit platea facilisis scelerisque consectetur. himenaeos ac potenti felis ut aliquam blandit lectus aptent, urna nam euismod porttitor dapibus fringilla integer vestibulum, orci habitasse sollicitudin quam condimentum netus potenti massa dolor tellus nisi congue aptent aliquam  neq aenean nunc vel turpis himenaeos amet porttitor accumsan, turpis nam hendrerit luctus sit vulputate molestie porttitor lorem. rutrum condimentum nulla adipiscing."
                 android:textColor="@color/cinza_sinopse"
                 android:textSize="15sp"
                 android:textStyle="bold"

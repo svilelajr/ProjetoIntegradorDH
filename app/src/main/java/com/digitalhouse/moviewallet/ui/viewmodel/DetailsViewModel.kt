@@ -16,7 +16,6 @@ class DetailsViewModel: ViewModel() {
     val movieDetail by lazy{ MutableLiveData<Movie>() }
     val configuration = SingletonConfiguration.config
     var imageUrl: String = ""
-    var movieTitle: String = ""
 
     fun getMovieDetail(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
@@ -33,13 +32,6 @@ class DetailsViewModel: ViewModel() {
       imageUrl = "${configuration?.images?.base_url}${configuration?.images?.backdrop_sizes?.last()}${movieDetail.value?.backdropPath}"
         return imageUrl
     }
-
-    fun getTitle():String{
-        movieTitle = movieDetail.value?.title ?: ""
-
-        return movieTitle
-    }
-
 
 
 }

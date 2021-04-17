@@ -1,6 +1,7 @@
 package com.digitalhouse.moviewallet.ui.activity
 
 import android.os.Bundle
+import android.os.TestLooperManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,8 @@ class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
     private val ivMovie by lazy { findViewById<ImageView>(R.id.iv_movie_details) }
     private val tvMovie by lazy { findViewById<TextView>(R.id.tv_title_details) }
+    private val tvSynopsis by lazy { findViewById<TextView>(R.id.tv_synopsis_details) }
+    private val tvGenre by lazy { findViewById<TextView>(R.id.tv_genre_details) }
 
     private lateinit var viewModel: DetailsViewModel
 
@@ -43,6 +46,8 @@ class DetailsScreen : AppCompatActivity() {
         viewModel.movieDetail.observe(this) {
             val imageUrl: String = viewModel.getBackdropPath()
             tvMovie.text = it.title
+            tvSynopsis.text = it.overview
+
             Picasso.get().load(imageUrl).into(ivMovie)
         }
     }

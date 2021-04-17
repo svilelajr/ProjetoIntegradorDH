@@ -2244,7 +2244,7 @@ id tv_parentalrating_details
 id tv_percentage_details
 id tv_rating_details
 id tv_search_itemlastsee
-id tv_synipsis_details
+id tv_synopsis_details
 id tv_title_details
 id tv_title_itemrelease
 id tv_titlerelease_home

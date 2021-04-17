@@ -2243,7 +2243,7 @@ int id tv_parentalrating_details 0x7f0801e2
 int id tv_percentage_details 0x7f0801e3
 int id tv_rating_details 0x7f0801e4
 int id tv_search_itemlastsee 0x7f0801e5
-int id tv_synipsis_details 0x7f0801e6
+int id tv_synopsis_details 0x7f0801e6
 int id tv_title_details 0x7f0801e7
 int id tv_title_itemrelease 0x7f0801e8
 int id tv_titlerelease_home 0x7f0801e9

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
@@ -24,23 +25,30 @@ class ContextScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.context_screen)
+        viewModel = ViewModelProvider.NewInstanceFactory().create(ContextViewModel::class.java)
         initViews()
 
     }
 
     private fun initViews() {
         rvMovie.layoutManager = GridLayoutManager(this, 3)
-
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { onBackPressed() }
         val extras = intent.extras
-        val name = extras?.getString("NAME")
-        val movie = extras?.getSerializable("MOVIES")
-        val movies = movie?.let { getMovies(it) }
-        toolbar.title = name.toString()
-        tvContext.text = "$name :"
-        rvMovie.adapter = movies?.let { MovieScreenAdapter(it) }
+        val genreName = extras?.getString("GENRE_NAME")
+        val genreId = extras?.getInt("GENRE_ID")
+        toolbar.title = genreName.toString()
+        tvContext.text = "$genreName :"
+        if (genreId != null){
+            viewModel.getMovieListByGenre(genreId.toString())
+            seeMore()
+        }
+
     }
 
-    private fun getMovies(movie: Serializable) = movie as MutableList<Movie>
+    private fun seeMore(){
+        viewModel.movieByCategory.observe(this) {
+            rvMovie.adapter = MovieScreenAdapter(it)
+        }
+    }
 }

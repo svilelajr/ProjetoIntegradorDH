@@ -435,21 +435,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-w550dp-land-v13_values-w550dp-land-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\9bc8f49ff8d3c635fe436c81695922cf\\material-1.3.0\\res\\values-w550dp-land-v13\\values-w550dp-land-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "51",
-                        "endOffsets": "102"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-large-v4_values-large-v4.arsc.flat",
             "map": [
                 {
@@ -477,6 +462,21 @@
                         "startOffsets": "55,114,185,256,326,396,464,532,636",
                         "endColumns": "58,70,70,69,69,67,67,103,115",
                         "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-w550dp-land-v13_values-w550dp-land-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\9bc8f49ff8d3c635fe436c81695922cf\\material-1.3.0\\res\\values-w550dp-land-v13\\values-w550dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
                     }
                 }
             ]
@@ -1286,6 +1286,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\32e78c14f4a57dc78eaa53d781cd7ad4\\appcompat-1.2.0\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-ka_values-ka.arsc.flat",
             "map": [
                 {
@@ -1339,22 +1355,6 @@
                         "startOffsets": "7425",
                         "endColumns": "100",
                         "endOffsets": "7521"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\32e78c14f4a57dc78eaa53d781cd7ad4\\appcompat-1.2.0\\res\\values-v22\\values-v22.xml",
-                    "from": {
-                        "startLines": "2,3,4,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,553",
-                        "endLines": "2,3,8,13",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,548,896"
                     }
                 }
             ]
