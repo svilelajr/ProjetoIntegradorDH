@@ -85,7 +85,6 @@ class HomeScreen : AppCompatActivity() {
                 adapterGenre.notifyDataSetChanged()
             }
         })
-
     }
 
     private fun setupRecyclerView() {
@@ -100,6 +99,7 @@ class HomeScreen : AppCompatActivity() {
     }
 
     private fun initClick() {
+
         btExplorar.setOnClickListener {
             val intent = Intent(this, SearchScreen::class.java)
             startActivity(intent)
