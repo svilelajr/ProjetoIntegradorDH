@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.adapter.MovieScreenAdapter
-import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.ui.viewmodel.ContextViewModel
 import java.io.Serializable
 

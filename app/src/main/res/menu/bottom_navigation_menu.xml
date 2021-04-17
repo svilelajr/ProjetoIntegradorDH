@@ -6,9 +6,12 @@
     <item
         android:id="@+id/page_favoritos"
         android:icon="@drawable/ic_baseline_favorite_border_35"
+        android:enabled="false"
         android:title="@string/btn_favoritos"/>
     <item
         android:id="@+id/page_perfil"
         android:icon="@drawable/ic_baseline_perm_identity_35"
-        android:title="@string/btn_perfil"/>
+        android:title="@string/btn_perfil"
+        android:enabled="true"/>
+
 </menu>

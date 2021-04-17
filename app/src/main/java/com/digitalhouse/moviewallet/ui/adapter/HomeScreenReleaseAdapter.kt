@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen

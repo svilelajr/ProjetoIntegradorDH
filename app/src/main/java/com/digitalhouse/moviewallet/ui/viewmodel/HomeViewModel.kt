@@ -17,10 +17,8 @@ class HomeViewModel : ViewModel() {
     private val repository = RepositoryMovie()
     val _listGenre = MutableLiveData<List<Genre>>()
     val listGenre: MutableLiveData<List<Genre>> = MutableLiveData()
-    val loading = MutableLiveData<Boolean>()
     val listReleaseMovie = MutableLiveData<List<Movie>>()
     var genreApi = mutableListOf<Genre>()
-    val genreView = listOf("28", "12", "35", "18", "10751", "27")
 
     fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
         try {
@@ -45,17 +43,9 @@ class HomeViewModel : ViewModel() {
                     }
                 }
             }
-
             listGenre.postValue(genreApi)
-
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Genre $error")
-        }
-    }
-
-    fun getMoviesByGenre(genreId: String?) = CoroutineScope(Dispatchers.IO).launch {
-        repository.getMoviesByGenre(genreId).let { movie ->
-
         }
     }
 
@@ -69,13 +59,6 @@ class HomeViewModel : ViewModel() {
         }
     }
 
-    fun getGenreView(genre: Genre) {
-        genreView.forEach { genreV ->
-            if (genreV == genre.id.toString()) {
-                _listGenre.postValue(listOf(genre))
-            }
-        }
-    }
 }
 
 

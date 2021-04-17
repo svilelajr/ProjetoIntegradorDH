@@ -2086,7 +2086,6 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
-id pb_home
 id pb_splash
 id peekHeight
 id percent
@@ -2247,7 +2246,6 @@ id tv_search_itemlastsee
 id tv_synopsis_details
 id tv_title_details
 id tv_title_itemrelease
-id tv_titlerelease_home
 id tv_yearmovie_details
 id txt_categorias
 id unchecked

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\32e78c14f4a57dc78eaa53d781cd7ad4\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\gportoma\\.gradle\\caches\\transforms-2\\files-2.1\\32e78c14f4a57dc78eaa53d781cd7ad4\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

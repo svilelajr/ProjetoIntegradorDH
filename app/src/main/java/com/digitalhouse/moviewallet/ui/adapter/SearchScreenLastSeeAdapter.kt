@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Movie
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.model.Movie
 
 class SearchScreenLastSeeAdapter(val ultimosVistosList: MutableList<Movie>) : RecyclerView.Adapter<SearchScreenLastSeeAdapter.SearchScreenLastSeeViewHolder>() {
 
@@ -18,7 +18,7 @@ class SearchScreenLastSeeAdapter(val ultimosVistosList: MutableList<Movie>) : Re
     override fun onBindViewHolder(holder: SearchScreenLastSeeViewHolder, position: Int) {
         val position = ultimosVistosList[position]
         val nome = holder.nomeFilme
-        nome.text = position.nomeDoFilme
+        nome.text = position.title
     }
 
     inner class SearchScreenLastSeeViewHolder(view: View) : RecyclerView.ViewHolder(view) {

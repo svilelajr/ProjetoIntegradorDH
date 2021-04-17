@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.adapters.HomeScreenCategoryAdapter
-import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
@@ -28,7 +27,6 @@ class HomeScreen : AppCompatActivity() {
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
-    lateinit var progressBar: ProgressBar
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -64,7 +62,6 @@ class HomeScreen : AppCompatActivity() {
         setContentView(R.layout.home_screen)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
         viewModel.getConfiguration()
-        progressBar = findViewById(R.id.pb_home)
 
         observers()
         setupRecyclerView()

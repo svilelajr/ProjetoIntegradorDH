@@ -7,8 +7,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.ListaCategorias
-import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.adapter.SearchScreenCategoryAdapter
@@ -41,7 +39,7 @@ class SearchScreen() : AppCompatActivity() {
     private fun setupRecycler() {
         recyclerVistos.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerVistos.adapter = SearchScreenLastSeeAdapter(ListaFilmes.getListaDefilmeAcao())
+//        recyclerVistos.adapter = SearchScreenLastSeeAdapter(ListaFilmes.getListaDefilmeAcao())
 
         recyclerCategorias.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

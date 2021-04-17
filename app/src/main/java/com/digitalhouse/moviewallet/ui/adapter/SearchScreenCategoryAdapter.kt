@@ -7,11 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.data.Category
-import com.digitalhouse.moviewallet.data.Movie
-
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.data.ListaFilmes
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.ui.activity.ContextScreen
 
@@ -29,11 +25,7 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
 
 
         btCategory.setOnClickListener {
-            val intent= Intent(it.context, ContextScreen::class.java)
-            val movieArray:ArrayList<Movie> = ArrayList(ListaFilmes.getListaDefilmeAcao())
-            intent.putExtra("NAME",position.name)
-            intent.putExtra("MOVIES",movieArray)
-            it.context.startActivity(intent)
+
         }
 
 
