@@ -2,6 +2,7 @@ package com.digitalhouse.moviewallet.network
 
 import com.digitalhouse.moviewallet.model.*
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ServiceMovieDB {
@@ -22,5 +23,11 @@ interface ServiceMovieDB {
         @Query("language") language: String?,
         @Query("with_genres") genre:String?
     ):DiscoverMovies
+
+    @GET("movie/{movie_id}")
+    suspend fun getMovieDetail(
+        @Path("movie_id") movieId: String,
+        @Query("language") language: String?
+    ):Movie
 
 }

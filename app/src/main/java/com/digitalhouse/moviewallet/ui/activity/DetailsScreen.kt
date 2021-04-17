@@ -31,16 +31,19 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun initViews() {
-        val configuration = SingletonConfiguration.config
         val extras = intent.extras
-        val movie = extras?.getSerializable("MOVIE") as Movie
-//        val imageUrl = extras?.getString("IMAGE")
-        val imageUrl = "${configuration?.images?.base_url}${configuration?.images?.backdrop_sizes?.last()}${movie.backdropPath}"
+        val movieId = extras?.getInt("MOVIE_ID")
+        if (movieId != null) {
+            viewModel.getMovieDetail(movieId.toString())
+            movieDetails()
+        }
+    }
 
-
-
-        tvMovie.text = movie.title
-        Picasso.get().load(imageUrl).into(ivMovie)
-
+    private fun movieDetails() {
+        viewModel.movieDetail.observe(this) {
+            val imageUrl: String = viewModel.getBackdropPath()
+            tvMovie.text = it.title
+            Picasso.get().load(imageUrl).into(ivMovie)
+        }
     }
 }

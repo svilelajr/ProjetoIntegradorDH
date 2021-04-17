@@ -19,4 +19,5 @@ class RepositoryMovie {
     suspend fun getGenre() = serviceMovie.getGenre(language)
     suspend fun getReleaseMovie() = serviceMovie.getReleaseMovie()
     suspend fun getMoviesByGenre(genre:String?,) = serviceMovie.getMoviesByGenre(language,genre)
+    suspend fun getMovieDetails(movieID: String) = serviceMovie.getMovieDetail(movieID, language,)
 }

@@ -46,6 +46,7 @@ class HomeScreenCategoryAdapter( val listaDeCategorias: MutableList<Genre>) : Re
         buttonVerMais.setOnClickListener {
             val intent = Intent(it.context, ContextScreen::class.java)
             intent.putExtra("NAME", listaDeCategorias[position].name)
+            intent.putExtra("GENRE_ID", listaCategorias.id)
             it.context.startActivity(intent)
         }
     }
