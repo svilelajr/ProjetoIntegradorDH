@@ -22,9 +22,13 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalh
     override fun onBindViewHolder(holder: HomeScreenReleaseViewHolder, position: Int) {
         val movie = listRelease[position]
         val configuration = SingletonConfiguration.config
-        val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(2)}${movie.backdropPath}"
+        var imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(2)}${movie.backdropPath}"
         holder.tvMovie.text = movie.title
-        Picasso.get().load(imageUrl).into(holder.imgView)
+        if (movie.backdropPath != null) {
+            Picasso.get().load(imageUrl).into(holder.imgView)
+        } else
+            imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(5)}${movie.posterPath}"
+            Picasso.get().load(imageUrl).into(holder.imgView)
 
         holder.cvMovie.setOnClickListener{
             val intent= Intent(it.context,DetailsScreen::class.java)
