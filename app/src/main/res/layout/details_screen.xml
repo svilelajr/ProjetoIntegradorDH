@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb_details"
@@ -23,11 +22,8 @@
     <ImageView
         android:id="@+id/iv_movie_details"
         android:layout_width="match_parent"
-        android:layout_height="226dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:scaleType="centerInside"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
         app:layout_constraintCircleRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,40 +32,39 @@
 
     <TextView
         android:id="@+id/tv_rating_details"
-        android:layout_width="73dp"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Avaliação
-         dos
-         usuarios:"
+        android:text="Popularidade:"
         android:textColor="#47525E"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tv_percentage_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/iv_movie_details" />
 
     <TextView
         android:id="@+id/tv_percentage_details"
-        android:layout_width="73dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="8dp"
-        android:paddingTop="18dp"
-        android:text="50%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="50%"
+        android:textSize="15sp"
         android:textAlignment="center"
         android:textColor="#5929D977"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_rating_details" />
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating_details" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="0dp"
+        android:layout_width="275dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_rating_details"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_movie_details">
 
@@ -80,93 +75,66 @@
 
             <TextView
                 android:id="@+id/tv_title_details"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:textAlignment="center"
+                android:gravity="center"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="NOME FILME" />
 
             <TextView
-                android:id="@+id/tv_yearmovie_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="16dp"
-                android:text="(2020)"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintStart_toEndOf="@+id/tv_title_details"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-            <TextView
-                android:id="@+id/tv_parentalrating_details"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/borda_class_indic"
-                android:paddingTop="2dp"
-                android:text="14"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/tv_title_details"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_details" />
-
-            <TextView
                 android:id="@+id/tv_genre_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Ação, Aventura, Crime"
+                android:layout_marginTop="2dp"
+                android:gravity="left"
                 android:textColor="@color/white"
-                android:textSize="8sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_parentalrating_details"
-                app:layout_constraintStart_toEndOf="@+id/tv_parentalrating_details"
-                app:layout_constraintTop_toTopOf="@+id/tv_parentalrating_details" />
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_details"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_details"
+                tools:text="(2020) Ação, Aventura | 120min" />
 
             <TextView
-                android:id="@+id/tv_duration_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="| 120 min"
-                android:textColor="@color/white"
-                android:textSize="8sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_parentalrating_details"
-                app:layout_constraintStart_toEndOf="@+id/tv_genre_details"
-                app:layout_constraintTop_toTopOf="@+id/tv_parentalrating_details" />
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_genre_details" />
+
 
             <TextView
                 android:id="@+id/tv_synopsis_details"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/cinza_sinopse"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_genre_details" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/tv_actors_details"
+        android:id="@+id/tv_cast_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -174,16 +142,18 @@
         android:textColor="@color/cinza_sinopse"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tv_percentage_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/tv_percentage_details" />
 
-    <ListView
-        android:id="@+id/lv_actor_details"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_actors_details"
-        app:layout_constraintTop_toBottomOf="@+id/tv_actors_details" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_elenco"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_favorite_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cast_details" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/bt_favorite_details"
@@ -195,7 +165,7 @@
         android:backgroundTint="@color/rosa_principal"
         android:src="@drawable/ic_baseline_favorite_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lv_actor_details"
+        app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />
 
 

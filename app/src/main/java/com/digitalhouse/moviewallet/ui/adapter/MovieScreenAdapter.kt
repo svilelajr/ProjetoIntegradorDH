@@ -23,7 +23,7 @@ class MovieScreenAdapter(val listMovies: MutableList<MovieRecycler>) : RecyclerV
     override fun onBindViewHolder(holder: MovieScreenViewHolder, position: Int) {
         val configuration = SingletonConfiguration.config
         val position = listMovies[position]
-        val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(4)}${position.posterPath}"
+        val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(5)}${position.posterPath}"
         val image = holder.imgMovie
         Picasso.get().load(imageUrl).into(image)
         holder.cvMovie.setOnClickListener {
@@ -36,7 +36,6 @@ class MovieScreenAdapter(val listMovies: MutableList<MovieRecycler>) : RecyclerV
 
     inner class MovieScreenViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgMovie by lazy { view.findViewById<ImageView>(R.id.iv_movie_screen) }
-        val tvMovie by lazy { view.findViewById<TextView>(R.id.tv_movie_screen) }
         val cvMovie by lazy { view.findViewById<CardView>(R.id.cv_movie_screen) }
     }
 }

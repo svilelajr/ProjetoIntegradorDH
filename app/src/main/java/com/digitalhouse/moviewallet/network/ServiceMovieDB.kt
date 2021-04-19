@@ -16,18 +16,25 @@ interface ServiceMovieDB {
     ): ListGenre
 
     @GET("movie/now_playing")
-    suspend fun getReleaseMovie(): ReleaseMovie
+    suspend fun getReleaseMovie(): UpComing
 
     @GET("discover/movie")
     suspend fun getMoviesByGenre(
         @Query("language") language: String?,
-        @Query("with_genres") genre:String?
+        @Query("with_genres") genre:String?,
+        @Query("page") page:Int?
     ):DiscoverMovies
 
     @GET("movie/{movie_id}")
     suspend fun getMovieDetail(
         @Path("movie_id") movieId: String,
         @Query("language") language: String?
-    ):Movie
+    ):MovieDetail
+
+    @GET("movie/{movie_id}/credits")
+    suspend fun getCreditMovie(
+        @Path("movie_id")movieId: String,
+        @Query("language")language: String?
+    ):CreditMovie
 
 }

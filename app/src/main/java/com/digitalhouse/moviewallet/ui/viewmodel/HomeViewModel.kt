@@ -38,7 +38,7 @@ class HomeViewModel : ViewModel() {
                 _listGenre.postValue(it.genres)
                 genreApi = it.genres as MutableList<Genre>
                 genreApi.forEach { genreApi ->
-                    repository.getMoviesByGenre(genreApi.id.toString()).let { movie ->
+                    repository.getMoviesByGenre(genreApi.id.toString(),1).let { movie ->
                         genreApi.movies = movie.movies as MutableList<MovieRecycler>?
                     }
                 }

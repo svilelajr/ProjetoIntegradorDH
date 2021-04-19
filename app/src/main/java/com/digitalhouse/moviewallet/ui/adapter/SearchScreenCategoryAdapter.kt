@@ -24,8 +24,11 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
         nome.text = position.name
 
 
-        btCategory.setOnClickListener {
-
+        nome.setOnClickListener {
+            val intent = Intent(it.context, ContextScreen::class.java)
+            intent.putExtra("GENRE_NAME", position.name)
+            intent.putExtra("GENRE_ID", position.id)
+            it.context.startActivity(intent)
         }
 
 

@@ -64,6 +64,10 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\src\\main\\res\\drawable\\ic_baseline_search_35.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_details_actor.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\src\\main\\res\\layout\\item_details_actor.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\build\\intermediates\\res\\merged\\debug\\menu_spinner_genre_register.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\MovieWallet\\app\\src\\main\\res\\menu\\spinner_genre_register.xml"
     },

@@ -6,6 +6,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ProgressBar
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
@@ -35,8 +36,11 @@ class HomeScreen : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.page_favoritos -> {
-                    val intent = Intent(this, LoginScreen::class.java)
-                    startActivity(intent)
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("Em construção")
+                    builder.setMessage("Disponível em Breve...")
+                    builder.show()
+
 
                     return@OnNavigationItemSelectedListener true
                 }

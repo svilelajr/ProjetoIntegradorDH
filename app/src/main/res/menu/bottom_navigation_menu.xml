@@ -6,7 +6,7 @@
     <item
         android:id="@+id/page_favoritos"
         android:icon="@drawable/ic_baseline_favorite_border_35"
-        android:enabled="false"
+        android:enabled="true"
         android:title="@string/btn_favoritos"/>
     <item
         android:id="@+id/page_perfil"

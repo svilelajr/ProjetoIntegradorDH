@@ -39,7 +39,7 @@ class SearchScreen() : AppCompatActivity() {
     private fun setupRecycler() {
         recyclerVistos.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        recyclerVistos.adapter = SearchScreenLastSeeAdapter(ListaFilmes.getListaDefilmeAcao())
+//       recyclerVistos.adapter = SearchScreenLastSeeAdapter(ListaFilmes.getListaDefilmeAcao())
 
         recyclerCategorias.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

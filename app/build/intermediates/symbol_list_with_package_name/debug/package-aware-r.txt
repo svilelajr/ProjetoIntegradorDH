@@ -1976,6 +1976,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageView2
 id imageView4
 id imageView5
@@ -2006,7 +2007,6 @@ id listMode
 id list_item
 id logo_mw_app
 id logo_splash
-id lv_actor_details
 id masculino
 id masked
 id material_clock_display
@@ -2063,6 +2063,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id navigation_header_container
+id nestedScrollView
 id never
 id noScroll
 id none
@@ -2092,6 +2093,7 @@ id percent
 id pin
 id position
 id postLayout
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -2107,6 +2109,7 @@ id rounded
 id row_index_key
 id rv_category_home
 id rv_category_search
+id rv_elenco
 id rv_lastsee_search
 id rv_movie_screen
 id rv_release_home
@@ -2194,6 +2197,7 @@ id textStart
 id textTop
 id textView
 id textView2
+id textView3
 id textView_plataformas
 id textView_preferencias
 id textView_preferencias2
@@ -2232,21 +2236,17 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_actors_details
+id tv_cast_details
 id tv_categorysearch_itemcategory
-id tv_context_movie
-id tv_duration_details
 id tv_explore_search
 id tv_genre_details
 id tv_lastsee_search
-id tv_movie_screen
-id tv_parentalrating_details
 id tv_percentage_details
 id tv_rating_details
 id tv_search_itemlastsee
 id tv_synopsis_details
 id tv_title_details
 id tv_title_itemrelease
-id tv_yearmovie_details
 id txt_categorias
 id unchecked
 id uniform
@@ -2340,6 +2340,7 @@ layout design_text_input_start_icon
 layout details_screen
 layout home_screen
 layout item_context_screen
+layout item_details_actor
 layout item_home_category
 layout item_home_release
 layout item_search_category
