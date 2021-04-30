@@ -1,27 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rastros_de_um_sequestro.jpg.flat",
         "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\drawable\\rastros_de_um_sequestro.jpg"
+    },
+    {
+        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\layout_details_screen.xml.flat",
         "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\layout\\details_screen.xml"
     },
     {
-        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_45.xml.flat",
-        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\drawable\\ic_baseline_search_45.xml"
+        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_mw_round.png.flat",
+        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_mw_round.png"
     },
     {
         "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_mw_round.png.flat",
-        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_mw_round.png"
+        "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_45.xml.flat",
+        "source": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\src\\main\\res\\drawable\\ic_baseline_search_45.xml"
     },
     {
         "merged": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\res\\merged\\debug\\drawable_garota_exemplar.jpg.flat",

@@ -70,7 +70,7 @@ class DetailsScreen : AppCompatActivity() {
             tvMovie.text = it.title
             tvSynopsis.text = it.overview
             tvGenre.text = "(${date.year}) ${it.genres?.get(0)?.name} | ${it.runtime}min"
-            tvRating.text = it.popularity.toString()
+            tvRating.text = "${viewModel.getPopularity()} %"
             Picasso.get().load(imageUrl).into(ivMovie)
         }
     }

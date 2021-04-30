@@ -12,13 +12,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class DetailsViewModel: ViewModel() {
+class DetailsViewModel : ViewModel() {
 
     private val repository = RepositoryMovie()
-    val movieDetail by lazy{ MutableLiveData<MovieDetail>() }
+    val movieDetail by lazy { MutableLiveData<MovieDetail>() }
     val actorMovie by lazy { MutableLiveData<List<Actor>>() }
-    val configuration = SingletonConfiguration.config
-    var imageUrl: String = ""
+    private val configuration = SingletonConfiguration.config
+    private var imageUrl: String = ""
+    private var popularityVote: String = ""
 
     fun getMovieDetail(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
@@ -26,7 +27,7 @@ class DetailsViewModel: ViewModel() {
                 movieDetail.postValue(it as MovieDetail)
             }
 
-        } catch (error: Throwable){
+        } catch (error: Throwable) {
             Log.e("Error", "Problema de Conexão $error")
         }
     }
@@ -37,15 +38,20 @@ class DetailsViewModel: ViewModel() {
                 actorMovie.postValue(it.cast)
             }
 
-        } catch (error: Throwable){
+        } catch (error: Throwable) {
             Log.e("Error", "Problema de Conexão $error")
         }
     }
 
-    fun getBackdropPath(): String{
-      imageUrl = "${configuration?.images?.base_url}${configuration?.images?.poster_sizes?.last()}${movieDetail.value?.backdropPath}"
+    fun getBackdropPath(): String {
+        imageUrl =
+            "${configuration?.images?.base_url}${configuration?.images?.poster_sizes?.last()}${movieDetail.value?.backdropPath}"
         return imageUrl
     }
 
+    fun getPopularity(): String {
+        popularityVote = ((movieDetail.value?.voteAverage)?.times(10))?.toInt().toString()
+        return popularityVote
+    }
 
 }
