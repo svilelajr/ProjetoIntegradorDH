@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+            "outputFile": "C:\\Users\\dddev\\Documents\\MovieWallet\\MovieWallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\32e78c14f4a57dc78eaa53d781cd7ad4\\appcompat-1.2.0\\res\\values-be\\values-be.xml",
