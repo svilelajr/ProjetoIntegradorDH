@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.digitalhouse.moviewalletsprint1",
+  "applicationId": "com.digitalhouse.moviewallet",
   "variantName": "debug",
   "elements": [
     {

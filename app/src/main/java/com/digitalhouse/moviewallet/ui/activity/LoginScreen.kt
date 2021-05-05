@@ -2,14 +2,25 @@ package com.digitalhouse.moviewallet.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.digitalhouse.moviewallet.ui.viewmodel.LoginViewModel
 import com.digitalhouse.moviewallet.util.Util
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginScreen: AppCompatActivity(),Util {
 
@@ -25,6 +36,7 @@ class LoginScreen: AppCompatActivity(),Util {
         setContentView(R.layout.login_screen)
         viewModel = ViewModelProvider.NewInstanceFactory().create(LoginViewModel::class.java)
         initClick()
+
     }
 
     private fun initClick(){
@@ -40,4 +52,5 @@ class LoginScreen: AppCompatActivity(),Util {
             startActivity(intent)
         }
     }
+
 }

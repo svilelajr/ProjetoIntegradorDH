@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.digitalhouse.moviewalletsprint1",
+  "applicationId": "com.digitalhouse.moviewallet",
   "variantName": "debug",
   "elements": []
 }

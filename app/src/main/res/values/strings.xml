@@ -4,5 +4,8 @@
     <string name="btn_favoritos">Favoritos</string>
     <string name="btn_perfil">Perfil</string>
     <string name="btn_ver_mais" translatable="false">Ver Mais</string>
+    <string name="facebook_app_id">238595164680814</string>
+    <string name="fb_login_protocol_scheme">fb238595164680814</string>
+
 </resources>
 
