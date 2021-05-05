@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171895047632",
+    "project_id": "movie-wallet-ac634",
+    "storage_bucket": "movie-wallet-ac634.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171895047632:android:5b0d85a56451eeed7f65d5",
+        "android_client_info": {
+          "package_name": "com.digitalhouse.moviewallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171895047632-40rgs9dipsthlfd9cvbefo5re7mqcgtq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digitalhouse.moviewallet",
+            "certificate_hash": "9e3426e28da56fa68a15e3c349489a9fc7492d4a"
+          }
+        },
+        {
+          "client_id": "171895047632-m695v9g5a9un3i68ln0e39lbhjdsgh92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqt5Tcu2tfmbi-EOXwn3X36O9WUg6IqOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171895047632-m695v9g5a9un3i68ln0e39lbhjdsgh92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

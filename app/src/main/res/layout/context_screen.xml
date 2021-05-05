@@ -44,7 +44,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <ProgressBar
-            android:id="@+id/next_loading_home"
+            android:id="@+id/next_loading_context_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"

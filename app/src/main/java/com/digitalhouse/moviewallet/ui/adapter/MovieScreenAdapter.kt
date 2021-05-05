@@ -14,7 +14,8 @@ import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
 import com.squareup.picasso.Picasso
 
-class MovieScreenAdapter(val listMovies: MutableList<MovieRecycler>) : RecyclerView.Adapter<MovieScreenAdapter.MovieScreenViewHolder>() {
+class MovieScreenAdapter : RecyclerView.Adapter<MovieScreenAdapter.MovieScreenViewHolder>() {
+    private val listMovies =  mutableListOf<MovieRecycler>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MovieScreenViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_context_screen, parent, false))
 
@@ -31,6 +32,11 @@ class MovieScreenAdapter(val listMovies: MutableList<MovieRecycler>) : RecyclerV
             intent.putExtra("MOVIE_ID", position.id)
             it.context.startActivity(intent)
         }
+    }
+
+    fun addMovies(movies : List<MovieRecycler>){
+        listMovies.addAll(movies)
+        notifyDataSetChanged()
     }
 
 
