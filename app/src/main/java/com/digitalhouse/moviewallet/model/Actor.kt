@@ -1,5 +1,5 @@
 package com.digitalhouse.moviewallet.model
-
+//testando commit
 
 import com.google.gson.annotations.SerializedName
 
