@@ -1972,6 +1972,7 @@ id bt_explore
 id bt_favorite_details
 id bt_login
 id bt_register
+id btn_logout
 id btn_ver_mais
 id button
 id buttonPanel
@@ -2347,7 +2348,6 @@ id textView
 id textView2
 id textView3
 id textView_plataformas
-id textView_preferencias
 id textView_preferencias2
 id text_input_end_icon
 id text_input_error_icon
@@ -2402,6 +2402,7 @@ id unknown
 id unlabeled
 id up
 id useLogo
+id user_name_preferencias
 id view_offset_helper
 id visible
 id wide

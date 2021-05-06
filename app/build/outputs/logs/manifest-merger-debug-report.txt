@@ -105,7 +105,7 @@ INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\Proj
 	xmlns:android
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:5:5-67
 MERGED from [com.google.firebase:firebase-firestore:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\395bb30047727a6673cdc794a4de3d5f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\395bb30047727a6673cdc794a4de3d5f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\e8c61bd18bd452ee92b051328456c813\jetified-firebase-auth-20.0.4\AndroidManifest.xml:23:5-67
@@ -125,7 +125,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:
 	android:name
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:6:5-78
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:6:5-79
 MERGED from [com.google.firebase:firebase-firestore:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\395bb30047727a6673cdc794a4de3d5f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\395bb30047727a6673cdc794a4de3d5f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\e8c61bd18bd452ee92b051328456c813\jetified-firebase-auth-20.0.4\AndroidManifest.xml:24:5-79
@@ -233,47 +233,51 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\dddev\.gr
 	android:allowBackup
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:15:9-49
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:14:9-49
 	android:usesCleartextTraffic
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:14:9-44
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:15:9-44
 activity#com.digitalhouse.moviewallet.ui.activity.MainActivity
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:17:19-87
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:16:19-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.digitalhouse.moviewallet.ui.activity.HomeScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:24:9-88
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:23:9-60
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:24:19-85
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:23:19-57
 activity#com.digitalhouse.moviewallet.ui.activity.SearchScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:25:9-90
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:24:9-62
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:25:19-87
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:24:19-59
 activity#com.digitalhouse.moviewallet.ui.activity.DetailsScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:26:9-91
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:25:9-63
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:26:19-88
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:25:19-60
 activity#com.digitalhouse.moviewallet.ui.activity.LoginScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:27:9-89
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:26:9-61
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:27:19-86
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:26:19-58
 activity#com.digitalhouse.moviewallet.ui.activity.RegisterScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:28:9-92
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:27:9-64
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:28:19-89
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:27:19-61
 activity#com.digitalhouse.moviewallet.ui.activity.ContextScreen
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:29:9-91
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:28:9-63
 	android:name
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:29:19-88
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:28:19-60
+activity#com.digitalhouse.moviewallet.ui.activity.SettingsScreen
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:29:9-64
+	android:name
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:29:19-61
 meta-data#com.facebook.sdk.ApplicationId
 ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:31:9-33:55
 	android:value

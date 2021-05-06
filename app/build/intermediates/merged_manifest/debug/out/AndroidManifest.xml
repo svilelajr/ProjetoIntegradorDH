@@ -38,6 +38,7 @@
         <activity android:name="com.digitalhouse.moviewallet.ui.activity.LoginScreen" />
         <activity android:name="com.digitalhouse.moviewallet.ui.activity.RegisterScreen" />
         <activity android:name="com.digitalhouse.moviewallet.ui.activity.ContextScreen" />
+        <activity android:name="com.digitalhouse.moviewallet.ui.activity.SettingsScreen" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
