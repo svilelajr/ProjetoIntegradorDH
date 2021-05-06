@@ -42,7 +42,7 @@ package com.digitalhouse.moviewallet.ui.activity
 //            loginFacebook()
 //        }
 //    }
-//
+
 //    fun loginFacebook() {
 //        loginManager.logInWithReadPermissions(this, arrayListOf("email", "public_profile"))
 //        loginManager.registerCallback(callbackManager, object :
@@ -108,5 +108,5 @@ package com.digitalhouse.moviewallet.ui.activity
 //
 //        setUserName("Usuário desconectado")
 //    }
-//
+
 //}

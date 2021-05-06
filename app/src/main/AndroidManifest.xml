@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.digitalhouse.moviewallet">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,22 +11,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.MovieWallet"
-        >
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.MainActivity">
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.HomeScreen" />
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.SearchScreen" />
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.DetailsScreen" />
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.LoginScreen" />
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.RegisterScreen" />
-        <activity android:name="com.digitalhouse.moviewallet.ui.activity.ContextScreen" />
+        <activity android:name=".ui.activity.HomeScreen" />
+        <activity android:name=".ui.activity.SearchScreen" />
+        <activity android:name=".ui.activity.DetailsScreen" />
+        <activity android:name=".ui.activity.LoginScreen" />
+        <activity android:name=".ui.activity.RegisterScreen" />
+        <activity android:name=".ui.activity.ContextScreen" />
+        <activity android:name=".ui.activity.SettingsScreen" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
