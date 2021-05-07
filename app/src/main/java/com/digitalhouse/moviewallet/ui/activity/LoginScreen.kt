@@ -108,16 +108,15 @@ class LoginScreen : AppCompatActivity(), Util {
         super.onActivityResult(requestCode, resultCode, data)
         callbackManager.onActivityResult(requestCode, resultCode, data)
 
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == 200) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
-                // Google Sign In was successful, authenticate with Firebase
+
                 val account = task.getResult(ApiException::class.java)!!
                 Log.d("GogleSign", "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
-                // Google Sign In failed, update UI appropriately
+
                 Log.w("GogleSign", "Google sign in failed", e)
             }
         }
@@ -128,12 +127,16 @@ class LoginScreen : AppCompatActivity(), Util {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful){
+
                     Log.d("GoogleSign", "signInWithCredential:success")
                     val user = firebaseAuth.currentUser
                     startActivity(Intent(this, HomeScreen::class.java))
+
                 } else {
+
                     Log.w("GoogleSign", "signInWithCredential:failure", task.exception)
                     startActivity(Intent(this, HomeScreen::class.java))
+
                 }
             }
 
@@ -146,15 +149,19 @@ class LoginScreen : AppCompatActivity(), Util {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+
                     Log.d("facebook", "signInWithCredential:success")
                     val name = firebaseAuth.currentUser?.displayName
                     startActivity(Intent(this, HomeScreen::class.java))
+
                 } else {
+
                     Log.w("facebook", "signInWithCredential:failure", task.exception)
                     Toast.makeText(
                         baseContext, "Authentication failed.",
                         Toast.LENGTH_SHORT
                     ).show()
+
                 }
             }
     }
@@ -163,22 +170,18 @@ class LoginScreen : AppCompatActivity(), Util {
         super.onStart()
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null) {
+
             startActivity(Intent(this, SettingsScreen::class.java))
             finish()
+
         }
     }
 
     fun loginGoogleSignIn() {
         val signInIntent = googleSingInClient.signInIntent
+
         startActivityForResult(signInIntent, 200)
-    }
 
-    fun signout() {
-        firebaseAuth.signOut()
-        loginManager.logOut()
-        googleSingInClient.signOut()
-
-        finish()
     }
 
 }
