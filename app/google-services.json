@@ -22,11 +22,27 @@
           }
         },
         {
+          "client_id": "171895047632-ajqn8nvgt6kdbsjgup2fna829h3hv87o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digitalhouse.moviewallet",
+            "certificate_hash": "a48bed07f97918cd59b07da5fa32b0c9f5516a5f"
+          }
+        },
+        {
           "client_id": "171895047632-crl4jbh3v5p5v5dinqkdkkclnvu6teqe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.digitalhouse.moviewallet",
             "certificate_hash": "e797763f936ed3588c43316e2ffe629429ebd9b8"
+          }
+        },
+        {
+          "client_id": "171895047632-ke3k4m13ihppt101lbre6v0pq4nvg16k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digitalhouse.moviewallet",
+            "certificate_hash": "3ea6849b95dc914b05b13e9639842726460fbc69"
           }
         },
         {
