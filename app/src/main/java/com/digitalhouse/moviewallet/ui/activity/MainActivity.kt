@@ -1,10 +1,10 @@
 package com.digitalhouse.moviewallet.ui.activity
 
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.ViewModelProviders
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToHome() {
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, HomeScreen::class.java)
             startActivity(intent)
             finish()
