@@ -1,6 +1,7 @@
 package com.digitalhouse.moviewallet.ui.activity
 
 import android.os.Bundle
+import android.widget.SearchView
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -18,6 +19,7 @@ class SearchScreen() : AppCompatActivity() {
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_search) }
     private val recyclerVistos by lazy { findViewById<RecyclerView>(R.id.rv_lastsee_search) }
     private val recyclerCategorias by lazy { findViewById<RecyclerView>(R.id.rv_category_search) }
+    private val seachMovie by lazy { findViewById<SearchView>(R.id.sch_search) }
     var listGenres = mutableListOf<Genre>()
 
     private lateinit var viewModel: SearchViewModel
@@ -53,6 +55,8 @@ class SearchScreen() : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
     }
 }
 

@@ -50,6 +50,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1869,6 +1873,7 @@ drawable titulo_filme
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable toystory
+font roboto_thin
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2031,6 +2036,7 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id cv_home_popularityscreen
 id cv_movie_itemcategory
 id cv_movie_itemrelease
 id cv_movie_screen
@@ -2107,7 +2113,6 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
-id ib_search_home
 id icon
 id icon_group
 id icon_only
@@ -2115,7 +2120,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageView2
 id imageView4
 id img_btn_facebook_sign_in
@@ -2126,10 +2130,12 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_home_popularityscreen
 id iv_movie_details
 id iv_movie_itemcategory
 id iv_movie_itemrelease
 id iv_movie_screen
+id iv_provider_details
 id iv_search_itemlastsee
 id jumpToEnd
 id jumpToStart
@@ -2257,14 +2263,16 @@ id rounded
 id row_index_key
 id rv_category_home
 id rv_category_search
-id rv_elenco
 id rv_lastsee_search
 id rv_movie_screen
+id rv_popularity_home
+id rv_provider_details
 id rv_release_home
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id sch_search
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2383,13 +2391,13 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_actors_details
-id tv_cast_details
 id tv_categorysearch_itemcategory
 id tv_explore_search
 id tv_genre_details
+id tv_home_popularityscreen
 id tv_lastsee_search
 id tv_percentage_details
+id tv_provider_details
 id tv_rating_details
 id tv_search_itemlastsee
 id tv_synopsis_details
@@ -2501,6 +2509,7 @@ layout home_screen
 layout item_context_screen
 layout item_details_actor
 layout item_home_category
+layout item_home_popularity
 layout item_home_release
 layout item_search_category
 layout item_search_last_see
