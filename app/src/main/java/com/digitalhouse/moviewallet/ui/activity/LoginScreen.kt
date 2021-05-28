@@ -3,13 +3,14 @@ package com.digitalhouse.moviewallet.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.model.Subject
+import com.digitalhouse.moviewallet.model.User
 import com.digitalhouse.moviewallet.ui.viewmodel.LoginViewModel
 import com.digitalhouse.moviewallet.util.Util
 import com.facebook.AccessToken
@@ -26,7 +27,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import java.lang.Exception
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class LoginScreen : AppCompatActivity(), Util {
 
@@ -36,9 +38,10 @@ class LoginScreen : AppCompatActivity(), Util {
     private val btLoginGoogle by lazy { findViewById<ImageButton>(R.id.img_btn_google_sign_in) }
     private val fieldEmailLayout by lazy { findViewById<TextInputLayout>(R.id.til_email_login) }
     private val fieldPasswordLayout by lazy { findViewById<TextInputLayout>(R.id.til_password_login) }
+    private val loginManager = LoginManager.getInstance()
+    private val firestoreDb = Firebase.firestore
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
-    private val loginManager = LoginManager.getInstance()
     private lateinit var googleSingInClient: GoogleSignInClient
 
     private lateinit var viewModel: LoginViewModel
@@ -85,7 +88,7 @@ class LoginScreen : AppCompatActivity(), Util {
         }
     }
 
-    fun loginFacebook() {
+    private fun loginFacebook() {
         loginManager.logInWithReadPermissions(this, arrayListOf("email", "public_profile"))
         loginManager.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
@@ -126,11 +129,12 @@ class LoginScreen : AppCompatActivity(), Util {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful){
+                if (task.isSuccessful) {
 
                     Log.d("GoogleSign", "signInWithCredential:success")
                     val user = firebaseAuth.currentUser
-                    startActivity(Intent(this, HomeScreen::class.java))
+
+                    checkIfUserExistInDb()
 
                 } else {
 
@@ -152,7 +156,8 @@ class LoginScreen : AppCompatActivity(), Util {
 
                     Log.d("facebook", "signInWithCredential:success")
                     val name = firebaseAuth.currentUser?.displayName
-                    startActivity(Intent(this, HomeScreen::class.java))
+
+                    checkIfUserExistInDb()
 
                 } else {
 
@@ -169,19 +174,57 @@ class LoginScreen : AppCompatActivity(), Util {
     override fun onStart() {
         super.onStart()
         val currentUser = firebaseAuth.currentUser
-        if (currentUser != null) {
 
+        if (currentUser != null) {
             startActivity(Intent(this, SettingsScreen::class.java))
             finish()
-
         }
     }
 
-    fun loginGoogleSignIn() {
+    private fun loginGoogleSignIn() {
         val signInIntent = googleSingInClient.signInIntent
 
         startActivityForResult(signInIntent, 200)
 
+    }
+
+    private fun addUserToDatabase() {
+        val currentUser = firebaseAuth.currentUser
+
+        currentUser?.let { user ->
+            val subject = Subject("Firebase Database")
+            val userDb = User(
+                user.email ?: "",
+                user.displayName ?: "",
+                subject,
+                listOf()
+            )
+
+            firestoreDb.collection("users")
+                .document(user.uid)
+                .set(userDb)
+                .addOnSuccessListener {
+                    it
+                }.addOnFailureListener {
+                    it
+                }
+        }
+    }
+
+    private fun checkIfUserExistInDb() {
+        firebaseAuth.currentUser?.let { user ->
+            firestoreDb.collection("users")
+                .document(user.uid)
+                .get()
+                .addOnCompleteListener {
+                    if (it.result?.exists() == true) {
+                        startActivity(Intent(this, HomeScreen::class.java))
+                    } else {
+                        addUserToDatabase()
+                        startActivity(Intent(this, HomeScreen::class.java))
+                    }
+                }
+        }
     }
 
 }

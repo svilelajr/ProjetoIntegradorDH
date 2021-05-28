@@ -21,6 +21,7 @@ import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeScreen : AppCompatActivity() {
     private val recyclerViewCategoria by lazy { findViewById<RecyclerView>(R.id.rv_category_home) }
@@ -28,19 +29,30 @@ class HomeScreen : AppCompatActivity() {
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
+    private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.page_home -> {
-
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.page_favoritos -> {
-                    val builder = AlertDialog.Builder(this)
-                    builder.setTitle("Em construção")
-                    builder.setMessage("Disponível em Breve...")
-                    builder.show()
 
+                    if (firebaseAuth.currentUser == null){
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("Usuário Não Logado")
+                        builder.setMessage("Favoritos disponível somente para usuários Logados \n\nDeseja Logar?")
+                        builder.setPositiveButton("Sim") { _, _ ->
+                            startActivity(Intent(this, LoginScreen::class.java))
+                            finishAffinity()
+                        }
+
+                        builder.setNegativeButton("Não", null)
+                        builder.show()
+                    } else {
+                        startActivity(Intent(this, FavoritesScreen::class.java))
+                    }
 
                     return@OnNavigationItemSelectedListener true
                 }
