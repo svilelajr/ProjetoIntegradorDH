@@ -1,11 +1,8 @@
 package com.digitalhouse.moviewallet.ui.activity
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.os.TestLooperManager
 import android.util.Log
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -15,21 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.*
-import com.digitalhouse.moviewallet.repository.SingletonConfiguration
-import com.digitalhouse.moviewallet.ui.adapter.ActorDetailsAdapter
+import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
-import okhttp3.internal.userAgent
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
-import javax.security.auth.Subject
+
 
 class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
@@ -38,14 +30,17 @@ class DetailsScreen : AppCompatActivity() {
     private val tvSynopsis by lazy { findViewById<TextView>(R.id.tv_synopsis_details) }
     private val tvGenre by lazy { findViewById<TextView>(R.id.tv_genre_details) }
     private val tvRating by lazy { findViewById<TextView>(R.id.tv_percentage_details) }
-    private val rvActors by lazy { findViewById<RecyclerView>(R.id.rv_elenco) }
     private val btFavorite by lazy { findViewById<FloatingActionButton>(R.id.bt_favorite_details) }
-    private val listActor = mutableListOf<Actor>()
-    private val adapterActor = ActorDetailsAdapter(listActor)
+    private val rvProvider by lazy { findViewById<RecyclerView>(R.id.rv_provider_details) }
     private val firestoreDb = Firebase.firestore
     private lateinit var viewModel: DetailsViewModel
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var movieDetail: MovieDetail
+
+    private val listProviders = mutableListOf<Flatrate>()
+    var urlImageTest = ""
+
+    private val adapterProvider = ProviderDetailsAdapter(listProviders)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,12 +57,12 @@ class DetailsScreen : AppCompatActivity() {
 
     private fun initViews() {
         val extras = intent.extras
-        val movieId = extras?.getInt("MOVIE_ID")
+        val movieId = extras?.getString("MOVIE_ID")
         if (movieId != null) {
-            viewModel.getMovieDetail(movieId.toString())
+            viewModel.getMovieDetail(movieId)
+            viewModel.getProvider(movieId)
+            providerMovie()
             movieDetails()
-            viewModel.getCreditMovie(movieId.toString())
-            movieCredits()
         }
         toolbar.setNavigationOnClickListener {
             onBackPressed()
@@ -111,16 +106,18 @@ class DetailsScreen : AppCompatActivity() {
         }
     }
 
-    private fun movieCredits() {
-        viewModel.actorMovie.observe(this) {
-            listActor.addAll(it)
-            adapterActor.notifyDataSetChanged()
+    private fun providerMovie() {
+        viewModel.providerMovie.observe(this) {
+            if (it != null) {
+                listProviders.addAll(it)
+            }
+            adapterProvider.notifyDataSetChanged()
         }
     }
 
     private fun setupRecycler() {
-        rvActors.adapter = adapterActor
-        rvActors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        rvProvider.adapter = adapterProvider
+        rvProvider.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
     private fun addFavoriteToDb() {

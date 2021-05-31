@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.model.FavoriteList
 import com.digitalhouse.moviewallet.model.Subject
 import com.digitalhouse.moviewallet.model.User
 import com.digitalhouse.moviewallet.ui.viewmodel.LoginViewModel
@@ -197,7 +198,7 @@ class LoginScreen : AppCompatActivity(), Util {
                 user.email ?: "",
                 user.displayName ?: "",
                 subject,
-                listOf()
+                FavoriteList(listOf())
             )
 
             firestoreDb.collection("users")

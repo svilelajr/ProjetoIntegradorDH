@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\89fdf914f5a55b6d1c8a75561337ced5\jetified-core-ktx-1.3.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\b8a25d6cc4e6f2ef404242f25f591d48\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\6b474db785a4db1bef87eddc1df6915f\jetified-firebase-firestore-ktx-22.1.2\AndroidManifest.xml:2:1-21:12
@@ -85,20 +85,20 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\dddev\.
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\ff77ff4a7251f8f24679ab72ae2e35da\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\ee5c0e793a397e9e87e07ef016f13e48\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\b33f2259f7e5e81d2613f0f44b52fbf4\jetified-protolite-well-known-types-17.1.1\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:2:11-69
@@ -141,7 +141,7 @@ MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\dddev\.gradle\caches\transfor
 	android:name
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:8:5-35:19
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:8:5-38:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\b8a25d6cc4e6f2ef404242f25f591d48\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\b8a25d6cc4e6f2ef404242f25f591d48\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:22.1.2] C:\Users\dddev\.gradle\caches\transforms-2\files-2.1\6b474db785a4db1bef87eddc1df6915f\jetified-firebase-firestore-ktx-22.1.2\AndroidManifest.xml:11:5-19:19
@@ -278,6 +278,12 @@ ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\Projeto
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:34:13-52
 	android:name
 		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:33:13-58
+meta-data#preloaded_fonts
+ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:35:9-37:57
+	android:resource
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:37:13-54
+	android:name
+		ADDED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml:36:13-43
 uses-sdk
 INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app\src\main\AndroidManifest.xml

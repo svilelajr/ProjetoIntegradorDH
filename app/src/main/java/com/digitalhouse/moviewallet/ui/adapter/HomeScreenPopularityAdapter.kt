@@ -31,7 +31,7 @@ class HomeScreenPopularityAdapter(val listMovie: MutableList<Movie>) :
         Picasso.get().load(imageUrl).into(image)
         holder.cvMovie.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
-            intent.putExtra("MOVIE_ID", movie.id)
+            intent.putExtra("MOVIE_ID", movie.id.toString())
             it.context.startActivity(intent)
         }
 

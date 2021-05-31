@@ -29,7 +29,7 @@ class HomeScreenMovieAdapter(val listaFilme: MutableList<MovieRecycler>) : Recyc
 
         holder.cvMovie.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
-            intent.putExtra("MOVIE_ID", position.id)
+            intent.putExtra("MOVIE_ID", position.id.toString())
             it.context.startActivity(intent)
         }
     }

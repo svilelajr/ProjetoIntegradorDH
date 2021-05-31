@@ -32,7 +32,7 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalh
 
         holder.cvMovie.setOnClickListener{
             val intent= Intent(it.context,DetailsScreen::class.java)
-            intent.putExtra("MOVIE_ID", movie.id)
+            intent.putExtra("MOVIE_ID", movie.id.toString())
             it.context.startActivity(intent)
         }
 

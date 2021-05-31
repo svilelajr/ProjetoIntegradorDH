@@ -29,7 +29,7 @@ class MovieScreenAdapter : RecyclerView.Adapter<MovieScreenAdapter.MovieScreenVi
         Picasso.get().load(imageUrl).into(image)
         holder.cvMovie.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
-            intent.putExtra("MOVIE_ID", position.id)
+            intent.putExtra("MOVIE_ID", position.id.toString())
             it.context.startActivity(intent)
         }
     }

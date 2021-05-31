@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.model.MovieFireDb
+import com.digitalhouse.moviewallet.model.MovieDetail
 import com.digitalhouse.moviewallet.model.User
 import com.digitalhouse.moviewallet.ui.adapter.FavoritesAdapter
 import com.google.firebase.auth.FirebaseAuth
@@ -19,7 +19,7 @@ class FavoritesScreen : AppCompatActivity() {
     private val rvFavorite by lazy { findViewById<RecyclerView>(R.id.rv_movie_screen) }
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_movies) }
     private val firestoreDb = Firebase.firestore
-    private val favorites: MutableList<MovieFireDb> = mutableListOf()
+    private var favorites: MutableList<HashMap<String,*>> = mutableListOf()
     private lateinit var user: User
     private lateinit var adapterFavorite: FavoritesAdapter
     private lateinit var firebaseAuth: FirebaseAuth
@@ -54,8 +54,15 @@ class FavoritesScreen : AppCompatActivity() {
             firestoreDb.collection("users")
                 .document(user.uid).get()
                 .addOnSuccessListener { it ->
+                   val user = it.toObject(User::class.java)
                     val result = it.data?.get("favoriteList")
-                    result as ArrayList<HashMap<String, MovieFireDb>>
+                    result as ArrayList<HashMap<String,*>>
+//                    result.forEach {
+//                        favorites.putAll(it)
+//                    }
+//                    user?.movies?.name?
+                    favorites.addAll(result)
+
                     adapterFavorite = FavoritesAdapter(favorites)
                     rvFavorite.adapter = adapterFavorite
                 }.addOnFailureListener {
