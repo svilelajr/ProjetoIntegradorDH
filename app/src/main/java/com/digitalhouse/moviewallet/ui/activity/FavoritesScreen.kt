@@ -20,7 +20,6 @@ class FavoritesScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_movies) }
     private val firestoreDb = Firebase.firestore
     private var favorites: MutableList<HashMap<String,*>> = mutableListOf()
-    private lateinit var user: User
     private lateinit var adapterFavorite: FavoritesAdapter
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -43,26 +42,16 @@ class FavoritesScreen : AppCompatActivity() {
         supportActionBar?.title = "Favorites"
 
         getFavoriteData()
-//        if (favorites.isNotEmpty()) {
-//            adapterFavorite = FavoritesAdapter(favorites)
-//            rvFavorite.adapter = adapterFavorite
-//        }
     }
 
     fun getFavoriteData() {
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
                 .document(user.uid).get()
-                .addOnSuccessListener { it ->
-                   val user = it.toObject(User::class.java)
+                .addOnSuccessListener {
                     val result = it.data?.get("favoriteList")
                     result as ArrayList<HashMap<String,*>>
-//                    result.forEach {
-//                        favorites.putAll(it)
-//                    }
-//                    user?.movies?.name?
                     favorites.addAll(result)
-
                     adapterFavorite = FavoritesAdapter(favorites)
                     rvFavorite.adapter = adapterFavorite
                 }.addOnFailureListener {
@@ -70,23 +59,4 @@ class FavoritesScreen : AppCompatActivity() {
                 }
         }
     }
-
-
-
-//    fun readData() {
-//        firebaseAuth.currentUser.let { user ->
-//            firestoreDb.collection("users")
-//                .document(user.uid).get()
-//                .addOnCompleteListener { task ->
-//                    if (task.isSuccessful) {
-//                        val list = ArrayList<String>()
-//                        for (document in task.result) {
-//                            val name = document.data["name"].toString()
-//                            list.add(name)
-//                        }
-//                        //Do what you need to do with your list
-//                    }
-//                }
-//        }
-//    }
 }
