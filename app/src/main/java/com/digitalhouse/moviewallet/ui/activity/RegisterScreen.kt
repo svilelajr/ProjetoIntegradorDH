@@ -5,20 +5,17 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.digitalhouse.moviewallet.ui.viewmodel.RegisterViewModel
 import com.digitalhouse.moviewallet.util.Util
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class RegisterScreen : AppCompatActivity(), Util {
