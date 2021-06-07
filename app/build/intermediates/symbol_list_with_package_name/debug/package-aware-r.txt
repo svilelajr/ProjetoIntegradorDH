@@ -1869,6 +1869,7 @@ drawable titulo_filme
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable toystory
+drawable uma_borda_arredondada
 id ALT
 id BOTTOM_END
 id BOTTOM_START
