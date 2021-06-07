@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
@@ -22,6 +23,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -35,7 +37,9 @@ class LoginScreen : AppCompatActivity(), Util {
     private val btLoginFacebook by lazy { findViewById<ImageButton>(R.id.img_btn_facebook_sign_in) }
     private val btLoginGoogle by lazy { findViewById<ImageButton>(R.id.img_btn_google_sign_in) }
     private val fieldEmailLayout by lazy { findViewById<TextInputLayout>(R.id.til_email_login) }
+    private val fieldEmail by lazy { findViewById<TextInputEditText>(R.id.et_email_login) }
     private val fieldPasswordLayout by lazy { findViewById<TextInputLayout>(R.id.til_password_login) }
+    private val fieldPassword by lazy { findViewById<TextInputEditText>(R.id.ti_password_login) }
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
     private val loginManager = LoginManager.getInstance()
@@ -66,8 +70,10 @@ class LoginScreen : AppCompatActivity(), Util {
     private fun initClick() {
         btLogin.setOnClickListener {
             if (validadePassword(fieldPasswordLayout) && validateEmail(fieldEmailLayout)) {
-                val intent = Intent(this, HomeScreen::class.java)
-                startActivity(intent)
+                val email = fieldEmail.text.toString()
+                val pass = fieldPassword.text.toString()
+                firebaseAuthWithEmailPass(email, pass)
+
             }
         }
 
@@ -126,7 +132,7 @@ class LoginScreen : AppCompatActivity(), Util {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful){
+                if (task.isSuccessful) {
 
                     Log.d("GoogleSign", "signInWithCredential:success")
                     val user = firebaseAuth.currentUser
@@ -182,6 +188,20 @@ class LoginScreen : AppCompatActivity(), Util {
 
         startActivityForResult(signInIntent, 200)
 
+    }
+
+    private fun firebaseAuthWithEmailPass(email: String, pass: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val user = firebaseAuth.currentUser
+                startActivity(Intent(this, HomeScreen::class.java))
+            } else {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Login Inválido")
+                builder.setMessage("Usuário não cadastrado")
+                builder.show()
+            }
+        }
     }
 
 }
