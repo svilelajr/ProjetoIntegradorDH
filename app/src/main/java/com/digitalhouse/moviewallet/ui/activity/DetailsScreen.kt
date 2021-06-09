@@ -1,6 +1,9 @@
 package com.digitalhouse.moviewallet.ui.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -9,9 +12,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
+import com.digitalhouse.moviewallet.model.Buy
 import com.digitalhouse.moviewallet.model.Flatrate
-import com.digitalhouse.moviewallet.model.Providers
-import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
+import com.digitalhouse.moviewallet.model.Rent
+import com.digitalhouse.moviewallet.ui.adapter.ProviderBuyDetailsAdapter
+import com.digitalhouse.moviewallet.ui.adapter.ProviderFlatrateDetailsAdapter
+import com.digitalhouse.moviewallet.ui.adapter.ProviderRentDetailsAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.squareup.picasso.Picasso
@@ -19,28 +25,38 @@ import java.time.LocalDate
 
 class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
+    private val ivBackgroundMovie by lazy { findViewById<ImageView>(R.id.iv_moviebackground_details) }
     private val ivMovie by lazy { findViewById<ImageView>(R.id.iv_movie_details) }
-    private val tvMovie by lazy { findViewById<TextView>(R.id.tv_title_details) }
     private val tvSynopsis by lazy { findViewById<TextView>(R.id.tv_synopsis_details) }
-    private val tvGenre by lazy { findViewById<TextView>(R.id.tv_genre_details) }
+    private val tvTitle by lazy { findViewById<TextView>(R.id.tv_title_details) }
     private val tvRating by lazy { findViewById<TextView>(R.id.tv_percentage_details) }
-    private val rvProvider by lazy { findViewById<RecyclerView>(R.id.rv_provider_details) }
-
-
+    private val rvProviderFlatrate by lazy { findViewById<RecyclerView>(R.id.rv_providerflatrate_details) }
+    private val rvProviderRent by lazy { findViewById<RecyclerView>(R.id.rv_providerrent_details) }
+    private val rvProviderBuy by lazy { findViewById<RecyclerView>(R.id.rv_providerbuy_details) }
     private val btFavorite by lazy { findViewById<FloatingActionButton>(R.id.bt_favorite_details) }
+    private val tvFlatrate by lazy { findViewById<TextView>(R.id.tv_flatrate_details) }
+    private val tvRent by lazy { findViewById<TextView>(R.id.tv_rent_details) }
+    private val tvBuy by lazy { findViewById<TextView>(R.id.tv_buy_details) }
+
 
     private lateinit var viewModel: DetailsViewModel
-    private val listProviders = mutableListOf<Flatrate>()
-    var urlImageTest = ""
 
-    private val adapterProvider = ProviderDetailsAdapter(listProviders)
+    private val listProvidersFlatrate = mutableListOf<Flatrate>()
+    private val listProvidersBuy = mutableListOf<Buy>()
+    private val listProvidersRent = mutableListOf<Rent>()
+    private val adapterProviderFlatrate = ProviderFlatrateDetailsAdapter(listProvidersFlatrate)
+    private val adapterProviderBuy = ProviderBuyDetailsAdapter(listProvidersBuy)
+    private val adapterProviderRent = ProviderRentDetailsAdapter(listProvidersRent)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.details_screen)
         viewModel = ViewModelProvider.NewInstanceFactory().create(DetailsViewModel::class.java)
-        viewModel.imageTest.observe(this, { url ->
-            Picasso.get().load(url).into(ivMovie)
+        viewModel.imageBackgroundUrl.observe(this, { url ->
+            Picasso.get().load(url).into(ivBackgroundMovie)
+        })
+        viewModel.imagePosterUrl.observe(this, {
+            Picasso.get().load(it).into(ivMovie)
         })
         setSupportActionBar(toolbar)
         initViews()
@@ -57,21 +73,29 @@ class DetailsScreen : AppCompatActivity() {
             movieDetails()
             viewModel.getProvider(movieId.toString())
             providerMovie()
+
         }
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun movieDetails() {
         viewModel.movieDetail.observe(this) {
             val date = LocalDate.parse(it.releaseDate)
-            val imageUrl: String = urlImageTest
-            tvMovie.text = it.title
-            tvSynopsis.text = it.overview
-            tvGenre.text = "(${date.year}) ${it.genres?.get(0)?.name} | ${it.runtime}min"
+            if (it.genres?.isNotEmpty() == true) {
+                tvTitle.text =
+                    ("${it.title} (${date.year}) | ${it.genres.get(0).name} | ${it.runtime}min")
+            } else {
+                ("${it.title} (${date.year}) | ${it.runtime}min")
+            }
+            if (it.overview.isNullOrBlank()) {
+                tvSynopsis.text = "INFELIZMENTE A SINOPSE DO FILME AINDA NÃO FOI FORNECIDA"
+            } else {
+                tvSynopsis.text = it.overview
+            }
             tvRating.text = "${viewModel.getPopularity()} %"
-//            Picasso.get().load(imageUrl).into(ivMovie)
         }
     }
 
@@ -85,17 +109,59 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun providerMovie() {
-        viewModel.providerMovie.observe(this) {
+        viewModel.providerFlatrate.observe(this) {
             if (it != null) {
-                listProviders.addAll(it)
+                listProvidersFlatrate.addAll(it)
             }
-            adapterProvider.notifyDataSetChanged()
+            adapterProviderFlatrate.notifyDataSetChanged()
+            validateProvider()
         }
+        viewModel.providerBuy.observe(this) {
+            if (it != null) {
+                listProvidersBuy.addAll(it)
+            }
+            adapterProviderBuy.notifyDataSetChanged()
+            validateProvider()
+        }
+        viewModel.providerRent.observe(this) {
+            if (it != null) {
+                listProvidersRent.addAll(it)
+            }
+            adapterProviderRent.notifyDataSetChanged()
+            validateProvider()
+        }
+
     }
 
     private fun setupRecycler() {
-        rvProvider.adapter = adapterProvider
-        rvProvider.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        rvProviderFlatrate.adapter = adapterProviderFlatrate
+        rvProviderFlatrate.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        rvProviderBuy.adapter = adapterProviderBuy
+        rvProviderBuy.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        rvProviderRent.adapter = adapterProviderRent
+        rvProviderRent.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    private fun validateProvider() {
+        when {
+            listProvidersFlatrate.isNotEmpty() -> {
+                rvProviderFlatrate.visibility = VISIBLE
+                tvFlatrate.visibility = VISIBLE
+            }
+            listProvidersRent.isNotEmpty() -> {
+                rvProviderRent.visibility = VISIBLE
+                tvRent.visibility = VISIBLE
+            }
+            listProvidersBuy.isNotEmpty() -> {
+                rvProviderBuy.visibility = VISIBLE
+                tvBuy.visibility = VISIBLE
+            }
+        }
     }
 
 }

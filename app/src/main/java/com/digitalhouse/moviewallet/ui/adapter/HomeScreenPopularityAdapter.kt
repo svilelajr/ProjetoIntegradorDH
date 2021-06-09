@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
@@ -29,7 +28,7 @@ class HomeScreenPopularityAdapter(val listMovie: MutableList<Movie>) :
         val imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(5)}${movie.posterPath}"
         val image = holder.imgMovie
         Picasso.get().load(imageUrl).into(image)
-        holder.cvMovie.setOnClickListener {
+        holder.cvMovie?.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
             intent.putExtra("MOVIE_ID", movie.id)
             it.context.startActivity(intent)
@@ -40,9 +39,8 @@ class HomeScreenPopularityAdapter(val listMovie: MutableList<Movie>) :
     override fun getItemCount() = listMovie.size
 
     inner class HomeScreenPopularityViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgMovie by lazy { view.findViewById<ImageView>(R.id.iv_home_popularityscreen) }
-        val cvMovie by lazy { view.findViewById<CardView>(R.id.cv_home_popularityscreen) }
-        val tvPopularity by lazy { view.findViewById<TextView>(R.id.tv_home_popularityscreen) }
+        val imgMovie: ImageView? by lazy { view.findViewById<ImageView>(R.id.iv_home_popularityscreen) }
+        val cvMovie: CardView? by lazy { view.findViewById<CardView>(R.id.cv_home_popularityscreen) }
     }
 
 }

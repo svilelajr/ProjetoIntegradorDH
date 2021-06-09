@@ -23,14 +23,14 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalh
         val movie = listRelease[position]
         val configuration = SingletonConfiguration.config
         var imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(2)}${movie.backdropPath}"
-        holder.tvMovie.text = movie.title
+        holder.tvMovie?.text = movie.title
         if (movie.backdropPath != null) {
             Picasso.get().load(imageUrl).into(holder.imgView)
         } else
             imageUrl = "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(5)}${movie.posterPath}"
             Picasso.get().load(imageUrl).into(holder.imgView)
 
-        holder.cvMovie.setOnClickListener{
+        holder.cvMovie?.setOnClickListener{
             val intent= Intent(it.context,DetailsScreen::class.java)
             intent.putExtra("MOVIE_ID", movie.id)
             it.context.startActivity(intent)
@@ -39,8 +39,8 @@ class HomeScreenReleaseAdapter(private val listRelease: MutableList<com.digitalh
     }
 
     inner class HomeScreenReleaseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgView by lazy { view.findViewById<ImageView>(R.id.iv_movie_itemrelease) }
-        val cvMovie by lazy { view.findViewById<CardView>(R.id.cv_movie_itemrelease) }
-        val tvMovie by lazy { view.findViewById<TextView>(R.id.tv_title_itemrelease) }
+        val imgView: ImageView? by lazy { view.findViewById<ImageView>(R.id.iv_movie_itemrelease) }
+        val cvMovie: CardView? by lazy { view.findViewById<CardView>(R.id.cv_movie_itemrelease) }
+        val tvMovie: TextView? by lazy { view.findViewById<TextView>(R.id.tv_title_itemrelease) }
     }
 }

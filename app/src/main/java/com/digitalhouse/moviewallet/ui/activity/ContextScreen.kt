@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.model.MovieRecycler
 import com.digitalhouse.moviewallet.ui.adapter.MovieScreenAdapter
 import com.digitalhouse.moviewallet.ui.adapter.RecyclerScrollListener
 import com.digitalhouse.moviewallet.ui.viewmodel.ContextViewModel

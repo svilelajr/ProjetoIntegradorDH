@@ -56,7 +56,7 @@ class SettingsScreen : AppCompatActivity() {
         userName.text = name ?: ""
     }
 
-    fun signout() {
+    private fun signout() {
         firebaseAuth.signOut()
         loginManager.logOut()
         googleSingInClient.signOut()

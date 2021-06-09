@@ -9,10 +9,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_mw"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_mw"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieWallet"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,12 +22,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.HomeScreen" />
-        <activity android:name=".ui.activity.SearchScreen" />
+        <activity android:name=".ui.activity.SearchScreenCategory" />
         <activity android:name=".ui.activity.DetailsScreen" />
         <activity android:name=".ui.activity.LoginScreen" />
         <activity android:name=".ui.activity.RegisterScreen" />
         <activity android:name=".ui.activity.ContextScreen" />
         <activity android:name=".ui.activity.SettingsScreen" />
+        <activity android:name=".ui.activity.SearchScreen" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

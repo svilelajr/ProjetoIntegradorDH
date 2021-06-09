@@ -8,18 +8,19 @@ import retrofit2.http.Query
 interface ServiceMovieDB {
 
     @GET("configuration")
-    suspend fun getMoviesConfiguration(): MovieConfiguration
+    suspend fun getMoviesConfiguration(): MovieConfigurationResponse
 
     @GET("genre/movie/list")
     suspend fun getGenre(
         @Query("language") language: String?
-    ): ListGenre
+    ): GenreResponse
 
     @GET("movie/now_playing")
     suspend fun getReleaseMovie(
         @Query("language") language: String?,
-        @Query("region") region: String?
-    ): UpComing
+        @Query("region") region: String?,
+        @Query("page") page: Int?
+    ): UpComingResponse
 
     @GET("discover/movie")
     suspend fun getMoviesByGenre(
@@ -27,26 +28,27 @@ interface ServiceMovieDB {
         @Query("with_genres") genre: String?,
         @Query("page") page: Int?,
         @Query("watch_region") region: String,
-        @Query("watch_monetization_types") watchMonetization: String
-    ): DiscoverMovies
+
+        ): DiscoverMovieResponse
 
     @GET("movie/{movie_id}")
     suspend fun getMovieDetail(
         @Path("movie_id") movieId: String,
         @Query("language") language: String?
-    ): MovieDetail
+    ): MovieDetailResponse
 
     @GET("movie/{movie_id}/credits")
     suspend fun getCreditMovie(
         @Path("movie_id") movieId: String,
         @Query("language") language: String?
-    ): CreditMovie
+    ): CreditMovieResponse
 
     @GET("movie/popular")
     suspend fun getPopularMovie(
         @Query("language") language: String?,
+        @Query("page") page: Int?,
         @Query("region") region: String?
-    ): PopularMovie
+    ): PopularMovieResponse
 
     @GET("movie/{movie_id}/watch/providers")
     suspend fun getProviderMovie(
@@ -56,6 +58,14 @@ interface ServiceMovieDB {
     @GET("movie/{movie_id}/images")
     suspend fun getImageMovie(
         @Path("movie_id") movieId: String,
-        @Query("include_image_language")pt:String
-    ):ImageMovieResponse
+        @Query("include_image_language") pt: String
+    ): ImageMovieResponse
+
+    @GET("search/movie")
+    suspend fun getSearchMovie(
+        @Query("language") language: String?,
+        @Query("query") query: String?,
+        @Query("page") page: Int?,
+        @Query("region") region: String?,
+    ): SearchResponse
 }

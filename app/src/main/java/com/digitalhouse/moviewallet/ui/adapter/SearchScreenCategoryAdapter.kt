@@ -21,10 +21,10 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
         val position = listaDeCategorias[position]
         val nome = holder.nomeCategoria
         val btCategory = holder.btCategory
-        nome.text = position.name
+        nome?.text = position.name
 
 
-        nome.setOnClickListener {
+        nome?.setOnClickListener {
             val intent = Intent(it.context, ContextScreen::class.java)
             intent.putExtra("GENRE_NAME", position.name)
             intent.putExtra("GENRE_ID", position.id)
@@ -35,8 +35,8 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
     }
 
     inner class SearchScreenCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val nomeCategoria by lazy { view.findViewById<TextView>(R.id.tv_categorysearch_itemcategory) }
-        val btCategory by lazy { view.findViewById<ImageButton>(R.id.bt_categorysearch_temcategory) }
+        val nomeCategoria: TextView? by lazy { view.findViewById<TextView>(R.id.tv_categorysearch_itemcategory) }
+        val btCategory: ImageButton? by lazy { view.findViewById<ImageButton>(R.id.bt_categorysearch_temcategory) }
     }
 }
 

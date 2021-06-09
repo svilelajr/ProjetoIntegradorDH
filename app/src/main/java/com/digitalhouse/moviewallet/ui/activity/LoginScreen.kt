@@ -3,7 +3,6 @@ package com.digitalhouse.moviewallet.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
@@ -26,7 +25,6 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import java.lang.Exception
 
 class LoginScreen : AppCompatActivity(), Util {
 
@@ -85,7 +83,7 @@ class LoginScreen : AppCompatActivity(), Util {
         }
     }
 
-    fun loginFacebook() {
+    private fun loginFacebook() {
         loginManager.logInWithReadPermissions(this, arrayListOf("email", "public_profile"))
         loginManager.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
@@ -177,7 +175,7 @@ class LoginScreen : AppCompatActivity(), Util {
         }
     }
 
-    fun loginGoogleSignIn() {
+    private fun loginGoogleSignIn() {
         val signInIntent = googleSingInClient.signInIntent
 
         startActivityForResult(signInIntent, 200)
