@@ -8,7 +8,6 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.digitalhouse.moviewallet.ui.viewmodel.RegisterViewModel
 import com.digitalhouse.moviewallet.util.Util
 import com.google.android.material.textfield.TextInputLayout

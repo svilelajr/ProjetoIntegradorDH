@@ -46,7 +46,7 @@ class DetailsViewModel : ViewModel() {
     }
 
     fun getPopularity(): String {
-        popularityVote = ((movieDetail.value?.voteAverage)?.times(10))?.toInt().toString()
+        popularityVote = ((movieDetail.value?.popularity)?.times(10))?.toInt().toString()
         return popularityVote
     }
 

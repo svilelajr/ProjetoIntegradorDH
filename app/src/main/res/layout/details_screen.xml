@@ -36,7 +36,7 @@
             android:layout_width="210dp"
             android:layout_height="300dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="60dp"
             app:cardCornerRadius="13dp"
             app:cardElevation="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
             android:id="@+id/cardView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:orientation="vertical"
             app:cardElevation="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +90,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/rosa_claro">
+                android:background="@color/black">
 
                 <TextView
                     android:id="@+id/tv_title_details"
@@ -100,7 +100,7 @@
                     android:layout_marginTop="8dp"
                     android:gravity="start"
                     android:textColor="@color/white"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="NOME FILME" />
@@ -122,23 +122,10 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
                     tools:text="Infelizmentesdf asdf " />
-
-                <TextView
-                    android:id="@+id/tv_percentage_details"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:textAlignment="center"
-                    android:textColor="#5929D977"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_title_details"
-                    tools:text="50%" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -151,21 +138,21 @@
             android:alpha=".35"
             android:backgroundTint="@color/rosa_principal"
             android:src="@drawable/ic_baseline_favorite_35"
-            app:layout_constraintBottom_toTopOf="@+id/cardView"
-            app:layout_constraintStart_toEndOf="@+id/cardView2"
-            app:layout_constraintTop_toBottomOf="@+id/iv_moviebackground_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:tint="@color/white" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="4dp"
             android:alpha=".35"
             android:backgroundTint="@color/rosa_principal"
             android:src="@drawable/ic_baseline_share_24"
             android:tint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/bt_favorite_details"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bt_favorite_details"
             app:layout_constraintTop_toTopOf="@+id/bt_favorite_details" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -238,7 +225,33 @@
             app:layout_constraintBottom_toTopOf="@+id/rv_providerbuy_details"
             app:layout_constraintStart_toStartOf="@+id/rv_providerbuy_details" />
 
+        <TextView
+            android:id="@+id/tv_percentage_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#5929D977"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="348dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:text="50%" />
 
+        <RatingBar
+            android:id="@+id/rb_details_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:numStars="5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_moviebackground_details" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

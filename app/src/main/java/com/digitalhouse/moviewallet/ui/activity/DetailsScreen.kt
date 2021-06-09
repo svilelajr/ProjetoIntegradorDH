@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,7 @@ class DetailsScreen : AppCompatActivity() {
     private val tvFlatrate by lazy { findViewById<TextView>(R.id.tv_flatrate_details) }
     private val tvRent by lazy { findViewById<TextView>(R.id.tv_rent_details) }
     private val tvBuy by lazy { findViewById<TextView>(R.id.tv_buy_details) }
+    private val ratingBar by lazy { findViewById<RatingBar>(R.id.rb_details_screen) }
 
 
     private lateinit var viewModel: DetailsViewModel
@@ -95,7 +97,8 @@ class DetailsScreen : AppCompatActivity() {
             } else {
                 tvSynopsis.text = it.overview
             }
-            tvRating.text = "${viewModel.getPopularity()} %"
+            ratingBar.rating = 5.0f
+
         }
     }
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rosa_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_new"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_search"
+        android:elevation="10dp"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_search"
+        app:layout_constraintEnd_toEndOf="@+id/tb_search"
+        app:layout_constraintStart_toStartOf="@+id/tb_search"
+        app:layout_constraintTop_toTopOf="@+id/tb_search"
+        app:queryHint="Digite o Filme" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_result_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_search"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
