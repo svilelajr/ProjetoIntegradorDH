@@ -61,8 +61,4 @@ class SearchScreen : AppCompatActivity() {
         )
         resultSearch.adapter = adapterResult
     }
-
-    fun hideKeyboard(){
-
-    }
 }

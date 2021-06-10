@@ -168,10 +168,8 @@ class LoginScreen : AppCompatActivity(), Util {
         super.onStart()
         val currentUser = firebaseAuth.currentUser
         if (currentUser != null) {
-
             startActivity(Intent(this, SettingsScreen::class.java))
             finish()
-
         }
     }
 

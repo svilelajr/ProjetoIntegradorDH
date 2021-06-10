@@ -1992,7 +1992,6 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
-id cardView
 id cardView2
 id cardview_preferencias
 id center
@@ -2046,6 +2045,7 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id cv_details_itemsimilar
 id cv_home_popularityscreen
 id cv_movie_itemcategory
 id cv_movie_itemrelease
@@ -2107,7 +2107,6 @@ id fitToContents
 id fixed
 id flip
 id floating
-id floatingActionButton
 id forever
 id foto_preferencias
 id ghost_view
@@ -2142,6 +2141,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_details_itemsimilar
 id iv_home_popularityscreen
 id iv_movie_details
 id iv_movie_itemcategory
@@ -2284,6 +2284,7 @@ id rv_providerflatrate_details
 id rv_providerrent_details
 id rv_release_home
 id rv_result_search
+id rv_similiar_details
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2412,11 +2413,11 @@ id transition_transform
 id triangle
 id tv_buy_details
 id tv_categorysearch_itemcategory
+id tv_detailsmovie_details
 id tv_explore_search
 id tv_flatrate_details
 id tv_lastsee_search
 id tv_movie_result
-id tv_percentage_details
 id tv_popularity_home
 id tv_rent_details
 id tv_synopsis_details
@@ -2528,6 +2529,7 @@ layout details_screen
 layout home_screen
 layout item_context_screen
 layout item_details_provider
+layout item_details_similiar
 layout item_home_category
 layout item_home_popularity
 layout item_home_release

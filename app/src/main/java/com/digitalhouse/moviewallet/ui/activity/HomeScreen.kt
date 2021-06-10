@@ -3,6 +3,7 @@ package com.digitalhouse.moviewallet.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.View.GONE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -21,6 +22,8 @@ import com.digitalhouse.moviewallet.ui.adapter.HomeScreenPopularityAdapter
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 
@@ -35,7 +38,8 @@ class HomeScreen : AppCompatActivity() {
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
     private val tvPopularity by lazy { findViewById<TextView>(R.id.tv_popularity_home) }
 
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+    private val mOnNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.page_home -> {
 
@@ -135,7 +139,6 @@ class HomeScreen : AppCompatActivity() {
         btExplorar.setOnClickListener {
             val intent = Intent(this, SearchScreenCategory::class.java)
             startActivity(intent)
-
         }
     }
 

@@ -14,8 +14,26 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f05d4cf-90a9-445c-9819-e1e2fbe9b551" name="Default Changelist" comment="">
+    <list default="true" id="6f05d4cf-90a9-445c-9819-e1e2fbe9b551" name="Default Changelist" comment="&quot;Melhoria Pesquisa&quot;">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -26,12 +44,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_4_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
@@ -41,11 +63,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json" afterDir="false" />
@@ -53,9 +72,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/output-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/adapters/HomeScreenCategoryAdapter$HomeScreenCategoryViewHolder$buttonVerMais$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/adapters/HomeScreenCategoryAdapter$HomeScreenCategoryViewHolder.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/adapters/HomeScreenCategoryAdapter$onBindViewHolder$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/repository/RepositoryMovie.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/repository/RepositoryMovie.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/repository/SingletonConfiguration.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/repository/SingletonConfiguration.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/ContextScreen$rvMovie$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/ContextScreen$rvMovie$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/ContextScreen$toolbar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/ContextScreen$toolbar$2.dex" afterDir="false" />
@@ -63,22 +80,21 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$bottomNavigate$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$bottomNavigate$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$btExplorar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$btExplorar$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$initClick$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$initClick$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$mOnNavigationItemSelectedListener$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$mOnNavigationItemSelectedListener$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerRelease$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerRelease$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerViewCategoria$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerViewCategoria$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$toolbar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen$toolbar$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$btLogin$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$btLogin$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$btRegister$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$btRegister$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/HomeScreen.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$initClick$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$initClick$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$initClick$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$initClick$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldPasswordLayout$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$initClick$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$initClick$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$spinnerGender$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$spinnerGender$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/SearchScreen$onCreate$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/SearchScreen$onCreate$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/SearchScreen$toolbar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/SearchScreen$toolbar$2.dex" afterDir="false" />
@@ -90,18 +106,12 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$imgMovie$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$imgMovie$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/DetailsViewModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/DetailsViewModel.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel$getGenre$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel$getGenre$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/util/Util$DefaultImpls.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/util/Util$DefaultImpls.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_borda_class_indic.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_borda_arredondada.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_borda_arredondada.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_baseline_arrow_back_24.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_baseline_arrow_back_24.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_baseline_favorite_35.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_baseline_favorite_35.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_shape_categorias_borda.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_shape_categorias_borda.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_titulo_filme.jpg.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_titulo_filme.jpg.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_details_screen.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_details_screen.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_search_category.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_search_category.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_search_screen.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_search_screen.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_settings_screen.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_settings_screen.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_mw_round.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_mw_round.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat" afterDir="false" />
@@ -111,10 +121,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat" afterDir="false" />
@@ -134,7 +142,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
@@ -170,19 +177,27 @@
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/model/Movie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/network/ServiceMovieDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/network/ServiceMovieDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/repository/RepositoryMovie.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/repository/RepositoryMovie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen$rvMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen$rvMovie$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen$toolbar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen$toolbar$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/ContextScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$ivMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$ivMovie$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$bottomNavigate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$bottomNavigate$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$btExplorar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$btExplorar$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$initClick$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$initClick$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$mOnNavigationItemSelectedListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$mOnNavigationItemSelectedListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$observers$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerRelease$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerRelease$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerViewCategoria$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$recyclerViewCategoria$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$toolbar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen$toolbar$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/HomeScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/LoginScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$btnConfirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$btnConfirm$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.class" afterDir="false" />
@@ -192,8 +207,10 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SearchScreen$toolbar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SearchScreen$toolbar$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SearchScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SearchScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SettingsScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/activity/SettingsScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$cvMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$cvMovie$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$imgView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$imgView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$tvMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$tvMovie$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$cvMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$cvMovie$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$imgMovie$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$MovieScreenViewHolder$imgMovie$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$onBindViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/MovieScreenAdapter$onBindViewHolder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.class" afterDir="false" />
@@ -203,13 +220,22 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/GenreResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/GenreResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/ImageMovieResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/ImageMovieResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/MovieDetailResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/MovieDetailResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/network/ServiceMovieDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/network/ServiceMovieDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/RepositoryMovie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/RepositoryMovie.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/SingletonConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/SingletonConfiguration.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/RegisterScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/RegisterScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/HomeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/LoginScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SearchScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SearchScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SettingsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SettingsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/adapter/SearchScreenResultAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/adapter/SearchScreenResultAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/DetailsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/DetailsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_favorite_35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_favorite_35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_search.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/details_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/details_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_screen_resultsearch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_screen_resultsearch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/settings_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/settings_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_mw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_mw.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +243,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\gportoma\.android\avd\Pixel_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@RQ8M304JR5D]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -269,8 +295,8 @@
       <list>
         <option value="Kotlin Interface" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -430,24 +456,44 @@
       <option name="project" value="LOCAL" />
       <updated>1623200964263</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Melhoria Pesquisa&quot;">
+      <created>1623275667835</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623275667835</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Implementação Feature Disponibilidade e Alterações de UI&quot;" />
     <MESSAGE value="&quot;Novas Alterações&quot;" />
     <MESSAGE value="&quot;Implementação Pesquisa&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Implementação Pesquisa&quot;" />
+    <MESSAGE value="&quot;Melhoria Pesquisa&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Melhoria Pesquisa&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="203" key="#Inspections" timestamp="1623199055993">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="586" y="203" key="#Inspections/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623199055993" />
-    <state x="754" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1623196150764">
+    <state x="754" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1623365582719">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="754" y="240" key="#com.intellij.ide.util.MemberChooser/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623196150764" />
+    <state x="754" y="240" key="#com.intellij.ide.util.MemberChooser/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623365582719" />
     <state x="754" y="240" key="#com.intellij.ide.util.MemberChooser/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1620346129249" />
     <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1622068716186">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -472,15 +518,15 @@
     </state>
     <state x="661" y="362" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623198811620" />
     <state x="661" y="362" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1620346995895" />
-    <state x="951" y="468" key="AndroidCreateResourceFileDialog" timestamp="1623195728837">
+    <state x="951" y="468" key="AndroidCreateResourceFileDialog" timestamp="1623365411167">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="951" y="468" key="AndroidCreateResourceFileDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623195728837" />
+    <state x="951" y="468" key="AndroidCreateResourceFileDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623365411167" />
     <state x="951" y="468" key="AndroidCreateResourceFileDialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1620346017143" />
-    <state x="504" y="95" key="CommitChangelistDialog2" timestamp="1623200934195">
+    <state x="504" y="95" key="CommitChangelistDialog2" timestamp="1623275555480">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="504" y="95" key="CommitChangelistDialog2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623200934195" />
+    <state x="504" y="95" key="CommitChangelistDialog2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623275555480" />
     <state x="504" y="95" key="CommitChangelistDialog2/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621298243205" />
     <state width="482" height="466" key="DebuggerActiveHint" timestamp="1622693579610">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -499,32 +545,32 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1622673834902" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1623203434110">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1623283733388">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1037" height="285" key="GridCell.Tab.0.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1622691989957" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623203434110" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623283733388" />
     <state width="1036" height="562" key="GridCell.Tab.0.bottom/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1620433864365" />
     <state width="1876" height="285" key="GridCell.Tab.0.bottom/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621043794821" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1623203434109">
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1623283733386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1037" height="285" key="GridCell.Tab.0.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1622691989957" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623203434109" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623283733386" />
     <state width="1036" height="562" key="GridCell.Tab.0.center/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1620433864364" />
     <state width="1876" height="285" key="GridCell.Tab.0.center/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621043794821" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1623203434109">
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1623283733386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1037" height="285" key="GridCell.Tab.0.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1622691989957" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623203434109" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623283733386" />
     <state width="1036" height="562" key="GridCell.Tab.0.left/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1620433864364" />
     <state width="1876" height="285" key="GridCell.Tab.0.left/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621043794821" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1623203434109">
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1623283733387">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1037" height="285" key="GridCell.Tab.0.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1622691989957" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623203434109" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623283733387" />
     <state width="1036" height="562" key="GridCell.Tab.0.right/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1620433864364" />
     <state width="1876" height="285" key="GridCell.Tab.0.right/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621043794821" />
     <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1622694768653">
@@ -551,37 +597,38 @@
     <state width="1037" height="285" key="GridCell.Tab.1.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1622691989958" />
     <state width="1877" height="328" key="GridCell.Tab.1.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1622694768653" />
     <state width="1876" height="285" key="GridCell.Tab.1.right/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621043794822" />
-    <state x="540" y="267" key="IDE.errors.dialog" timestamp="1623200743779">
+    <state x="540" y="267" key="IDE.errors.dialog" timestamp="1623282162752">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="540" y="267" key="IDE.errors.dialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623200743779" />
+    <state x="540" y="267" key="IDE.errors.dialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623282162752" />
     <state x="540" y="267" key="IDE.errors.dialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1620349383875" />
     <state x="593" y="287" key="MultipleFileMergeDialog" timestamp="1621298651216">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="593" y="287" key="MultipleFileMergeDialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621298651216" />
-    <state x="552" y="245" key="Vcs.Push.Dialog.v2" timestamp="1623200992788">
+    <state x="552" y="245" key="Vcs.Push.Dialog.v2" timestamp="1623275712563">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="245" key="Vcs.Push.Dialog.v2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623200992788" />
+    <state x="552" y="245" key="Vcs.Push.Dialog.v2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623275712563" />
     <state x="552" y="245" key="Vcs.Push.Dialog.v2/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1621298788468" />
     <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1622693484064">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="968" height="533" key="XDebugger.FullValuePopup/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1622693484064" />
-    <state x="-605" y="-9" width="1096" height="1038" key="dock-window-1" timestamp="1623197087133">
+    <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-1" timestamp="1623363830389">
       <screen x="-1080" y="-449" width="1080" height="1890" />
     </state>
-    <state x="-605" y="-9" width="1096" height="1038" key="dock-window-1/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623197087133" />
+    <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-1/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623363830389" />
+    <state x="921" y="34" width="952" height="677" key="dock-window-1/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@1920.0.1280.690" timestamp="1623282145357" />
     <state x="-1080" y="-449" width="1096" height="724" key="dock-window-1/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1620863748609" />
     <state x="-1080" y="-449" width="1096" height="1037" key="dock-window-1/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1622068861097" />
     <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-2" timestamp="1623203208712">
       <screen x="-1080" y="-449" width="1080" height="1890" />
     </state>
     <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623203208712" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1622161421023">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1623285307929">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1622161421023" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623285307929" />
   </component>
 </project>

@@ -19,10 +19,12 @@ class SettingsScreen : AppCompatActivity() {
     private val buttonLogout: Button by lazy { findViewById(R.id.btn_logout) }
     private val userName: TextView by lazy { findViewById(R.id.user_name_preferencias) }
     private val toolbarSettings by lazy { findViewById<Toolbar>(R.id.toobar) }
-    private val userPhoto:ImageView by lazy { findViewById(R.id.foto_preferencias) }
+    private val userPhoto: ImageView by lazy { findViewById(R.id.foto_preferencias) }
     private lateinit var firebaseAuth: FirebaseAuth
     private val loginManager = LoginManager.getInstance()
     private lateinit var googleSingInClient: GoogleSignInClient
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

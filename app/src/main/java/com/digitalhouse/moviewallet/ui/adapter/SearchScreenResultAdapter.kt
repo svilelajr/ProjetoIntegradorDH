@@ -13,6 +13,7 @@ import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
 import com.squareup.picasso.Picasso
+import java.time.LocalDate
 
 class SearchScreenResultAdapter(private val listMovie: MutableList<Movie>) :
     RecyclerView.Adapter<SearchScreenResultAdapter.SearchScreenResultViewHolder>() {
@@ -27,6 +28,7 @@ class SearchScreenResultAdapter(private val listMovie: MutableList<Movie>) :
     override fun onBindViewHolder(holder: SearchScreenResultViewHolder, position: Int) {
         val configuration = SingletonConfiguration.config
         val movie = listMovie[position]
+
         val imageUrl =
             "${configuration?.images?.secure_base_url}${configuration?.images?.poster_sizes?.get(5)}${movie.posterPath}"
         val image = holder.imageMovie

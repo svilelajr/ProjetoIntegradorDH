@@ -25,15 +25,17 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/background_search"
         android:elevation="10dp"
         android:inputType="text"
         app:iconifiedByDefault="false"
+        android:outlineSpotShadowColor="@color/white"
+        android:outlineAmbientShadowColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/tb_search"
         app:layout_constraintEnd_toEndOf="@+id/tb_search"
         app:layout_constraintStart_toStartOf="@+id/tb_search"
         app:layout_constraintTop_toTopOf="@+id/tb_search"
-        app:queryHint="Digite o Filme" />
+        app:queryHint="Digite o Filme"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_result_search"

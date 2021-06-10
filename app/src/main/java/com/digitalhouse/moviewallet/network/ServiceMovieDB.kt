@@ -68,4 +68,10 @@ interface ServiceMovieDB {
         @Query("page") page: Int?,
         @Query("region") region: String?,
     ): SearchResponse
+
+    @GET("movie/{movie_id}/similar")
+    suspend fun getSimiliarMovie(
+        @Path("movie_id") movieId: String,
+        @Query("language") language: String?,
+    ): SimiliarMovieResponse
 }
