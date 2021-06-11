@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".activities.MainActivity">
 
         <androidx.appcompat.widget.Toolbar
@@ -34,7 +34,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             tools:text="Fulano Beltrano da Silva"
-            android:textSize="23dp"
+            android:textSize="23sp"
             android:textColor="@color/cinza_escuro"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
                 android:padding="5dp"
                 android:text="Plataformas"
                 android:textColor="@color/white"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -125,10 +125,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:paddingStart="5dp"
                 android:text="Preferencias"
                 android:textColor="@color/white"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -167,6 +166,7 @@
 
 
         </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

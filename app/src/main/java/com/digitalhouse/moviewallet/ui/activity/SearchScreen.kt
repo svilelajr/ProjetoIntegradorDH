@@ -1,63 +1,64 @@
 package com.digitalhouse.moviewallet.ui.activity
 
 import android.os.Bundle
-import android.widget.SearchView
-import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.model.Genre
-import com.digitalhouse.moviewallet.ui.adapter.SearchScreenCategoryAdapter
-import com.digitalhouse.moviewallet.ui.adapter.SearchScreenLastSeeAdapter
-import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
+import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.ui.adapter.SearchScreenResultAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.SearchViewModel
 
-class SearchScreen() : AppCompatActivity() {
+class SearchScreen : AppCompatActivity() {
+
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_search) }
-    private val recyclerVistos by lazy { findViewById<RecyclerView>(R.id.rv_lastsee_search) }
-    private val recyclerCategorias by lazy { findViewById<RecyclerView>(R.id.rv_category_search) }
-    private val seachMovie by lazy { findViewById<SearchView>(R.id.sch_search) }
-    var listGenres = mutableListOf<Genre>()
+    private val search by lazy { findViewById<SearchView>(R.id.search_new) }
+    private val resultSearch by lazy { findViewById<RecyclerView>(R.id.rv_result_search) }
 
     private lateinit var viewModel: SearchViewModel
-    val adapter = SearchScreenCategoryAdapter(listGenres)
+    var listMovies = mutableListOf<Movie>()
+    private val adapterResult = SearchScreenResultAdapter(listMovies)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_screen)
         viewModel = ViewModelProvider.NewInstanceFactory().create(SearchViewModel::class.java)
-        viewModel.getGenre()
-        viewModel.listGenre.observe(this, Observer {
-            it?.let { listGenres.addAll(it) }
-            adapter.notifyDataSetChanged()
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                search.clearFocus()
+                viewModel.searchMovie(query)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                listMovies.clear()
+                viewModel.searchMovie(newText)
+                return false
+            }
+
         })
+        observer()
         setupRecycler()
-        setupToolbar()
+
+    }
+
+    private fun observer() {
+        viewModel.resultSearchMovie.observe(this) {
+            listMovies.addAll(it)
+            adapterResult.notifyDataSetChanged()
+        }
     }
 
     private fun setupRecycler() {
-        recyclerVistos.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//       recyclerVistos.adapter = SearchScreenLastSeeAdapter(ListaFilmes.getListaDefilmeAcao())
-
-        recyclerCategorias.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerCategorias.adapter = adapter
-
-        recyclerCategorias.isNestedScrollingEnabled
-    }
-
-    private fun setupToolbar() {
-        setSupportActionBar(toolbar)
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
+        resultSearch.layoutManager = LinearLayoutManager(
+            this, LinearLayoutManager.VERTICAL, false
+        )
+        resultSearch.adapter = adapterResult
     }
 }
-
-

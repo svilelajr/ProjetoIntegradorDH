@@ -5,5 +5,5 @@ import java.io.Serializable
 data class Genre(
     val id: Int?,
     val name: String?,
-    var movies: MutableList<MovieRecycler>?
+    var movies: MutableList<Movie>?
 ):Serializable

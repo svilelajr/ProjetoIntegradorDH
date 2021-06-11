@@ -4,10 +4,6 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_baseline_home_35.xml"
     },
     {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_search_last_see.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_search_last_see.xml"
-    },
-    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
@@ -52,12 +48,20 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_35.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_borda_arredondada.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\borda_arredondada.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_mw.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_mw.png"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\menu_search_menu.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\menu\\search_menu.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_register_screen.xml.flat",
@@ -70,10 +74,6 @@
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_garota_exemplar.jpg.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\garota_exemplar.jpg"
-    },
-    {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_details_actor.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_details_actor.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_mw_background.png.flat",
@@ -164,16 +164,20 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\shape_categorias_borda.xml"
     },
     {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_context_screen.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_context_screen.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_35.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_baseline_search_35.xml"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_search_category_screen.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\search_category_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_search.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\background_search.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_details_screen.xml.flat",
@@ -188,20 +192,8 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\context_screen.xml"
     },
     {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_borda_class_indic.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable-v24\\borda_class_indic.xml"
-    },
-    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_mw_background.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_mw_background.png"
-    },
-    {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_baseline_favorite_24.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable-v24\\ic_baseline_favorite_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_category.xml.flat",
@@ -248,6 +240,10 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\xml_backup_descriptor.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\xml\\backup_descriptor.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_filme_example.jpg.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\filme_example.jpg"
     },
@@ -276,8 +272,16 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\login_screen.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_screen_resultsearch.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_screen_resultsearch.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_release.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_home_release.xml"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_details_provider.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_details_provider.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_mw_background.png.flat",
@@ -298,6 +302,10 @@
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_mw_round.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_mw_round.png"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share_24.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_baseline_share_24.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_screen.xml.flat",

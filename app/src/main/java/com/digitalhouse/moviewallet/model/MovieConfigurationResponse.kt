@@ -1,0 +1,6 @@
+package com.digitalhouse.moviewallet.model
+
+data class MovieConfigurationResponse(
+    val change_keys: List<String>? = listOf(),
+    val images: Images? = Images()
+)

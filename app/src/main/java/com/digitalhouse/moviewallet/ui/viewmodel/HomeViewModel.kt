@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
-import com.digitalhouse.moviewallet.model.MovieRecycler
 import com.digitalhouse.moviewallet.repository.RepositoryMovie
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import kotlinx.coroutines.CoroutineScope
@@ -15,33 +14,31 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
     private val repository = RepositoryMovie()
-    val _listGenre = MutableLiveData<List<Genre>>()
     val listGenre: MutableLiveData<List<Genre>> = MutableLiveData()
     val listReleaseMovie = MutableLiveData<List<Movie>>()
     val listPopularMovie = MutableLiveData<List<Movie>>()
-    var genreApi = mutableListOf<Genre>()
-    val genreHome = mutableListOf(28, 16, 18, 35, 14, 27, 10749)
+    private var genreApi = mutableListOf<Genre>()
+    private val genreHome = mutableListOf(28, 16, 18, 35, 14, 27, 10749)
     val progress by lazy { MutableLiveData<Boolean>() }
 
     init {
         getConfiguration()
     }
 
-    fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
+    private fun getConfiguration() = CoroutineScope(Dispatchers.IO).launch {
         try {
             repository.getConfiguration().let { configuration ->
                 SingletonConfiguration.setConfiguration(configuration)
                 getGenre()
                 getReleaseMovies()
                 getPopularMovie()
-
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Configuration $error")
         }
     }
 
-    fun getGenre() = CoroutineScope(Dispatchers.IO).launch {
+    private fun getGenre() = CoroutineScope(Dispatchers.IO).launch {
         try {
             progress.postValue(true)
             genreHome.forEach { genreH ->
@@ -53,16 +50,16 @@ class HomeViewModel : ViewModel() {
                     }
                 }
             }
-            genreApi.forEach { genreApi ->
-                repository.getMoviesByGenre(genreApi.id.toString(), 1).let { movie ->
-                    movie.movies?.forEach {
-                        if (it.genreIds?.get(0) == genreApi.id) {
-                            genreApi.movies = movie.movies as MutableList<MovieRecycler>?
+            genreApi.forEach { genre ->
+                repository.getMoviesByGenre(genre.id.toString(), 1).let { dMovie ->
+                    dMovie.movies?.forEach { movie ->
+                        val m = movie.genreIds?.get(0)
+                        if (m == genre.id) {
+                            genre.movies = dMovie.movies as MutableList<Movie>?
                         }
                     }
                 }
             }
-
             listGenre.postValue(genreApi)
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Genre $error")
@@ -71,7 +68,7 @@ class HomeViewModel : ViewModel() {
         }
     }
 
-    fun getReleaseMovies() = CoroutineScope(Dispatchers.IO).launch {
+    private fun getReleaseMovies() = CoroutineScope(Dispatchers.IO).launch {
         try {
             repository.getReleaseMovie().let { movie ->
                 listReleaseMovie.postValue(movie.releaseMovies)
@@ -81,11 +78,11 @@ class HomeViewModel : ViewModel() {
         }
     }
 
-    fun getPopularMovie() = CoroutineScope(Dispatchers.IO).launch {
+    private fun getPopularMovie() = CoroutineScope(Dispatchers.IO).launch {
         try {
             progress.postValue(true)
-            repository.getPopularMovie().let {
-                listPopularMovie.postValue(it.movie)
+            repository.getPopularMovie().let { movieP ->
+                listPopularMovie.postValue(movieP.movie)
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Popular $error")
@@ -95,9 +92,3 @@ class HomeViewModel : ViewModel() {
     }
 
 }
-
-
-
-
-
-

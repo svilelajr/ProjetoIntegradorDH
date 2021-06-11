@@ -26,11 +26,8 @@ class SettingsScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.settings_screen)
-
         setSupportActionBar(toolbarSettings)
-
         toolbarSettings.setNavigationOnClickListener { onBackPressed() }
 
         firebaseAuth = FirebaseAuth.getInstance()
@@ -59,7 +56,7 @@ class SettingsScreen : AppCompatActivity() {
         userName.text = name ?: ""
     }
 
-    fun signout() {
+    private fun signout() {
         firebaseAuth.signOut()
         loginManager.logOut()
         googleSingInClient.signOut()
