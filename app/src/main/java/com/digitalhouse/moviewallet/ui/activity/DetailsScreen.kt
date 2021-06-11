@@ -28,6 +28,8 @@ import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import java.time.LocalDate
 
@@ -51,6 +53,7 @@ class DetailsScreen : AppCompatActivity() {
 
     private lateinit var viewModel: DetailsViewModel
     private lateinit var firebaseAuth: FirebaseAuth
+    private val firestoreDb = Firebase.firestore
     private lateinit var movieDetailResponse: MovieDetailResponse
 
     private val listProviders = mutableListOf<Flatrate>()
@@ -103,7 +106,7 @@ class DetailsScreen : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun movieDetails() {
         viewModel.movieDetail.observe(this) {
-            var movie = it
+            movieDetailResponse = it
             val date = LocalDate.parse(it.releaseDate)
             tvTitle.text = ("${it.title}")
 
@@ -114,7 +117,6 @@ class DetailsScreen : AppCompatActivity() {
             }
             tvDetailsMovie.text = "${date.year} | ${it.runtime}min"
             ratingBar.rating = 5.0f
-            getMovie(movie)
         }
     }
 

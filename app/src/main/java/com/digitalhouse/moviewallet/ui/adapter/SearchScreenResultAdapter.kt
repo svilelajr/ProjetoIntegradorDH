@@ -37,7 +37,7 @@ class SearchScreenResultAdapter(private val listMovie: MutableList<Movie>) :
         holder.yearRelease?.text = movie.releaseDate
         holder.cvMovie?.setOnClickListener {
             val intent = Intent(it.context, DetailsScreen::class.java)
-            intent.putExtra("MOVIE_ID", movie.id)
+            intent.putExtra("MOVIE_ID", movie.id.toString())
             it.context.startActivity(intent)
         }
 

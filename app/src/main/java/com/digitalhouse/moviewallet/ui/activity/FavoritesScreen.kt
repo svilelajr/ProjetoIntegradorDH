@@ -6,8 +6,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.model.MovieDetail
-import com.digitalhouse.moviewallet.model.User
 import com.digitalhouse.moviewallet.ui.adapter.FavoritesAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore

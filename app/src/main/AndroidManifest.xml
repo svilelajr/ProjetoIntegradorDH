@@ -29,6 +29,7 @@
         <activity android:name=".ui.activity.ContextScreen" />
         <activity android:name=".ui.activity.SettingsScreen" />
         <activity android:name=".ui.activity.SearchScreen" />
+        <activity android:name=".ui.activity.FavoritesScreen" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

@@ -23,6 +23,8 @@ class DetailsViewModel : ViewModel() {
     private var popularityVote: String = ""
     val imageBackgroundUrl by lazy { MutableLiveData<String>() }
     val imagePosterUrl by lazy { MutableLiveData<String>() }
+    val similiarMovies = MutableLiveData<List<Movie>>()
+
 
 
     fun getMovieDetail(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
@@ -41,6 +43,16 @@ class DetailsViewModel : ViewModel() {
                 )
             }
         } catch (error: Throwable) {
+            Log.e("Error", "Problema de Conexão $error")
+        }
+    }
+
+    fun getSimiliarMovie(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            repository.getSimiliarMovie(movieId).let {
+                similiarMovies.postValue(it.movies)
+            }
+        }catch (error:Throwable){
             Log.e("Error", "Problema de Conexão $error")
         }
     }

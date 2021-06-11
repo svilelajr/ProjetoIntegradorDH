@@ -33,13 +33,13 @@ class HomeScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_home) }
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
-//    private val indicatorRelease by lazy { findViewById<ScrollingPagerIndicator>(R.id.indicator) }
+    private val indicatorRelease by lazy { findViewById<ScrollingPagerIndicator>(R.id.indicator) }
     private val recyclerPopular by lazy { findViewById<RecyclerView>(R.id.rv_popularity_home) }
     private val progressBar by lazy { findViewById<ProgressBar>(R.id.progressBar) }
     private val btExplorar by lazy { findViewById<Button>(R.id.bt_explore) }
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
-//    private val tvPopularity by lazy { findViewById<TextView>(R.id.tv_popularity_home) }
+    private val tvPopularity by lazy { findViewById<TextView>(R.id.tv_popularity_home) }
 
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->

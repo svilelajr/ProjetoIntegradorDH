@@ -3,7 +3,7 @@ package com.digitalhouse.moviewallet.model
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieDetail(
+data class MovieDetailResponse(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")

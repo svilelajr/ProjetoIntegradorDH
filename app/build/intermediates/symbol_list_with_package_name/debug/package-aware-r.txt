@@ -2136,6 +2136,7 @@ id imageView2
 id imageView4
 id img_btn_facebook_sign_in
 id img_btn_google_sign_in
+id indicator
 id info
 id inline
 id invisible
@@ -2419,6 +2420,7 @@ id tv_explore_search
 id tv_flatrate_details
 id tv_lastsee_search
 id tv_movie_result
+id tv_popularity_home
 id tv_rent_details
 id tv_synopsis_details
 id tv_title_details
