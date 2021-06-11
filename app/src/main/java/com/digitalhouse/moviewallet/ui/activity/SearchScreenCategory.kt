@@ -2,10 +2,13 @@ package com.digitalhouse.moviewallet.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
@@ -18,7 +21,9 @@ class SearchScreenCategory : AppCompatActivity() {
     private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_search_category) }
     private val recyclerCategorias by lazy { findViewById<RecyclerView>(R.id.rv_category_search) }
     private val searchMovie by lazy { findViewById<ImageButton>(R.id.sch_search) }
+    private val progressBar by lazy { findViewById<ProgressBar>(R.id.pb_search) }
     private var listGenres = mutableListOf<Genre>()
+
 
     private lateinit var viewModel: SearchViewModel
     private val adapterCategory = SearchScreenCategoryAdapter(listGenres)
@@ -32,17 +37,15 @@ class SearchScreenCategory : AppCompatActivity() {
         setupRecycler()
         setupToolbar()
         searchMovie.setOnClickListener {
-            val intent = Intent(this,SearchScreen::class.java)
+            val intent = Intent(this, SearchScreen::class.java)
             startActivity(intent)
         }
     }
 
 
-
     private fun setupRecycler() {
 
-        recyclerCategorias.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerCategorias.layoutManager = GridLayoutManager(this, 2)
         recyclerCategorias.adapter = adapterCategory
 
         recyclerCategorias.isNestedScrollingEnabled
@@ -52,6 +55,13 @@ class SearchScreenCategory : AppCompatActivity() {
         viewModel.listGenre.observe(this, {
             it?.let { listGenres.addAll(it) }
             adapterCategory.notifyDataSetChanged()
+        })
+        viewModel.progress.observe(this, {
+            if (it) {
+                progressBar.visibility = View.VISIBLE
+            } else {
+                progressBar.visibility = View.GONE
+            }
         })
 
     }

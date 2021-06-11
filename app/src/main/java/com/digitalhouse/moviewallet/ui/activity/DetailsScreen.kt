@@ -4,6 +4,7 @@ import android.content.Intent
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.RatingBar
@@ -37,6 +38,7 @@ class DetailsScreen : AppCompatActivity() {
     private val toolbar by lazy { findViewById<androidx.appcompat.widget.Toolbar>(R.id.tb_details) }
     private val ivBackgroundMovie by lazy { findViewById<ImageView>(R.id.iv_moviebackground_details) }
     private val ivMovie by lazy { findViewById<ImageView>(R.id.iv_movie_details) }
+    private val ivJustWatch by lazy { findViewById<ImageView>(R.id.iv_just_watch) }
     private val tvSynopsis by lazy { findViewById<TextView>(R.id.tv_synopsis_details) }
     private val tvDetailsMovie by lazy { findViewById<TextView>(R.id.tv_detailsmovie_details) }
     private val tvTitle by lazy { findViewById<TextView>(R.id.tv_title_details) }
@@ -47,6 +49,7 @@ class DetailsScreen : AppCompatActivity() {
     private val tvFlatrate by lazy { findViewById<TextView>(R.id.tv_flatrate_details) }
     private val tvRent by lazy { findViewById<TextView>(R.id.tv_rent_details) }
     private val tvBuy by lazy { findViewById<TextView>(R.id.tv_buy_details) }
+    private val tvTitleSemelhante by lazy { findViewById<TextView>(R.id.tv_title_semelhante) }
     private val ratingBar by lazy { findViewById<RatingBar>(R.id.rb_details_screen) }
     private val rvSimilarMovie by lazy { findViewById<RecyclerView>(R.id.rv_similiar_details) }
 
@@ -170,6 +173,9 @@ class DetailsScreen : AppCompatActivity() {
         viewModel.similiarMovies.observe(this) {
             listMovie.addAll(it)
             adapterSimilarMovie.notifyDataSetChanged()
+            if (listMovie.isNullOrEmpty()){
+                tvTitleSemelhante.visibility = GONE
+            }
         }
     }
 
@@ -195,14 +201,17 @@ class DetailsScreen : AppCompatActivity() {
             listProvidersFlatrate.isNotEmpty() -> {
                 rvProviderFlatrate.visibility = VISIBLE
                 tvFlatrate.visibility = VISIBLE
+                ivJustWatch.visibility = VISIBLE
             }
             listProvidersRent.isNotEmpty() -> {
                 rvProviderRent.visibility = VISIBLE
                 tvRent.visibility = VISIBLE
+                ivJustWatch.visibility = VISIBLE
             }
             listProvidersBuy.isNotEmpty() -> {
                 rvProviderBuy.visibility = VISIBLE
                 tvBuy.visibility = VISIBLE
+                ivJustWatch.visibility = VISIBLE
             }
         }
     }

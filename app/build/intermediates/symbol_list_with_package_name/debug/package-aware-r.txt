@@ -1837,6 +1837,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ilha_do_medo
+drawable just_watch
 drawable logo_mw
 drawable logotipo_background
 drawable material_cursor_drawable
@@ -2047,6 +2048,7 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id cv_categorysearch_newitemcategory
 id cv_details_itemsimilar
 id cv_home_popularityscreen
 id cv_movie_itemcategory
@@ -2143,8 +2145,10 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_categorysearch_newitemcategory
 id iv_details_itemsimilar
 id iv_home_popularityscreen
+id iv_just_watch
 id iv_movie_details
 id iv_movie_itemcategory
 id iv_movie_itemrelease
@@ -2255,6 +2259,7 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_search
 id pb_splash
 id peekHeight
 id percent
@@ -2415,8 +2420,8 @@ id transition_transform
 id triangle
 id tv_buy_details
 id tv_categorysearch_itemcategory
+id tv_categorysearch_newitemcategory
 id tv_detailsmovie_details
-id tv_explore_search
 id tv_flatrate_details
 id tv_lastsee_search
 id tv_movie_result
@@ -2425,6 +2430,7 @@ id tv_rent_details
 id tv_synopsis_details
 id tv_title_details
 id tv_title_itemrelease
+id tv_title_semelhante
 id tv_year_movie_result
 id txt_categorias
 id unchecked
@@ -2537,6 +2543,7 @@ layout item_home_popularity
 layout item_home_release
 layout item_screen_resultsearch
 layout item_search_category
+layout item_search_categorynew
 layout login_screen
 layout material_chip_input_combo
 layout material_clock_display

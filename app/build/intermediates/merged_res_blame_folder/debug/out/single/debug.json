@@ -128,6 +128,10 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\reciclerview_lista_de_filmes.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_just_watch.png.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\just_watch.png"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_facebook.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\facebook.png"
     },
@@ -282,6 +286,10 @@
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_screen.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\login_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_search_categorynew.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_search_categorynew.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_release.xml.flat",

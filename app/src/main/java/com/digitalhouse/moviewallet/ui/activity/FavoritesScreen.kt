@@ -37,7 +37,7 @@ class FavoritesScreen : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { onBackPressed() }
 
-        supportActionBar?.title = "Favorites"
+        supportActionBar?.title = "FAVORITOS"
 
         getFavoriteData()
     }

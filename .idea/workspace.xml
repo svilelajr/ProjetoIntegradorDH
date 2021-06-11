@@ -11,7 +11,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="BranchesTreeState">
     <expand>
@@ -32,30 +32,57 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874a9a7b-d7aa-4c93-90b2-7934944aee9a" name="Default Changelist" comment="&quot;Versão 1.0 funcional&quot;">
+    <list default="true" id="874a9a7b-d7aa-4c93-90b2-7934944aee9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$ivMovie$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$ivMovie$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen$toolbar$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldEmailLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/LoginScreen$fieldPasswordLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldConfirmPasswordLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldEmailLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldNameLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldPasswordLayout$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/activity/RegisterScreen$fieldPasswordLayout$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$tvMovie$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/HomeScreenReleaseAdapter$HomeScreenReleaseViewHolder$tvMovie$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$btCategory$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder$nomeCategoria$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$SearchScreenCategoryViewHolder.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$onBindViewHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter$onBindViewHolder$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel$getGenre$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel$getGenre$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel$getGenre$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel$getGenre$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_details_screen.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_details_screen.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/Genre.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/model/Genre.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/FavoritesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/FavoritesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SearchScreenCategory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/SearchScreenCategory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/adapter/SearchScreenCategoryAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/SearchViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/details_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/details_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_details_similiar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_details_similiar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_category_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_category_screen.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\gportoma\.android\avd\Pixel_2_API_28.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@RQ8M304JR5D]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -111,8 +138,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Data Class" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -157,8 +184,8 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\gportoma\.android\avd\Pixel_2_API_28.avd" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-11T03:03:41.956498500Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="SerialNumber@RQ8M304JR5D" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-11T03:15:07.317937700Z" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -166,17 +193,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateKotlinClassDialog.RecentsKey">
-      <recent name="com.digitalhouse.moviewallet.model" />
-    </key>
     <key name="android.template.-1496378832">
-      <recent name="com.digitalhouse.moviewallet.ui.activity" />
-    </key>
-    <key name="android.template.-420393484">
       <recent name="com.digitalhouse.moviewallet.ui.activity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dddev\Documents\Projetos Curso Android Digital House\ProjetoIntegradorDH\app" />
+    </key>
+    <key name="android.template.-420393484">
+      <recent name="com.digitalhouse.moviewallet.ui.activity" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.digitalhouse.moviewallet.model" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -271,6 +298,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -479,9 +507,14 @@
     <state x="-810" y="242" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@-1080.-449.1080.1890" timestamp="1618835417530" />
     <state x="480" y="384" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1618837383772" />
     <state x="-810" y="691" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618441012341" />
-    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1618840359093">
+    <state x="730" y="318" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1623415137168">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="730" y="318" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623415137168" />
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog" timestamp="1623413457761">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="279" key="AndroidCreateResourceFileDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623413457761" />
     <state x="540" y="279" key="AndroidCreateResourceFileDialog/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1618840359093" />
     <state x="539" y="190" key="AndroidProcessChooserDialog" timestamp="1618691079072">
       <screen x="0" y="0" width="1366" height="738" />
@@ -519,81 +552,85 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="538" y="270" key="GitRewordDialog/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1620166910845" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1623380714637">
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1623423354487">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1275" height="174" key="GridCell.Tab.0.bottom/-1318.18.1318.714/0.0.1366.738@-1318.18.1318.714" timestamp="1620182044718" />
     <state width="1323" height="181" key="GridCell.Tab.0.bottom/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800157" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380714637" />
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623423354487" />
     <state width="1876" height="284" key="GridCell.Tab.0.bottom/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618543592575" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990506" />
     <state width="1860" height="282" key="GridCell.Tab.0.bottom/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618377570815" />
     <state width="1036" height="284" key="GridCell.Tab.0.bottom/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.0.bottom/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451379279" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1623380714636">
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1623423354487">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1275" height="174" key="GridCell.Tab.0.center/-1318.18.1318.714/0.0.1366.738@-1318.18.1318.714" timestamp="1620182044718" />
     <state width="1323" height="181" key="GridCell.Tab.0.center/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800157" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380714636" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623423354487" />
     <state width="1876" height="284" key="GridCell.Tab.0.center/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618543592575" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990506" />
     <state width="1860" height="282" key="GridCell.Tab.0.center/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618377570815" />
     <state width="1036" height="284" key="GridCell.Tab.0.center/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.0.center/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451379279" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1623380714636">
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1623423354487">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1275" height="174" key="GridCell.Tab.0.left/-1318.18.1318.714/0.0.1366.738@-1318.18.1318.714" timestamp="1620182044718" />
     <state width="1323" height="181" key="GridCell.Tab.0.left/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800157" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380714636" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623423354487" />
     <state width="1876" height="284" key="GridCell.Tab.0.left/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618543592574" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990506" />
     <state width="1860" height="282" key="GridCell.Tab.0.left/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618377570815" />
     <state width="1036" height="284" key="GridCell.Tab.0.left/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.0.left/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451379279" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1623380714637">
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1623423354487">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1275" height="174" key="GridCell.Tab.0.right/-1318.18.1318.714/0.0.1366.738@-1318.18.1318.714" timestamp="1620182044718" />
     <state width="1323" height="181" key="GridCell.Tab.0.right/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800157" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380714637" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623423354487" />
     <state width="1876" height="284" key="GridCell.Tab.0.right/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618543592575" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990506" />
     <state width="1860" height="282" key="GridCell.Tab.0.right/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618377570815" />
     <state width="1036" height="284" key="GridCell.Tab.0.right/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.0.right/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451379279" />
-    <state width="1323" height="188" key="GridCell.Tab.1.bottom" timestamp="1622501800149">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1623419260791">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1323" height="188" key="GridCell.Tab.1.bottom/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800149" />
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623419260791" />
     <state width="1876" height="252" key="GridCell.Tab.1.bottom/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618540546256" />
     <state width="1877" height="285" key="GridCell.Tab.1.bottom/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990501" />
     <state width="1860" height="282" key="GridCell.Tab.1.bottom/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618370850010" />
     <state width="1036" height="284" key="GridCell.Tab.1.bottom/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805462" />
     <state width="1849" height="401" key="GridCell.Tab.1.bottom/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451384678" />
-    <state width="1323" height="188" key="GridCell.Tab.1.center" timestamp="1622501800149">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1877" height="328" key="GridCell.Tab.1.center" timestamp="1623419260791">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1323" height="188" key="GridCell.Tab.1.center/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800149" />
+    <state width="1877" height="328" key="GridCell.Tab.1.center/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623419260791" />
     <state width="1876" height="252" key="GridCell.Tab.1.center/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618540546256" />
     <state width="1877" height="285" key="GridCell.Tab.1.center/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990501" />
     <state width="1860" height="282" key="GridCell.Tab.1.center/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618370850010" />
     <state width="1036" height="284" key="GridCell.Tab.1.center/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.1.center/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451384678" />
-    <state width="1323" height="188" key="GridCell.Tab.1.left" timestamp="1622501800149">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1877" height="328" key="GridCell.Tab.1.left" timestamp="1623419260791">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1323" height="188" key="GridCell.Tab.1.left/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800149" />
+    <state width="1877" height="328" key="GridCell.Tab.1.left/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623419260791" />
     <state width="1876" height="252" key="GridCell.Tab.1.left/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618540546255" />
     <state width="1877" height="285" key="GridCell.Tab.1.left/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990501" />
     <state width="1860" height="282" key="GridCell.Tab.1.left/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618370850010" />
     <state width="1036" height="284" key="GridCell.Tab.1.left/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@-1080.0.1080.1890" timestamp="1618443805461" />
     <state width="1849" height="401" key="GridCell.Tab.1.left/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618451384677" />
-    <state width="1323" height="188" key="GridCell.Tab.1.right" timestamp="1622501800149">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1877" height="328" key="GridCell.Tab.1.right" timestamp="1623419260791">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1323" height="188" key="GridCell.Tab.1.right/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622501800149" />
+    <state width="1877" height="328" key="GridCell.Tab.1.right/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623419260791" />
     <state width="1876" height="252" key="GridCell.Tab.1.right/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618540546256" />
     <state width="1877" height="285" key="GridCell.Tab.1.right/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618726990501" />
     <state width="1860" height="282" key="GridCell.Tab.1.right/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618370850010" />
@@ -613,11 +650,11 @@
     </state>
     <state x="314" y="130" key="MultipleFileMergeDialog/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622237167207" />
     <state x="585" y="166" key="MultipleFileMergeDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623373487060" />
-    <state x="280" y="10" key="SettingsEditor" timestamp="1623379711680">
+    <state x="280" y="10" key="SettingsEditor" timestamp="1623380862674">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="199" y="7" key="SettingsEditor/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1623108520877" />
-    <state x="280" y="10" key="SettingsEditor/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623379711680" />
+    <state x="280" y="10" key="SettingsEditor/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380862674" />
     <state x="0" y="0" key="SettingsEditor/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618486132526" />
     <state x="0" y="0" key="SettingsEditor/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618450084933" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1623378359980">
@@ -654,17 +691,19 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="276" y="107" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622227116828" />
-    <state x="-1080" y="-449" width="1096" height="1037" key="dock-window-1" timestamp="1618843325781">
+    <state x="-1080" y="-449" width="1096" height="1038" key="dock-window-1" timestamp="1623423741618">
       <screen x="-1080" y="-449" width="1080" height="1890" />
     </state>
+    <state x="-1080" y="-449" width="1096" height="1038" key="dock-window-1/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623423741618" />
     <state x="-1080" y="0" width="1096" height="1037" maximized="true" key="dock-window-1/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618582831371" />
     <state x="-1080" y="-449" width="1096" height="1037" key="dock-window-1/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1618843325781" />
     <state x="-1080" y="-541" width="1096" height="724" maximized="true" key="dock-window-1/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618720435411" />
     <state x="-1080" y="0" width="1096" height="719" maximized="true" key="dock-window-1/1920.0.1536.840/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618368534607" />
     <state x="-1080" y="0" width="1096" height="1037" maximized="true" key="dock-window-1/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618446337039" />
-    <state x="-1080" y="-449" width="1096" height="1037" maximized="true" key="dock-window-2" timestamp="1618837496974">
+    <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-2" timestamp="1623413992127">
       <screen x="-1080" y="-449" width="1080" height="1890" />
     </state>
+    <state x="-1080" y="-449" width="1096" height="1038" maximized="true" key="dock-window-2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623413992127" />
     <state x="-1080" y="-449" width="1096" height="1037" maximized="true" key="dock-window-2/1920.0.1280.700/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1618837496974" />
     <state x="675" y="238" key="git4idea.branch.GitSmartOperationDialog" timestamp="1623371383430">
       <screen x="0" y="0" width="1920" height="1050" />
