@@ -1,9 +1,9 @@
 package com.digitalhouse.moviewallet.model
 
 class FavoriteList() {
-    var name: List<MovieDetail> = listOf()
+    var name: List<MovieDetailResponse> = listOf()
 
-    constructor(name: List<MovieDetail>): this(){
+    constructor(name: List<MovieDetailResponse>): this(){
         this.name = name
     }
 }

@@ -4,9 +4,7 @@ import android.content.Intent
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.View.GONE
 import android.view.View.VISIBLE
-import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
@@ -18,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.*
-import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
 import com.digitalhouse.moviewallet.model.Buy
 import com.digitalhouse.moviewallet.model.Flatrate
 import com.digitalhouse.moviewallet.model.Movie
@@ -31,8 +28,6 @@ import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import java.time.LocalDate
 
@@ -56,7 +51,7 @@ class DetailsScreen : AppCompatActivity() {
 
     private lateinit var viewModel: DetailsViewModel
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var movieDetail: MovieDetail
+    private lateinit var movieDetailResponse: MovieDetailResponse
 
     private val listProviders = mutableListOf<Flatrate>()
     var urlImageTest = ""
@@ -214,7 +209,7 @@ class DetailsScreen : AppCompatActivity() {
 
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
-                .document(user.uid).update("favoriteList", FieldValue.arrayUnion(movieDetail))
+                .document(user.uid).update("favoriteList", FieldValue.arrayUnion(movieDetailResponse))
                 .addOnSuccessListener {
                     Log.d("TAG", "DocumentSnapshot successfully written!")
                 }.addOnFailureListener { e ->
@@ -223,7 +218,7 @@ class DetailsScreen : AppCompatActivity() {
         }
     }
 
-    private fun getMovie(movie: MovieDetail) {
-        movieDetail = movie
+    private fun getMovie(movieResponse: MovieDetailResponse) {
+        movieDetailResponse = movieResponse
     }
 }

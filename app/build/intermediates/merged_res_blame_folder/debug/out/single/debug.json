@@ -180,6 +180,10 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\background_search.xml"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_details_screen.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\details_screen.xml"
     },
@@ -194,6 +198,10 @@
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_mw_background.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_mw_background.png"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_details_similiar.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_details_similiar.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_category.xml.flat",
@@ -264,16 +272,16 @@
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_mw.png"
     },
     {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_screen_resultsearch.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_screen_resultsearch.xml"
+    },
+    {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_mw.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_mw.png"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_screen.xml.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\login_screen.xml"
-    },
-    {
-        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_screen_resultsearch.xml.flat",
-        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\layout\\item_screen_resultsearch.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_release.xml.flat",
@@ -294,6 +302,10 @@
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_mw_background.png.flat",
         "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_mw_background.png"
+    },
+    {
+        "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_borda_class_indic.xml.flat",
+        "source": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\src\\main\\res\\drawable\\borda_class_indic.xml"
     },
     {
         "merged": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_mw_round.png.flat",
