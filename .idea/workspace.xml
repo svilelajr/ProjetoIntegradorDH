@@ -33,16 +33,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874a9a7b-d7aa-4c93-90b2-7934944aee9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/model/Genre.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/digitalhouse/moviewallet/model/Genre.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/network/ServiceMovieDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/network/ServiceMovieDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/RepositoryMovie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/repository/RepositoryMovie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/DetailsScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/activity/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/digitalhouse/moviewallet/ui/viewmodel/HomeViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_home_popularity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_home_popularity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_screen_resultsearch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_screen_resultsearch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +102,7 @@
     </option>
   </component>
   <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="alteracaoguilherme" />
+    <option name="BRANCH" value="desenvolvimento" />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -424,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623433485811</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="&quot;Correção TextView Homescreen&quot;">
+      <created>1623440182331</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1623440182331</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +460,8 @@
     <MESSAGE value="&quot;Atualização GRADLE3&quot;" />
     <MESSAGE value="&quot;Versão 1.0 funcional&quot;" />
     <MESSAGE value="&quot;Melhoria tela de pesquisa categorias&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Melhoria tela de pesquisa categorias&quot;" />
+    <MESSAGE value="&quot;Correção TextView Homescreen&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Correção TextView Homescreen&quot;" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -621,11 +620,11 @@
     </state>
     <state x="184" y="86" key="MergeDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623373469938" />
     <state x="184" y="86" key="MergeDialog/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618612323424" />
-    <state x="585" y="166" key="MultipleFileMergeDialog" timestamp="1623373487060">
+    <state x="585" y="166" key="MultipleFileMergeDialog" timestamp="1623440295709">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="314" y="130" key="MultipleFileMergeDialog/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622237167207" />
-    <state x="585" y="166" key="MultipleFileMergeDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623373487060" />
+    <state x="585" y="166" key="MultipleFileMergeDialog/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623440295709" />
     <state x="280" y="10" key="SettingsEditor" timestamp="1623380862674">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -633,11 +632,11 @@
     <state x="280" y="10" key="SettingsEditor/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623380862674" />
     <state x="0" y="0" key="SettingsEditor/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618486132526" />
     <state x="0" y="0" key="SettingsEditor/1920.0.1920.1050/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618450084933" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1623433491625">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1623440189306">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="393" y="181" key="Vcs.Push.Dialog.v2/-1318.18.1318.714/0.0.1366.738@0.0.1366.738" timestamp="1622673939313" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623433491625" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.0.1280.690/0.0.1920.1050/-1080.-449.1080.1890@0.0.1920.1050" timestamp="1623440189306" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/1920.0.1280.700/-1080.0.1080.1890/0.0.1920.1050@0.0.1920.1050" timestamp="1618487494080" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/1920.0.1280.700/0.0.1920.1050/-1080.-541.1080.1890@0.0.1920.1050" timestamp="1618703201226" />
     <state width="689" height="375" key="XDebugger.FullValuePopup" timestamp="1622227392516">
