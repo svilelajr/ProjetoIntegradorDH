@@ -39,8 +39,5 @@ interface Util {
             layout.error = "Nome não pode estar vazio"
             false
         }
-
-
     }
-
 }
