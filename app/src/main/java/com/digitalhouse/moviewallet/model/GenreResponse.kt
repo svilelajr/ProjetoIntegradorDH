@@ -1,6 +1,6 @@
 package com.digitalhouse.moviewallet.model
 
-data class ListGenre(
+data class GenreResponse(
 
     val genres: List<Genre>?
 )

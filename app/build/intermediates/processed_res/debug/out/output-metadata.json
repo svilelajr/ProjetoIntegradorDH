@@ -5,7 +5,7 @@
     "kind": "Directory"
   },
   "applicationId": "com.digitalhouse.moviewallet",
-  "variantName": "processDebugResources",
+  "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",

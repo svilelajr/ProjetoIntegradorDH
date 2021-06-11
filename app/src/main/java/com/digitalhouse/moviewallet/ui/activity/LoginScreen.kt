@@ -47,7 +47,6 @@ class LoginScreen : AppCompatActivity(), Util {
     private val fieldPassword by lazy { findViewById<TextInputEditText>(R.id.ti_password_login) }
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
-    private val loginManager = LoginManager.getInstance()
     private lateinit var googleSingInClient: GoogleSignInClient
 
     private lateinit var viewModel: LoginViewModel

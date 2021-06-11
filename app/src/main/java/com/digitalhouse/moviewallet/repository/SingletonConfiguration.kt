@@ -1,10 +1,10 @@
 package com.digitalhouse.moviewallet.repository
 
-import com.digitalhouse.moviewallet.model.MovieConfiguration
+import com.digitalhouse.moviewallet.model.MovieConfigurationResponse
 
 object SingletonConfiguration {
-    var config: MovieConfiguration? = null
-    fun setConfiguration(configuration: MovieConfiguration){
+    var config: MovieConfigurationResponse? = null
+    fun setConfiguration(configuration: MovieConfigurationResponse){
         config = configuration
     }
 }

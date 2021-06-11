@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+    <ImageView
         android:id="@+id/logo_mw_app"
         android:layout_width="@dimen/layout_width_logo_mw"
         android:layout_height="@dimen/layout_height_logo_mw"
@@ -64,7 +63,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_release_home"
                 android:layout_width="match_parent"
@@ -74,6 +72,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbarSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/rv_release_home"
+                app:layout_constraintTop_toBottomOf="@+id/rv_release_home"
+                app:spi_dotColor="@color/rosa_claro"
+                app:spi_dotSelectedColor="@color/rosa_principal"
+                app:spi_dotSelectedSize="15dp"
+                app:spi_dotSize="10dp"
+                app:spi_dotSpacing="10dp"
+                app:spi_visibleDotCount="5" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_popularity_home"
@@ -82,8 +95,20 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/rv_release_home"
-                app:layout_constraintTop_toBottomOf="@+id/rv_release_home" />
+                app:layout_constraintTop_toBottomOf="@+id/indicator" />
 
+            <TextView
+                android:id="@+id/tv_popularity_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="POPULARES"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rv_popularity_home" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_category_home"
