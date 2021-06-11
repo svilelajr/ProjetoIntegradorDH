@@ -187,7 +187,7 @@ class DetailsScreen : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         rvSimilarMovie.adapter = adapterSimilarMovie
-        rvSimilarMovie.layoutManager = GridLayoutManager(this, 2)
+        rvSimilarMovie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun validateProvider() {
