@@ -92,23 +92,24 @@
                 android:id="@+id/rv_popularity_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/rv_release_home"
-                app:layout_constraintTop_toBottomOf="@+id/indicator" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_popularity_home" />
 
             <TextView
                 android:id="@+id/tv_popularity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
                 android:text="POPULARES"
+                android:textColor="@color/black"
                 android:textSize="35sp"
                 android:textStyle="bold"
                 android:visibility="gone"
-                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/rv_popularity_home" />
+                app:layout_constraintTop_toBottomOf="@+id/indicator" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_category_home"

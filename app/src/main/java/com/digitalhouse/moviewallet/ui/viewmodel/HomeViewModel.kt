@@ -73,6 +73,7 @@ class HomeViewModel : ViewModel() {
             repository.getReleaseMovie().let { movie ->
                 listReleaseMovie.postValue(movie.releaseMovies)
             }
+
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Release $error")
         }

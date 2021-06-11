@@ -7,6 +7,7 @@ import android.view.View.GONE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -49,7 +50,7 @@ class HomeScreen : AppCompatActivity() {
                 }
                 R.id.page_favoritos -> {
 
-                    if (firebaseAuth.currentUser == null){
+                    if (firebaseAuth.currentUser == null) {
                         val builder = AlertDialog.Builder(this)
                         builder.setTitle("Usuário Não Logado")
                         builder.setMessage("Favoritos disponível somente para usuários Logados \n\nDeseja Logar?")
@@ -95,7 +96,7 @@ class HomeScreen : AppCompatActivity() {
         initClick()
         bottomNavigate.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
-    
+
     private fun observers() {
         viewModel.listReleaseMovie.observe(this, {
             it?.let {
@@ -151,12 +152,9 @@ class HomeScreen : AppCompatActivity() {
     }
 
     private fun initClick() {
-
         btExplorar.setOnClickListener {
             val intent = Intent(this, SearchScreenCategory::class.java)
             startActivity(intent)
         }
     }
-
-
 }

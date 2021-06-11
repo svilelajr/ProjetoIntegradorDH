@@ -59,9 +59,6 @@ class DetailsScreen : AppCompatActivity() {
     private val firestoreDb = Firebase.firestore
     private lateinit var movieDetailResponse: MovieDetailResponse
 
-    private val listProviders = mutableListOf<Flatrate>()
-    var urlImageTest = ""
-
     private val listProvidersFlatrate = mutableListOf<Flatrate>()
     private val listProvidersBuy = mutableListOf<Buy>()
     private val listProvidersRent = mutableListOf<Rent>()

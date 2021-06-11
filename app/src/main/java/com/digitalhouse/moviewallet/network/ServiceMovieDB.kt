@@ -28,20 +28,13 @@ interface ServiceMovieDB {
         @Query("with_genres") genre: String?,
         @Query("page") page: Int?,
         @Query("watch_region") region: String,
-
-        ): DiscoverMovieResponse
+    ): DiscoverMovieResponse
 
     @GET("movie/{movie_id}")
     suspend fun getMovieDetail(
         @Path("movie_id") movieId: String,
         @Query("language") language: String?
     ): MovieDetailResponse
-
-    @GET("movie/{movie_id}/credits")
-    suspend fun getCreditMovie(
-        @Path("movie_id") movieId: String,
-        @Query("language") language: String?
-    ): CreditMovieResponse
 
     @GET("movie/popular")
     suspend fun getPopularMovie(
@@ -58,6 +51,7 @@ interface ServiceMovieDB {
     @GET("movie/{movie_id}/images")
     suspend fun getImageMovie(
         @Path("movie_id") movieId: String,
+        @Query("language") language: String,
         @Query("include_image_language") pt: String
     ): ImageMovieResponse
 
@@ -74,4 +68,10 @@ interface ServiceMovieDB {
         @Path("movie_id") movieId: String,
         @Query("language") language: String?,
     ): SimiliarMovieResponse
+
+    @GET("trending/{media_type}/{time_window}")
+    suspend fun getTrendingMovies(
+        @Path("media_type") mediaType: String,
+        @Path("time_window") timeWindow: String,
+    ): TrendingMovieResponse
 }

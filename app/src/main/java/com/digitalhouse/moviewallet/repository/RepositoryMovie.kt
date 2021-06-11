@@ -30,8 +30,9 @@ class RepositoryMovie {
         serviceMovie.getPopularMovie(language, pageRandom.random(), region)
 
     suspend fun getProviderMovie(movieID: String) = serviceMovie.getProviderMovie(movieID)
-    suspend fun getImageMovie(movieID: String) = serviceMovie.getImageMovie(movieID, "pt")
+    suspend fun getImageMovie(movieID: String) = serviceMovie.getImageMovie(movieID,language, "pt")
     suspend fun getSearchMovie(query: String) =
         serviceMovie.getSearchMovie(language, query, 1, region)
     suspend fun getSimiliarMovie(movieID: String) = serviceMovie.getSimiliarMovie(movieID,language)
+    suspend fun getTrendingMovies() = serviceMovie.getTrendingMovies("movie","day")
 }
