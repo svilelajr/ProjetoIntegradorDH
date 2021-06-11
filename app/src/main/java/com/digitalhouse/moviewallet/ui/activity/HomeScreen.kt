@@ -3,7 +3,6 @@ package com.digitalhouse.moviewallet.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.View.GONE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -19,12 +18,11 @@ import com.digitalhouse.moviewallet.ui.adapter.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenPopularityAdapter
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 import com.google.firebase.auth.FirebaseAuth
@@ -61,7 +59,15 @@ class HomeScreen : AppCompatActivity() {
 
                         builder.setNegativeButton("Não", null)
                         builder.show()
-                    } else {
+                    } else if (!SingletonConfiguration.getFavoriteDataValidation()) {
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("Aviso")
+                        builder.setMessage("Não foi adicionado Filmes aos Favoritos ainda\n")
+                        builder.setNegativeButton("Ok", null)
+                        builder.show()
+
+                    } else{
+
                         startActivity(Intent(this, FavoritesScreen::class.java))
                     }
 

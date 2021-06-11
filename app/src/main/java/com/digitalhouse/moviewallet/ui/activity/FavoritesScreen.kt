@@ -1,7 +1,11 @@
 package com.digitalhouse.moviewallet.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +41,7 @@ class FavoritesScreen : AppCompatActivity() {
 
         toolbar.setNavigationOnClickListener { onBackPressed() }
 
-        supportActionBar?.title = "FAVORITOS"
+        supportActionBar?.title = "Favoritos"
 
         getFavoriteData()
     }
@@ -47,11 +51,17 @@ class FavoritesScreen : AppCompatActivity() {
             firestoreDb.collection("users")
                 .document(user.uid).get()
                 .addOnSuccessListener {
-                    val result = it.data?.get("favoriteList")
-                    result as ArrayList<HashMap<String,*>>
-                    favorites.addAll(result)
-                    adapterFavorite = FavoritesAdapter(favorites)
-                    rvFavorite.adapter = adapterFavorite
+                    if (it.data?.get("favoriteList") != null) {
+                        val result = it.data?.get("favoriteList")
+                        result as ArrayList<HashMap<String, *>>
+                        favorites.addAll(result)
+                        adapterFavorite = FavoritesAdapter(favorites)
+                        rvFavorite.adapter = adapterFavorite
+                    } else {
+                        favorites = mutableListOf()
+                        adapterFavorite = FavoritesAdapter(favorites)
+                        rvFavorite.adapter = adapterFavorite
+                    }
                 }.addOnFailureListener {
                     it
                 }
