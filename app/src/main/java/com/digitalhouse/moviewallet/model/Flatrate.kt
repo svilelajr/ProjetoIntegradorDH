@@ -2,6 +2,7 @@ package com.digitalhouse.moviewallet.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Flatrate(
     @SerializedName("display_priority")
@@ -12,4 +13,4 @@ data class Flatrate(
     val providerId: Int?,
     @SerializedName("provider_name")
     val providerName: String?
-)
+):Serializable

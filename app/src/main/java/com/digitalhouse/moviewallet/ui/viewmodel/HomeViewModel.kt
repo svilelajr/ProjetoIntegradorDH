@@ -18,7 +18,7 @@ class HomeViewModel : ViewModel() {
     val listReleaseMovie = MutableLiveData<List<Movie>>()
     val listPopularMovie = MutableLiveData<List<Movie>>()
     private var genreApi = mutableListOf<Genre>()
-    private val genreHome = mutableListOf(28, 16, 18, 35, 14, 27, 10749)
+    private val genreHome = mutableListOf(28, 16, 18, 35, 27, 10749)
     val progress by lazy { MutableLiveData<Boolean>() }
 
     init {
@@ -51,7 +51,7 @@ class HomeViewModel : ViewModel() {
                 }
             }
             genreApi.forEach { genre ->
-                repository.getMoviesByGenre(genre.id.toString(), 1).let { dMovie ->
+                repository.getMoviesByGenre(genre.id.toString()).let { dMovie ->
                     dMovie.movies?.forEach { movie ->
                         val m = movie.genreIds?.get(0)
                         if (m == genre.id) {

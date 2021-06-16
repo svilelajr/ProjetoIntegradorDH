@@ -19,27 +19,23 @@ class SearchViewModel : ViewModel() {
     private var genreApi = mutableListOf<Genre>()
     val progress by lazy { MutableLiveData<Boolean>() }
 
-
     val resultSearchMovie = MutableLiveData<List<Movie>>()
-
 
     fun getGenre() = CoroutineScope(Dispatchers.IO).launch {
         try {
             progress.postValue(true)
             repository.getGenre().let { genre ->
                 genre.genres?.forEach {
-                    genreApi.add(it)
-                }
-            }
-            genreApi.forEach { genre ->
-                repository.getMoviesByGenre(genre.id.toString(), 1).let { dMovie ->
-                    genre.movie = dMovie.movies?.random()
+                    repository.getMoviesByGenre(it.id.toString()).let { dMovie ->
+                        it.movieUrlImage = dMovie.movies?.random()?.backdropPath
+                        genreApi.add(it)
+                    }
                 }
             }
             _listGenre.postValue(genreApi)
         } catch (error: Throwable) {
             Log.e("Error", "Problema de conexão $error")
-        }finally {
+        } finally {
             progress.postValue(false)
 
         }

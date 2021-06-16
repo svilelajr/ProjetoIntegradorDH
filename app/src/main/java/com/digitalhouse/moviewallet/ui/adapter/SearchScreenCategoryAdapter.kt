@@ -4,7 +4,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -31,9 +30,9 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
         val configuration = SingletonConfiguration.config
         var imageUrl =
             "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(1)}${
-                position.movie?.backdropPath
+                position.movieUrlImage
             }"
-        if (position.movie?.backdropPath != null) {
+        if (position.movieUrlImage != null) {
             Picasso.get().load(imageUrl).into(holder.ivCategory)
         }
         val nome = holder.nomeCategoria

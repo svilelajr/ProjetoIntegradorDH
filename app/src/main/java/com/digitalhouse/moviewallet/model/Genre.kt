@@ -6,5 +6,5 @@ data class Genre(
     val id: Int?,
     val name: String?,
     var movies: MutableList<Movie>?,
-    var movie: Movie?
+    var movieUrlImage: String?
 ):Serializable

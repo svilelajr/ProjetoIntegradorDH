@@ -12,19 +12,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.*
 import com.digitalhouse.moviewallet.model.Buy
-import com.digitalhouse.moviewallet.model.Flatrate
 import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.model.Rent
 import com.digitalhouse.moviewallet.ui.adapter.DetailsScreenSimiliarAdapter
-import com.digitalhouse.moviewallet.ui.adapter.ProviderBuyDetailsAdapter
-import com.digitalhouse.moviewallet.ui.adapter.ProviderFlatrateDetailsAdapter
-import com.digitalhouse.moviewallet.ui.adapter.ProviderRentDetailsAdapter
+import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
@@ -42,13 +38,9 @@ class DetailsScreen : AppCompatActivity() {
     private val tvSynopsis by lazy { findViewById<TextView>(R.id.tv_synopsis_details) }
     private val tvDetailsMovie by lazy { findViewById<TextView>(R.id.tv_detailsmovie_details) }
     private val tvTitle by lazy { findViewById<TextView>(R.id.tv_title_details) }
-    private val rvProviderFlatrate by lazy { findViewById<RecyclerView>(R.id.rv_providerflatrate_details) }
-    private val rvProviderRent by lazy { findViewById<RecyclerView>(R.id.rv_providerrent_details) }
-    private val rvProviderBuy by lazy { findViewById<RecyclerView>(R.id.rv_providerbuy_details) }
+    private val rvProvider by lazy { findViewById<RecyclerView>(R.id.rv_provider_details) }
     private val btFavorite by lazy { findViewById<FloatingActionButton>(R.id.bt_favorite_details) }
-    private val tvFlatrate by lazy { findViewById<TextView>(R.id.tv_flatrate_details) }
-    private val tvRent by lazy { findViewById<TextView>(R.id.tv_rent_details) }
-    private val tvBuy by lazy { findViewById<TextView>(R.id.tv_buy_details) }
+    private val tvProvider by lazy { findViewById<TextView>(R.id.tv_provider_details) }
     private val tvTitleSemelhante by lazy { findViewById<TextView>(R.id.tv_title_semelhante) }
     private val ratingBar by lazy { findViewById<RatingBar>(R.id.rb_details_screen) }
     private val rvSimilarMovie by lazy { findViewById<RecyclerView>(R.id.rv_similiar_details) }
@@ -59,13 +51,11 @@ class DetailsScreen : AppCompatActivity() {
     private val firestoreDb = Firebase.firestore
     private lateinit var movieDetailResponse: MovieDetailResponse
 
-    private val listProvidersFlatrate = mutableListOf<Flatrate>()
+    private val listProvidersFlatrate = mutableListOf<String>()
     private val listProvidersBuy = mutableListOf<Buy>()
     private val listProvidersRent = mutableListOf<Rent>()
     private val listMovie = mutableListOf<Movie>()
-    private val adapterProviderFlatrate = ProviderFlatrateDetailsAdapter(listProvidersFlatrate)
-    private val adapterProviderBuy = ProviderBuyDetailsAdapter(listProvidersBuy)
-    private val adapterProviderRent = ProviderRentDetailsAdapter(listProvidersRent)
+    private val adapterProviderFlatrate = ProviderDetailsAdapter(listProvidersFlatrate)
     private val adapterSimilarMovie = DetailsScreenSimiliarAdapter(listMovie)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -116,7 +106,7 @@ class DetailsScreen : AppCompatActivity() {
                 tvSynopsis.text = it.overview
             }
             tvDetailsMovie.text = "${date.year} | ${it.runtime}min"
-            ratingBar.rating = 5.0f
+            ratingBar.rating = it.popularity?.toFloat()!!
         }
     }
 
@@ -124,9 +114,7 @@ class DetailsScreen : AppCompatActivity() {
         btFavorite.setOnClickListener {
             if (firebaseAuth.currentUser != null) {
                 addFavoriteToDb()
-
             } else {
-
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Usuário Não Logado")
                 builder.setMessage("Favoritos disponível somente para usuários Logados \n\nDeseja Logar?")
@@ -134,7 +122,6 @@ class DetailsScreen : AppCompatActivity() {
                     startActivity(Intent(this, LoginScreen::class.java))
                     finishAffinity()
                 }
-
                 builder.setNegativeButton("Não", null)
                 builder.show()
             }
@@ -142,74 +129,41 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun providerMovie() {
-        viewModel.providerFlatrate.observe(this) {
+        viewModel.providers.observe(this) {
             if (it != null) {
                 listProvidersFlatrate.addAll(it)
             }
             adapterProviderFlatrate.notifyDataSetChanged()
             validateProvider()
         }
-        viewModel.providerBuy.observe(this) {
-            if (it != null) {
-                listProvidersBuy.addAll(it)
-            }
-            adapterProviderBuy.notifyDataSetChanged()
-            validateProvider()
-        }
-        viewModel.providerRent.observe(this) {
-            if (it != null) {
-                listProvidersRent.addAll(it)
-            }
-            adapterProviderRent.notifyDataSetChanged()
-            validateProvider()
-        }
-
     }
 
     private fun similarMovie() {
-        viewModel.similiarMovies.observe(this) {
+        viewModel.similarMovies.observe(this) {
             listMovie.addAll(it)
             adapterSimilarMovie.notifyDataSetChanged()
-            if (listMovie.isNullOrEmpty()){
-                tvTitleSemelhante.visibility = GONE
+            if (listMovie.isNotEmpty()) {
+                rvSimilarMovie.visibility = VISIBLE
+                tvTitleSemelhante.visibility = VISIBLE
             }
         }
     }
 
     private fun setupRecycler() {
-        rvProviderFlatrate.adapter = adapterProviderFlatrate
-        rvProviderFlatrate.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-
-        rvProviderBuy.adapter = adapterProviderBuy
-        rvProviderBuy.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-
-        rvProviderRent.adapter = adapterProviderRent
-        rvProviderRent.layoutManager =
+        rvProvider.adapter = adapterProviderFlatrate
+        rvProvider.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         rvSimilarMovie.adapter = adapterSimilarMovie
-        rvSimilarMovie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rvSimilarMovie.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun validateProvider() {
-        when {
-            listProvidersFlatrate.isNotEmpty() -> {
-                rvProviderFlatrate.visibility = VISIBLE
-                tvFlatrate.visibility = VISIBLE
-                ivJustWatch.visibility = VISIBLE
-            }
-            listProvidersRent.isNotEmpty() -> {
-                rvProviderRent.visibility = VISIBLE
-                tvRent.visibility = VISIBLE
-                ivJustWatch.visibility = VISIBLE
-            }
-            listProvidersBuy.isNotEmpty() -> {
-                rvProviderBuy.visibility = VISIBLE
-                tvBuy.visibility = VISIBLE
-                ivJustWatch.visibility = VISIBLE
-            }
+        if (listProvidersFlatrate.isNotEmpty()) {
+            rvProvider.visibility = VISIBLE
+            tvProvider.visibility = VISIBLE
+            ivJustWatch.visibility = VISIBLE
         }
     }
 
@@ -217,7 +171,8 @@ class DetailsScreen : AppCompatActivity() {
 
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
-                .document(user.uid).update("favoriteList", FieldValue.arrayUnion(movieDetailResponse))
+                .document(user.uid)
+                .update("favoriteList", FieldValue.arrayUnion(movieDetailResponse))
                 .addOnSuccessListener {
                     Log.d("TAG", "DocumentSnapshot successfully written!")
                 }.addOnFailureListener { e ->

@@ -14,17 +14,14 @@ class DetailsViewModel : ViewModel() {
 
     private val repository = RepositoryMovie()
     val movieDetail by lazy { MutableLiveData<MovieDetailResponse>() }
+    val providerLogoPath = mutableListOf<String>()
 
-    val providerFlatrate by lazy { MutableLiveData<List<Flatrate>?>() }
-    val providerBuy by lazy { MutableLiveData<List<Buy>?>() }
-    val providerRent by lazy { MutableLiveData<List<Rent>?>() }
-
+    val providers by lazy { MutableLiveData<List<String>?>() }
     private val configuration = SingletonConfiguration.config
-    private var popularityVote: String = ""
+    private var popularityVote: Float = 0.0f
     val imageBackgroundUrl by lazy { MutableLiveData<String>() }
     val imagePosterUrl by lazy { MutableLiveData<String>() }
-    val similiarMovies = MutableLiveData<List<Movie>>()
-
+    val similarMovies = MutableLiveData<List<Movie>>()
 
 
     fun getMovieDetail(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
@@ -50,29 +47,36 @@ class DetailsViewModel : ViewModel() {
     fun getSimiliarMovie(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
             repository.getSimiliarMovie(movieId).let {
-                similiarMovies.postValue(it.movies)
-            }
-        }catch (error:Throwable){
-            Log.e("Error", "Problema de Conexão $error")
-        }
-    }
-
-    fun getPopularity(): String {
-        popularityVote = ((movieDetail.value?.popularity)?.times(10))?.toInt().toString()
-        return popularityVote
-    }
-
-    fun getProvider(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            repository.getProviderMovie(movieId).let {
-                providerFlatrate.postValue(it.providers?.bR?.flatrate)
-                providerBuy.postValue(it.providers?.bR?.buy)
-                providerRent.postValue(it.providers?.bR?.rent)
+                similarMovies.postValue(it.movies)
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Conexão $error")
         }
     }
 
+    fun getPopularity(): Float {
+        popularityVote = ((movieDetail.value?.popularity)?.times(10))?.toFloat()!!
+        return popularityVote
+    }
+
+    fun getProvider(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            repository.getProviderMovie(movieId).let { providerResponse ->
+                providerResponse.providers?.bR?.flatrate?.forEach { providerF ->
+                    providerF.logoPath?.let { it1 -> providerLogoPath.add(it1) }
+                }
+                providerResponse.providers?.bR?.buy?.forEach { providerF ->
+                    providerF.logoPath?.let { it1 -> providerLogoPath.add(it1) }
+                }
+                providerResponse.providers?.bR?.rent?.forEach { providerF ->
+                    providerF.logoPath?.let { it1 -> providerLogoPath.add(it1) }
+                }
+
+                providers.postValue(providerLogoPath.distinct())
+            }
+        } catch (error: Throwable) {
+            Log.e("Error", "Problema de Conexão $error")
+        }
+    }
 
 }

@@ -15,22 +15,5 @@ object SingletonConfiguration {
         config = configuration
     }
 
-    fun getFavoriteDataValidation(): Boolean {
 
-        var validation = false
-
-        firebaseAuth.currentUser?.let { user ->
-            firestoreDb.collection("users")
-                .document(user.uid).get()
-                .addOnSuccessListener {
-                    if (it.data?.get("favoriteList") == null) {
-                        validation = true
-                    }
-
-                }.addOnFailureListener {
-                    it
-                }
-        }
-        return validation
-    }
 }

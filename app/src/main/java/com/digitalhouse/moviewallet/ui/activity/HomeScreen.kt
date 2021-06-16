@@ -56,18 +56,9 @@ class HomeScreen : AppCompatActivity() {
                             startActivity(Intent(this, LoginScreen::class.java))
                             finishAffinity()
                         }
-
                         builder.setNegativeButton("Não", null)
                         builder.show()
-                    } else if (!SingletonConfiguration.getFavoriteDataValidation()) {
-                        val builder = AlertDialog.Builder(this)
-                        builder.setTitle("Aviso")
-                        builder.setMessage("Não foi adicionado Filmes aos Favoritos ainda\n")
-                        builder.setNegativeButton("Ok", null)
-                        builder.show()
-
-                    } else{
-
+                    } else {
                         startActivity(Intent(this, FavoritesScreen::class.java))
                     }
 

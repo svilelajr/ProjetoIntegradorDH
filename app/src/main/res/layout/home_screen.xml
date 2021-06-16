@@ -32,7 +32,8 @@
         android:layout_height="@dimen/layout_height_titulo_filme"
         android:src="@drawable/titulo_filme"
         app:layout_constraintBottom_toBottomOf="@+id/tb_home"
-        app:layout_constraintLeft_toRightOf="@id/logo_mw_app" />
+        app:layout_constraintLeft_toRightOf="@id/logo_mw_app"
+        app:layout_constraintTop_toTopOf="@+id/logo_mw_app" />
 
     <Button
         android:id="@+id/bt_explore"
