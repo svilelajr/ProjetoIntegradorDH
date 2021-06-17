@@ -18,10 +18,9 @@ class DetailsViewModel : ViewModel() {
 
     val providers by lazy { MutableLiveData<List<String>?>() }
     private val configuration = SingletonConfiguration.config
-    private var popularityVote: Float = 0.0f
     val imageBackgroundUrl by lazy { MutableLiveData<String>() }
     val imagePosterUrl by lazy { MutableLiveData<String>() }
-    val similarMovies = MutableLiveData<List<Movie>>()
+    val similarMovies = MutableLiveData<List<Movie>?>()
 
 
     fun getMovieDetail(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
@@ -54,11 +53,6 @@ class DetailsViewModel : ViewModel() {
         }
     }
 
-    fun getPopularity(): Float {
-        popularityVote = ((movieDetail.value?.popularity)?.times(10))?.toFloat()!!
-        return popularityVote
-    }
-
     fun getProvider(movieId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
             repository.getProviderMovie(movieId).let { providerResponse ->
@@ -71,8 +65,8 @@ class DetailsViewModel : ViewModel() {
                 providerResponse.providers?.bR?.rent?.forEach { providerF ->
                     providerF.logoPath?.let { it1 -> providerLogoPath.add(it1) }
                 }
-
-                providers.postValue(providerLogoPath.distinct())
+                val nProviders = providerLogoPath.distinct()
+                providers.postValue(nProviders)
             }
         } catch (error: Throwable) {
             Log.e("Error", "Problema de Conexão $error")

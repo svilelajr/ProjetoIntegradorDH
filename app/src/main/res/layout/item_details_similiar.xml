@@ -28,9 +28,10 @@
 
             <ImageView
                 android:id="@+id/iv_details_itemsimilar"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="230dp"
                 android:scaleType="centerCrop"
+                tools:src="@drawable/deadpool_boyfriend_pic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

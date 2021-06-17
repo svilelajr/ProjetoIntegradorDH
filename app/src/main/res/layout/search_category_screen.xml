@@ -20,7 +20,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="EXPLORAR"
+            app:title="Explorar"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
             app:titleTextColor="@color/white" />
 

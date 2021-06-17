@@ -41,11 +41,9 @@ class SearchScreen : AppCompatActivity() {
                 viewModel.searchMovie(newText)
                 return false
             }
-
         })
         observer()
         setupRecycler()
-
     }
 
     private fun observer() {

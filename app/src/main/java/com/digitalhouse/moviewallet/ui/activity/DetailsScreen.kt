@@ -4,11 +4,11 @@ import android.content.Intent
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -83,10 +83,9 @@ class DetailsScreen : AppCompatActivity() {
             viewModel.getMovieDetail(movieId)
             viewModel.getProvider(movieId)
             providerMovie()
+            movieDetails()
             viewModel.getSimiliarMovie(movieId.toString())
             similarMovie()
-
-            movieDetails()
         }
         toolbar.setNavigationOnClickListener {
             onBackPressed()
@@ -106,7 +105,7 @@ class DetailsScreen : AppCompatActivity() {
                 tvSynopsis.text = it.overview
             }
             tvDetailsMovie.text = "${date.year} | ${it.runtime}min"
-            ratingBar.rating = it.popularity?.toFloat()!!
+            ratingBar.rating = it.voteAverage?.toFloat()!! / 2f
         }
     }
 
@@ -140,7 +139,9 @@ class DetailsScreen : AppCompatActivity() {
 
     private fun similarMovie() {
         viewModel.similarMovies.observe(this) {
-            listMovie.addAll(it)
+            if (it != null) {
+                listMovie.addAll(it)
+            }
             adapterSimilarMovie.notifyDataSetChanged()
             if (listMovie.isNotEmpty()) {
                 rvSimilarMovie.visibility = VISIBLE
@@ -168,7 +169,6 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun addFavoriteToDb() {
-
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
                 .document(user.uid)
@@ -178,10 +178,7 @@ class DetailsScreen : AppCompatActivity() {
                 }.addOnFailureListener { e ->
                     Log.w("TAG", "Error writing document", e)
                 }
+            Toast.makeText(this, "FILME ADICIONADO AOS FAVORITOS", Toast.LENGTH_LONG).show()
         }
-    }
-
-    private fun getMovie(movieResponse: MovieDetailResponse) {
-        movieDetailResponse = movieResponse
     }
 }
