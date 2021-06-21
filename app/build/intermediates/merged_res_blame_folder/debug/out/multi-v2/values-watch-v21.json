@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\gportoma\\OneDrive - everis\\Escritorio\\Movie Wallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "C:\\Users\\dddev\\Documents\\Projetos Curso Android Digital House\\ProjetoIntegradorDH\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gportoma\\.gradle\\caches\\transforms-2\\files-2.1\\42a99c267804f8dc813265d57f0227f4\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\dddev\\.gradle\\caches\\transforms-2\\files-2.1\\42a99c267804f8dc813265d57f0227f4\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

@@ -20,6 +20,7 @@ import com.digitalhouse.moviewallet.model.Buy
 import com.digitalhouse.moviewallet.model.Movie
 import com.digitalhouse.moviewallet.model.Rent
 import com.digitalhouse.moviewallet.ui.adapter.DetailsScreenSimiliarAdapter
+import com.digitalhouse.moviewallet.ui.adapter.FavoritesAdapter
 import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -50,6 +51,7 @@ class DetailsScreen : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private val firestoreDb = Firebase.firestore
     private lateinit var movieDetailResponse: MovieDetailResponse
+    private val movieIdsList: MutableList<Long> = mutableListOf()
 
     private val listProvidersFlatrate = mutableListOf<String>()
     private val listProvidersBuy = mutableListOf<Buy>()
@@ -85,6 +87,8 @@ class DetailsScreen : AppCompatActivity() {
             providerMovie()
             movieDetails()
             viewModel.getSimiliarMovie(movieId.toString())
+            viewModel.getMoviesIdsOnDb(firebaseAuth, firestoreDb)
+            getMoviesIds()
             similarMovie()
         }
         toolbar.setNavigationOnClickListener {
@@ -112,7 +116,19 @@ class DetailsScreen : AppCompatActivity() {
     private fun initClick() {
         btFavorite.setOnClickListener {
             if (firebaseAuth.currentUser != null) {
-                addFavoriteToDb()
+
+                if (checkIfMovieIsOnDb()) {
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("Filme ja existe nos Favoritos")
+                    builder.setMessage("Deseja remover o filme dos Favoritos?")
+                    builder.setPositiveButton("Sim") { _, _ ->
+                        removeMovieFromDb()
+                    }
+                    builder.setNegativeButton("Não", null)
+                    builder.show()
+                } else {
+                    addFavoriteToDb()
+                }
             } else {
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Usuário Não Logado")
@@ -172,13 +188,64 @@ class DetailsScreen : AppCompatActivity() {
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
                 .document(user.uid)
-                .update("favoriteList", FieldValue.arrayUnion(movieDetailResponse))
+                .update(
+                    "favoriteList", FieldValue.arrayUnion(movieDetailResponse),
+                    "moviesIds", FieldValue.arrayUnion(movieDetailResponse.id)
+                )
                 .addOnSuccessListener {
                     Log.d("TAG", "DocumentSnapshot successfully written!")
+                    Toast.makeText(this, "Filme Adicionado aos Favoritos", Toast.LENGTH_LONG).show()
                 }.addOnFailureListener { e ->
                     Log.w("TAG", "Error writing document", e)
+                    Toast.makeText(
+                        this,
+                        "Não foi possivel adicionar o Filme aos Favoritos",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
-            Toast.makeText(this, "FILME ADICIONADO AOS FAVORITOS", Toast.LENGTH_LONG).show()
+
+        }
+    }
+
+    private fun getMoviesIds() {
+        viewModel.movieIdsList.observe(this, {
+            it?.let {
+                movieIdsList.addAll(it)
+            }
+        })
+    }
+
+    private fun checkIfMovieIsOnDb(): Boolean {
+        var boolean = false
+
+        for (id in movieIdsList) {
+            if (id == movieDetailResponse.id?.toLong()) {
+                boolean = true
+                break
+            }
+        }
+        return boolean
+    }
+
+    private fun removeMovieFromDb() {
+        firebaseAuth.currentUser?.let { user ->
+            firestoreDb.collection("users")
+                .document(user.uid)
+                .update(
+                    "favoriteList", FieldValue.arrayRemove(movieDetailResponse),
+                    "moviesIds", FieldValue.arrayRemove(movieDetailResponse.id)
+                )
+                .addOnSuccessListener {
+                    Log.d("TAG", "DocumentSnapshot successfully written!")
+                    Toast.makeText(this, "Filme Removido dos Favoritos", Toast.LENGTH_LONG).show()
+                }.addOnFailureListener { e ->
+                    Log.w("TAG", "Error writing document", e)
+                    Toast.makeText(
+                        this,
+                        "Não foi possivel remover o Filme dos Favoritos",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
         }
     }
 }
