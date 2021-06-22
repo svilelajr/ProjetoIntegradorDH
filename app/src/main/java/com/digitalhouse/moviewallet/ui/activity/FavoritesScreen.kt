@@ -1,23 +1,17 @@
 package com.digitalhouse.moviewallet.ui.activity
 
-import android.content.Intent
-import android.opengl.Visibility
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
-import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.adapter.FavoritesAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import org.w3c.dom.Text
-import kotlin.collections.ArrayList
 
 class FavoritesScreen : AppCompatActivity() {
 
@@ -50,7 +44,7 @@ class FavoritesScreen : AppCompatActivity() {
         getFavoriteData()
     }
 
-    fun getFavoriteData() {
+    private fun getFavoriteData() {
         firebaseAuth.currentUser?.let { user ->
             firestoreDb.collection("users")
                 .document(user.uid).get()

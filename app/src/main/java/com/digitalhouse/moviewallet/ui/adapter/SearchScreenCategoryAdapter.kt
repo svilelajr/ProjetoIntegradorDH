@@ -20,7 +20,7 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         SearchScreenCategoryViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_search_categorynew, parent, false)
+                .inflate(R.layout.item_search_category, parent, false)
         )
 
     override fun getItemCount() = listaDeCategorias.size
@@ -28,7 +28,7 @@ class SearchScreenCategoryAdapter(private val listaDeCategorias: MutableList<Gen
     override fun onBindViewHolder(holder: SearchScreenCategoryViewHolder, position: Int) {
         val position = listaDeCategorias[position]
         val configuration = SingletonConfiguration.config
-        var imageUrl =
+        val imageUrl =
             "${configuration?.images?.secure_base_url}${configuration?.images?.backdrop_sizes?.get(1)}${
                 position.movieUrlImage
             }"

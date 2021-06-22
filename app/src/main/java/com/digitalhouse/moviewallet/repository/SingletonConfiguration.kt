@@ -7,13 +7,9 @@ import com.google.firebase.ktx.Firebase
 
 object SingletonConfiguration {
     var config: MovieConfigurationResponse? = null
-    private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    private val firestoreDb = Firebase.firestore
-
 
     fun setConfiguration(configuration: MovieConfigurationResponse){
         config = configuration
     }
-
 
 }

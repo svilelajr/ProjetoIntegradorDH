@@ -3,9 +3,9 @@ package com.digitalhouse.moviewallet.model
 
 
 class User() {
-    var email: String = ""
+    private var email: String = ""
     var name: String = ""
-    var subject: Subject? = null
+    private var subject: Subject? = null
     var movies: FavoriteList? = null
 
     constructor(email: String, name: String, subject: Subject, movies: FavoriteList?) : this() {

@@ -13,14 +13,14 @@ import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.digitalhouse.moviewallet.ui.activity.DetailsScreen
 import com.squareup.picasso.Picasso
 
-class DetailsScreenSimiliarAdapter(val listMovies: MutableList<Movie>) :
+class DetailsScreenSimiliarAdapter(private val listMovies: MutableList<Movie>) :
     RecyclerView.Adapter<DetailsScreenSimiliarAdapter.DetailsScreenSimilarViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ) = DetailsScreenSimilarViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_details_similiar, parent, false)
+        LayoutInflater.from(parent.context).inflate(R.layout.item_context_screen, parent, false)
     )
 
     override fun onBindViewHolder(holder: DetailsScreenSimilarViewHolder, position: Int) {
@@ -40,7 +40,7 @@ class DetailsScreenSimiliarAdapter(val listMovies: MutableList<Movie>) :
     override fun getItemCount() = listMovies.size
 
     inner class DetailsScreenSimilarViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgMovie: ImageView? by lazy { view.findViewById<ImageView>(R.id.iv_details_itemsimilar) }
-        val cvMovie: CardView? by lazy { view.findViewById<CardView>(R.id.cv_details_itemsimilar) }
+        val imgMovie: ImageView? by lazy { view.findViewById<ImageView>(R.id.iv_movie_screen) }
+        val cvMovie: CardView? by lazy { view.findViewById<CardView>(R.id.cv_movie_screen) }
     }
 }

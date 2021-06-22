@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Movie
@@ -54,9 +54,7 @@ class SearchScreen : AppCompatActivity() {
     }
 
     private fun setupRecycler() {
-        resultSearch.layoutManager = LinearLayoutManager(
-            this, LinearLayoutManager.VERTICAL, false
-        )
+        resultSearch.layoutManager = GridLayoutManager(this, 2)
         resultSearch.adapter = adapterResult
     }
 }

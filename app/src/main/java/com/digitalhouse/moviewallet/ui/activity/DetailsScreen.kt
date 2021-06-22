@@ -12,15 +12,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.*
-import com.digitalhouse.moviewallet.model.Buy
 import com.digitalhouse.moviewallet.model.Movie
-import com.digitalhouse.moviewallet.model.Rent
 import com.digitalhouse.moviewallet.ui.adapter.DetailsScreenSimiliarAdapter
-import com.digitalhouse.moviewallet.ui.adapter.FavoritesAdapter
 import com.digitalhouse.moviewallet.ui.adapter.ProviderDetailsAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.DetailsViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -42,9 +40,9 @@ class DetailsScreen : AppCompatActivity() {
     private val rvProvider by lazy { findViewById<RecyclerView>(R.id.rv_provider_details) }
     private val btFavorite by lazy { findViewById<FloatingActionButton>(R.id.bt_favorite_details) }
     private val tvProvider by lazy { findViewById<TextView>(R.id.tv_provider_details) }
-    private val tvTitleSemelhante by lazy { findViewById<TextView>(R.id.tv_title_semelhante) }
+    private val tvTitleSemelhante by lazy { findViewById<TextView>(R.id.tv_similar_details) }
     private val ratingBar by lazy { findViewById<RatingBar>(R.id.rb_details_screen) }
-    private val rvSimilarMovie by lazy { findViewById<RecyclerView>(R.id.rv_similiar_details) }
+    private val rvSimilarMovie by lazy { findViewById<RecyclerView>(R.id.rv_similar_details) }
 
 
     private lateinit var viewModel: DetailsViewModel
@@ -53,11 +51,9 @@ class DetailsScreen : AppCompatActivity() {
     private lateinit var movieDetailResponse: MovieDetailResponse
     private val movieIdsList: MutableList<Long> = mutableListOf()
 
-    private val listProvidersFlatrate = mutableListOf<String>()
-    private val listProvidersBuy = mutableListOf<Buy>()
-    private val listProvidersRent = mutableListOf<Rent>()
+    private val listProviders = mutableListOf<String>()
     private val listMovie = mutableListOf<Movie>()
-    private val adapterProviderFlatrate = ProviderDetailsAdapter(listProvidersFlatrate)
+    private val adapterProvider = ProviderDetailsAdapter(listProviders)
     private val adapterSimilarMovie = DetailsScreenSimiliarAdapter(listMovie)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -100,6 +96,7 @@ class DetailsScreen : AppCompatActivity() {
     private fun movieDetails() {
         viewModel.movieDetail.observe(this) {
             movieDetailResponse = it
+
             val date = LocalDate.parse(it.releaseDate)
             tvTitle.text = ("${it.title}")
 
@@ -146,9 +143,9 @@ class DetailsScreen : AppCompatActivity() {
     private fun providerMovie() {
         viewModel.providers.observe(this) {
             if (it != null) {
-                listProvidersFlatrate.addAll(it)
+                listProviders.addAll(it)
             }
-            adapterProviderFlatrate.notifyDataSetChanged()
+            adapterProvider.notifyDataSetChanged()
             validateProvider()
         }
     }
@@ -167,17 +164,17 @@ class DetailsScreen : AppCompatActivity() {
     }
 
     private fun setupRecycler() {
-        rvProvider.adapter = adapterProviderFlatrate
+        rvProvider.adapter = adapterProvider
         rvProvider.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         rvSimilarMovie.adapter = adapterSimilarMovie
         rvSimilarMovie.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            GridLayoutManager(this, 2)
     }
 
     private fun validateProvider() {
-        if (listProvidersFlatrate.isNotEmpty()) {
+        if (listProviders.isNotEmpty()) {
             rvProvider.visibility = VISIBLE
             tvProvider.visibility = VISIBLE
             ivJustWatch.visibility = VISIBLE

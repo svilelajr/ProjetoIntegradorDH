@@ -38,8 +38,8 @@ class HomeScreenMovieAdapter(val listMovie: MutableList<Movie>) :
     }
 
     inner class HomeScreenMovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgPoster: ImageView? = view.findViewById<ImageView>(R.id.iv_movie_itemcategory)
-        var cvMovie: CardView? = view.findViewById<CardView>(R.id.cv_movie_itemcategory)
+        val imgPoster: ImageView? = view.findViewById(R.id.iv_movie_itemcategory)
+        var cvMovie: CardView? = view.findViewById(R.id.cv_movie_itemcategory)
     }
 }
 

@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -14,22 +13,19 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.digitalhouse.moviewallet.ui.adapter.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.R
 import com.digitalhouse.moviewallet.model.Genre
 import com.digitalhouse.moviewallet.model.Movie
-import com.digitalhouse.moviewallet.repository.SingletonConfiguration
+import com.digitalhouse.moviewallet.ui.adapter.HomeScreenCategoryAdapter
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenPopularityAdapter
 import com.digitalhouse.moviewallet.ui.adapter.HomeScreenReleaseAdapter
 import com.digitalhouse.moviewallet.ui.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
-
 import com.google.firebase.auth.FirebaseAuth
+import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 class HomeScreen : AppCompatActivity() {
     private val recyclerViewCategoria by lazy { findViewById<RecyclerView>(R.id.rv_category_home) }
-    private val toolbar by lazy { findViewById<Toolbar>(R.id.tb_home) }
     private val bottomNavigate by lazy { findViewById<BottomNavigationView>(R.id.bn_home) }
     private val recyclerRelease by lazy { findViewById<RecyclerView>(R.id.rv_release_home) }
     private val indicatorRelease by lazy { findViewById<ScrollingPagerIndicator>(R.id.indicator) }

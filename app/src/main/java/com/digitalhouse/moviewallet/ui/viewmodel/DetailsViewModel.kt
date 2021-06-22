@@ -3,14 +3,12 @@ package com.digitalhouse.moviewallet.ui.viewmodel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.digitalhouse.moviewallet.model.*
+import com.digitalhouse.moviewallet.model.Movie
+import com.digitalhouse.moviewallet.model.MovieDetailResponse
 import com.digitalhouse.moviewallet.repository.RepositoryMovie
 import com.digitalhouse.moviewallet.repository.SingletonConfiguration
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import com.squareup.okhttp.Dispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +17,7 @@ class DetailsViewModel : ViewModel() {
 
     private val repository = RepositoryMovie()
     val movieDetail by lazy { MutableLiveData<MovieDetailResponse>() }
-    val providerLogoPath = mutableListOf<String>()
+    private val providerLogoPath = mutableListOf<String>()
     val movieIdsList = MutableLiveData<List<Long>>()
 
     val providers by lazy { MutableLiveData<List<String>?>() }
